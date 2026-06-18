@@ -1,0 +1,79 @@
+{
+ "https://openalex.org/W4407702228": {
+  "design": "Autobiographical book chapter", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Reflective career chapter on how macro forces (policy, ideology) and micro interactions intersected across the author's research on immigration, poverty reduction, and forced displacement."
+ },
+ "https://openalex.org/W4411015747": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer ($333 vs $20/month)", "control": "Low-cash gift",
+  "sample_size": "1,000 (n=891 at year 4)", "age_0_8": "Preschoolers (~4 years)", "age_caregiver": "Low-income mothers",
+  "biomarkers": "EEG (brain activity)",
+  "kf1": "After four years, monthly unconditional cash transfers had no statistically significant impacts on children's language, executive function, social-emotional, or brain-activity outcomes (NBER working-paper version)."
+ },
+ "https://openalex.org/W4408220320": {
+  "country": "U.S.", "setting": "Florida public schools", "design": "Qualitative (interviews / white-paper report)",
+  "quant_qual": "qualitative", "type": "observational",
+  "demographics": "Educators and students under state education-restriction policies",
+  "kf1": "Documents how Florida's state-policy-driven education restrictions limit access to ideas and supports related to race, gender, and LGBTQ+ existence, serving as a national warning sign."
+ },
+ "https://openalex.org/W4412699679": {
+  "country": "China", "design": "Qualitative (semi-structured interviews)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "20 urban Chinese adolescents (50% girls)", "age_9_25": "Adolescents",
+  "demographics": "Urban Chinese adolescents",
+  "kf1": "Adolescents viewed school (not family) as the central arena of gender socialization and reported consistent gender-differential treatment by teachers (boys harsher/more demanding, girls lenient/lighter)."
+ },
+ "https://openalex.org/W7125434327": {
+  "country": "U.S.", "design": "Dataset deposit", "quant_qual": "quantitative", "type": "other",
+  "kf1": "Data deposit of supplemental files for manuscripts from the Baby's First Years study."
+ },
+ "https://openalex.org/W7162449400": {
+  "country": "U.S.", "design": "Dataset deposit", "quant_qual": "quantitative", "type": "other",
+  "kf1": "Data deposit of supplemental files for the Baby's First Years study (duplicate record)."
+ },
+ "https://openalex.org/W7126044518": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer ($333 vs $20/month)", "control": "Low-cash gift",
+  "sample_size": "1,000 mothers and newborns", "age_0_8": "Infants and toddlers", "age_caregiver": "Low-income mothers (M=27; 42% Black, 41% Hispanic)",
+  "demographics": "Low-income mothers across neighborhood opportunity contexts",
+  "kf1": "Parents in lower-opportunity neighborhoods who received larger cash transfers engaged children in more enriching activities and purchased more child-focused goods, suggesting compensatory caregiving investment.",
+  "effect_sizes": "Effect sizes .12 and .09 more per 1 SD decrease in neighborhood opportunity"
+ },
+ "https://openalex.org/W7125667541": {
+  "country": "U.S.", "design": "RCT (Baby's First Years; preprint)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer", "control": "Low-cash gift",
+  "sample_size": "~1,000", "age_0_8": "Preschoolers", "age_caregiver": "Low-income mothers", "biomarkers": "EEG (brain activity)",
+  "kf1": "Preprint: four years of cash transfers showed no impact on the primary brain-activity index; exploratory analysis found higher alpha power in the high-cash group needing replication.",
+  "effect_sizes": "Higher alpha power in high-cash group (exploratory)"
+ },
+ "https://openalex.org/W7130574013": {
+  "country": "U.S.", "setting": "New York City public schools (middle school)", "design": "Pre-post observational intervention",
+  "quant_qual": "quantitative", "type": "intervention", "intervention_name": "The Listening with Curiosity Project (26-lesson SEL curriculum)",
+  "sample_size": "494 seventh-grade students (mean age 12.13)", "age_9_25": "Middle-school students (~12 years)",
+  "demographics": "Racially/ethnically diverse NYC seventh-graders",
+  "kf1": "Improved listening and interpersonal curiosity were associated with greater connection to others and common humanity, and connection related to heightened academic engagement, with some gender differences."
+ },
+ "https://openalex.org/W4404994669": {
+  "country": "International", "design": "Scoping review", "quant_qual": "quantitative", "type": "review",
+  "sample_size": "99 empirical studies (post-2018)",
+  "demographics": "Autistic and gender-diverse individuals",
+  "kf1": "Scoping review found growth in quantity and quality of research at the intersection of autism and gender diversity since 2018, while methodological improvements and stakeholder collaboration are still needed."
+ },
+ "https://openalex.org/W4408365160": {
+  "design": "Panel discussion / commentary", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Discusses openness and transparency in peer review, including open peer review as a way to level the field for less-privileged scholars and detect misconduct."
+ },
+ "https://openalex.org/W4400100909": {
+  "country": "Norway", "setting": "Schools", "design": "Single-case experimental (multiple baseline)", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Accessible Literacy Learning (AAC reading program)",
+  "sample_size": "7 children aged 6-10", "age_0_8": "Children aged 6-8 (some)", "age_9_25": "Children aged 9-10 (some)",
+  "demographics": "Children with intellectual disabilities requiring augmentative and alternative communication",
+  "kf1": "Children with intellectual disabilities requiring AAC acquired phonological awareness and decoding skills through systematic evidence-based reading material delivered by trained teachers."
+ },
+ "https://openalex.org/W4415975664": {
+  "country": "Norway", "design": "Longitudinal cohort (MoBa; Language-8)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "Norwegian Mother, Father and Child Cohort (MoBa) / Language-8 study",
+  "age_0_8": "Children at 18 and 36 months, followed to age 8.5",
+  "demographics": "Community sample of children (Norway)",
+  "kf1": "Early joint attention and social responsiveness at 18-36 months significantly predicted pragmatic language competence at age 8.5, marking pragmatics as a transdiagnostic developmental vulnerability."
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "https://openalex.org/W4401538083": {
+  "design": "Data-mining methods study (likely author mismatch – not ECD)", "quant_qual": "quantitative", "type": "other",
+  "kf1": "[Likely wrong-author match] Parameter-reduction optimisation for association-rule mining of e-commerce purchase patterns."
+ },
+ "https://openalex.org/W4401774142": {
+  "design": "Analytical chemistry methods study (likely author mismatch – not ECD)", "quant_qual": "quantitative", "type": "other",
+  "kf1": "[Likely wrong-author match] Biphenyl chromatography column for analysis of steroids and metabolites."
+ },
+ "https://openalex.org/W4410536194": {
+  "design": "Machine-learning methods study (likely author mismatch – not ECD)", "quant_qual": "quantitative", "type": "other",
+  "kf1": "[Likely wrong-author match] Multilayer-perceptron algorithm for demographic targeting of online marketing."
+ },
+ "https://openalex.org/W2948853410": {
+  "design": "Law review article (likely author mismatch – not ECD)", "quant_qual": "qualitative", "type": "other",
+  "kf1": "[Likely wrong-author match] Argues bar associations can be catalysts for court reform."
+ },
+ "https://openalex.org/W4409813135": {
+  "country": "United Kingdom", "setting": "Family homes (four UK nations)",
+  "design": "Cross-sectional survey", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "1,444 parents/guardians", "age_0_8": "Children aged 0-36 months", "age_caregiver": "Parents/legal guardians",
+  "demographics": "Socially and ethnically diverse families with children 0-36 months across the four UK nations",
+  "kf1": "Nearly all homes had Wi-Fi and many digital devices; very young children engaged in varied digital activities alone and with parents, and parents' mediation was shaped by their own digital practices/attitudes, with implications for children's digital rights."
+ },
+ "https://openalex.org/W7125273975": {
+  "country": "United Kingdom", "design": "Psychometric scale development/validation", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "934 (nationally balanced UK sample)",
+  "age_0_8": "Children birth to 3 years", "age_caregiver": "Parents",
+  "demographics": "Parents of children birth-3 years (UK)",
+  "kf1": "Developed and validated the 15-item Parental Attitudes to Digital Technology Scale (PADTS) with a four-factor structure (perceived risks, learning benefits, confidence, technology anxiety) and measurement invariance across gender, ethnicity, region."
+ },
+ "https://openalex.org/W7154709674": {
+  "design": "Atmospheric physics methods study (likely author mismatch – not ECD)", "quant_qual": "quantitative", "type": "other",
+  "kf1": "[Likely wrong-author match] Formvar method to capture atmospheric ice crystals and retrieve roughness parameters."
+ },
+ "https://openalex.org/W4388014374": {
+  "country": "Multiple (31 countries)", "design": "Cross-sectional (country-level, 10-year)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "31 countries over 10 years",
+  "demographics": "Country-level child development and nurturing-care indicators",
+  "kf1": "Country-level improvements in provision of nurturing care over 10 years were associated with improvements in child development outcomes across 31 countries."
+ },
+ "https://openalex.org/W4404642920": {
+  "country": "Nigeria; Uganda; Colombia", "design": "Cross-sectional (Violence Against Children Surveys)",
+  "quant_qual": "quantitative", "type": "observational", "age_9_25": "Young people aged 13-24",
+  "demographics": "Nationally representative males and females aged 13-24",
+  "kf1": "Strong associations between lifetime violence and recent mental distress; being in work modified this association (mitigating in Colombian girls, exacerbating in Nigerian boys), varying by country, sex, and age.",
+  "effect_sizes": "Colombia girls aOR 0.42 (working) vs 6.12 (not working); Nigeria boys aOR 2.10 (working) vs 0.99 (not working)"
+ },
+ "https://openalex.org/W4404604318": {
+  "country": "Low- and middle-income (134 countries)", "design": "Descriptive analysis of aid data (2007-2021)",
+  "quant_qual": "quantitative", "type": "observational",
+  "demographics": "Early childhood care and education aid flows to 134 LMICs",
+  "kf1": "Lower-bound ECCE aid totalled US$3,646M (1.7% of education aid) over 2007-2021; conflict-affected countries received ~US$0.3/child vs US$1.2/child elsewhere, far below UNICEF's suggested 10% minimum.",
+  "effect_sizes": "ECCE aid US$3,646M = 1.7% of education aid; conflict US$0.3 vs non-conflict US$1.2 per child"
+ },
+ "https://openalex.org/W4399324374": {
+  "country": "Latin America & Caribbean (18 countries)", "design": "Cross-sectional (MICS/DHS)",
+  "quant_qual": "quantitative", "type": "observational", "age_0_8": "Children under five",
+  "demographics": "Children under five across 18 LAC countries",
+  "kf1": "Access to water and sanitation was positively associated with early childhood development and reduced stunting; improved garbage collection was associated with lower stunting and underweight."
+ },
+ "https://openalex.org/W4408090345": {
+  "country": "Global", "design": "Rapid review", "quant_qual": "qualitative", "type": "review",
+  "longitudinal": "no", "randomized": "not applicable",
+  "demographics": "Families and children worldwide",
+  "kf1": "Reviews evidence linking climate change to adverse physical and mental health and emerging effects on child development and family systems (early marriage, fertility, migration, parenting), identifying major literature gaps."
+ },
+ "https://openalex.org/W4409257810": {
+  "country": "Global", "design": "Conceptual review/commentary", "quant_qual": "qualitative", "type": "review",
+  "demographics": "Children and caregivers in the context of climate change",
+  "kf1": "Argues nurturing care by caregivers is a critical buffer protecting child development against climate-change impacts, yet is largely absent from climate research and policy."
+ },
+ "https://openalex.org/W4387048873": {
+  "country": "Northern Ireland; Colombia", "design": "Longitudinal (one semester; SIENA network models)",
+  "quant_qual": "quantitative", "type": "intervention", "intervention_name": "ASSIST or Dead Cool smoking-prevention programs",
+  "sample_size": "1,344 pupils (12 schools)", "age_9_25": "Adolescents aged 12-13",
+  "demographics": "Secondary-school adolescents in Northern Ireland and Bogotá, Colombia",
+  "kf1": "Both selection homophily (32.8%) and peer influence (39.2%) contributed to friends' smoking/vaping similarity; selection homophily was stronger in Bogotá and peer influence stronger in Northern Ireland.",
+  "effect_sizes": "Selection homophily ORs 0.87-1.26; peer influence βs 0.07-0.55"
+ },
+ "https://openalex.org/W4386751845": {
+  "country": "United Kingdom (Northern Ireland)", "design": "Cross-sectional (linked administrative data)",
+  "quant_qual": "quantitative", "type": "observational",
+  "demographics": "Pupils completing GCSEs (2011-2013 cohorts), Northern Ireland",
+  "kf1": "Socio-economic status effects on GCSE attainment are multidimensional; mother's education had the largest impact and free-school-meal eligibility remained an important predictor; girls outperformed boys."
+ },
+ "https://openalex.org/W4402390727": {
+  "country": "United Kingdom (Northern Ireland)", "design": "Cross-sectional (multilevel, linked admin data)",
+  "quant_qual": "quantitative", "type": "observational",
+  "demographics": "Post-primary pupils, Northern Ireland",
+  "kf1": "Poor physical and mental health were negatively associated with post-primary attainment in Northern Ireland."
+ },
+ "https://openalex.org/W4416717975": {
+  "design": "Editorial", "quant_qual": "qualitative", "type": "other",
+  "demographics": "Young children with social-emotional/behavioral needs",
+  "kf1": "Editorial introducing seven articles on inclusion of children with social-emotional/behavioural needs in early education, emphasizing co-construction, empowerment, and reflective educator practice."
+ },
+ "https://openalex.org/W4413409639": {
+  "country": "United Kingdom (Northern Ireland)", "design": "Cross-sectional (multilevel, linked admin data)",
+  "quant_qual": "quantitative", "type": "observational", "sample_size": "61,373",
+  "demographics": "Post-primary students, Northern Ireland",
+  "kf1": "Very bad self-reported health, physical and mental health conditions, and limiting illness were all negatively associated with GCSE attainment.",
+  "effect_sizes": "Very bad health d=-1.01; mental health condition d=-0.91; physical condition d=-0.39; limiting illness d=-0.98"
+ },
+ "https://openalex.org/W4415781815": {
+  "country": "Northern Ireland; Colombia", "design": "Intervention (pre/post, moderation analysis)",
+  "quant_qual": "quantitative", "type": "intervention", "intervention_name": "ASSIST and Dead Cool smoking-prevention programs",
+  "sample_size": "1,344 (12 schools)", "age_9_25": "Adolescents aged 12-13",
+  "demographics": "Secondary-school adolescents in Northern Ireland and Bogotá",
+  "kf1": "Peer influence on smoking/vaping norms was moderated by setting, intervention, gender, school SES, personality, and network position; effects were stronger among girls and lower-SES schools."
+ },
+ "https://openalex.org/W4416505020": {
+  "country": "United Kingdom (Northern Ireland)", "setting": "Primary schools",
+  "design": "RCT (factorial)", "randomized": "yes", "quant_qual": "quantitative", "type": "intervention",
+  "intervention_name": "Project Daire (Nourish; Engage)", "control": "Control (delayed)",
+  "sample_size": "445 children aged 6-7; 458 aged 10-11", "age_0_8": "Children aged 6-7", "age_9_25": "Children aged 10-11",
+  "demographics": "Primary-school children aged 6-7 and 10-11",
+  "kf1": "The Nourish arm significantly increased diet diversity among 10-11-year-olds (school DDS adjusted mean difference 2.79; total DDS 1.55) but not among 6-7-year-olds; diet quality was unchanged.",
+  "effect_sizes": "School DDS +2.79 (95% CI 1.44-4.14); total DDS +1.55 (0.65-2.44)"
+ },
+ "https://openalex.org/W4407165977": {
+  "country": "United Kingdom (Northern Ireland)", "setting": "Primary schools",
+  "design": "Process evaluation (mixed methods)", "quant_qual": "mixed", "type": "intervention",
+  "intervention_name": "Project Daire (Nourish; Engage)",
+  "sample_size": "15 schools; 983 pupils (495 aged 6-7; 488 aged 10-11)",
+  "age_0_8": "Children aged 6-7", "age_9_25": "Children aged 10-11",
+  "demographics": "Primary-school pupils and teachers",
+  "kf1": "100% school retention and high acceptability; impact occurred through social learning, experiential learning, engaging content, and real-life connections; lack of time was the main barrier."
+ },
+ "https://openalex.org/W7162766519": {
+  "country": "United Kingdom (Northern Ireland)", "design": "Policy brief", "quant_qual": "quantitative", "type": "other",
+  "demographics": "Students, Northern Ireland",
+  "kf1": "Policy brief summarizing evidence that students' physical and mental health affect GCSE attainment in Northern Ireland."
+ },
+ "https://openalex.org/W7118918012": {
+  "country": "United Kingdom (Northern Ireland)", "setting": "Primary schools (disadvantaged communities)",
+  "design": "Quasi-experimental (rolling cohort, matched controls)", "quant_qual": "quantitative", "type": "intervention",
+  "intervention_name": "Crescendo (music-based SEL program)", "control": "Matched control schools",
+  "sample_size": "559 children", "age_0_8": "Children aged 5-6",
+  "demographics": "Children aged 5-6 in socioeconomically disadvantaged communities",
+  "kf1": "Crescendo had significant positive effects on music skills and behavioural self-regulation, with moderate effects on self-regulation (d=0.29) and reaction to music (d=0.21).",
+  "effect_sizes": "Self-regulation d=0.29; reaction to music d=0.21"
+ },
+ "https://openalex.org/W4388199202": {
+  "country": "Bangladesh; Brazil; Colombia; India; Jordan; Lebanon; Mexico; Nigeria; South Africa",
+  "design": "Formative research / methods chapter", "quant_qual": "mixed", "type": "other",
+  "age_0_8": "Young children", "demographics": "Young children and caregivers affected by crisis/displacement",
+  "kf1": "Documents Sesame Workshop's adaptation of formative research (in-person and remote methods) for Watch, Play, Learn videos serving children affected by crisis and displacement across nine countries."
+ },
+ "https://openalex.org/W4400332074": {
+  "design": "Commentary/reflection", "quant_qual": "qualitative", "type": "other",
+  "demographics": "Children's educational media (Sesame Street)",
+  "kf1": "Reflects on bridging research and practice in producing Sesame Street and its international co-productions, offering a model for media makers to close the research-practice gap."
+ },
+ "https://openalex.org/W4394607915": {
+  "country": "United States; Latin America; Middle East", "design": "Case description / program reflection",
+  "quant_qual": "qualitative", "type": "intervention", "intervention_name": "Sesame educational media (diverse distribution platforms)",
+  "age_0_8": "Young children", "demographics": "Refugee and migrant children affected by conflict/displacement",
+  "kf1": "Describes how diverse media distribution platforms can support young displaced children's coping strategies, with lessons on content curation, local advisors, and on-the-ground partners."
+ },
+ "https://openalex.org/W4385554538": {
+  "design": "Methods (MR spectroscopic imaging)", "quant_qual": "quantitative", "type": "other",
+  "biomarkers": "3D Echo Planar Spectroscopic Imaging (brain metabolites)",
+  "kf1": "Methodological work on quantifying brain metabolites over large brain volumes via 3D echo-planar spectroscopic imaging."
+ },
+ "https://openalex.org/W4387023707": {
+  "country": "U.S.", "design": "Cross-sectional case-control", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "54 daily smokers; 37 nonsmokers", "age_adult": "Adults",
+  "demographics": "Adults who smoke daily vs nonsmokers",
+  "biomarkers": "MR spectroscopy neurometabolites (N-acetyl compounds, glutamate, creatine, choline, myo-inositol)",
+  "kf1": "Smoking was associated with a hypoinflammatory neurometabolite profile in the dorsal anterior cingulate cortex; glutamate and creatine correlated negatively with tobacco dependence."
+ },
+ "https://openalex.org/W4401441494": {
+  "country": "U.S.", "design": "Case-control (PET imaging)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "14 methamphetamine use disorder; 14 controls", "age_adult": "Adults",
+  "demographics": "Adults with methamphetamine use disorder vs controls",
+  "biomarkers": "PET [18F]FPEB (mGlu5 receptor)",
+  "kf1": "No evidence of mGlu5 downregulation in methamphetamine use disorder; mGlu5 was higher in nonsmokers, and prefrontal mGlu5 correlated with verbal learning."
+ },
+ "https://openalex.org/W4404219586": {
+  "country": "U.S.", "design": "Psychometric (factor analysis)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "1,059 community volunteers; 137 psychiatric patients", "age_adult": "Adults",
+  "demographics": "Community volunteers and patients with psychiatric diagnoses",
+  "kf1": "Confirmatory factor analysis of 18 cognitive tests supported a three-factor structure (verbal/working memory, inhibitory control, memory); several inhibitory-control measures showed weak convergent validity."
+ }
+}

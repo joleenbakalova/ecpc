@@ -1,0 +1,178 @@
+{
+ "https://openalex.org/W4403162134": {
+  "country": "International", "design": "Systematic review", "quant_qual": "quantitative", "type": "review",
+  "kf1": "Systematic review synthesizing malleable psychological/psychosocial determinants of uptake and adherence to COVID-19 distancing behaviours."
+ },
+ "https://openalex.org/W4400867056": {
+  "country": "International", "design": "Systematic review", "quant_qual": "quantitative", "type": "review",
+  "kf1": "Systematic review synthesizing psychological/psychosocial determinants of COVID-19 face-covering behaviours."
+ },
+ "https://openalex.org/W4400655458": {
+  "country": "International", "design": "Systematic review", "quant_qual": "quantitative", "type": "review",
+  "kf1": "Systematic review synthesizing psychological/psychosocial determinants of COVID-19 handwashing behaviours."
+ },
+ "https://openalex.org/W4394720092": {
+  "design": "Editorial", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Editorial setting out a vision for the journal Review of Education around methodological standards, open science, and supporting early-career researchers."
+ },
+ "https://openalex.org/W4406597169": {
+  "country": "China", "design": "Methodological appraisal of systematic reviews", "quant_qual": "quantitative", "type": "review",
+  "sample_size": "1,176 systematic reviews",
+  "kf1": "Completeness of reporting and methodological quality were low in Chinese social-science systematic reviews (PRISMA 49.9%, AMSTAR-2 45.5%), though improving over time.",
+  "effect_sizes": "PRISMA β=0.24; AMSTAR-2 β=0.17 (improvement over time)"
+ },
+ "https://openalex.org/W4407097133": {
+  "country": "Timor-Leste", "setting": "Community-based pre-schools",
+  "design": "Quasi-experimental (pre-post with control)", "quant_qual": "quantitative", "type": "intervention",
+  "intervention_name": "UNICEF community-based alternative pre-schools (CBAPs)", "control": "Public pre-school",
+  "sample_size": "607 children recruited (508 completed; 33 pre-schools)", "age_0_8": "Pre-school children",
+  "demographics": "Young children in conflict-affected Timor-Leste",
+  "kf1": "Attendance at community-based alternative pre-schools appeared to close the baseline developmental gap relative to public pre-schools, underscoring the value of early-learning access for at-risk children."
+ },
+ "https://openalex.org/W4406310353": {
+  "country": "U.S.", "design": "Cross-sectional survey (likely author mismatch – US college health)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "311 (females assigned at birth)", "age_adult": "University students",
+  "kf1": "[Possible wrong-author match] Period poverty (18.3%) was associated with higher odds of depression, anxiety, and suicidal ideation among university students.",
+  "effect_sizes": "Depression OR=6.21; anxiety OR=4.01; suicidal ideation OR=2.85"
+ },
+ "https://openalex.org/W4412950179": {
+  "country": "Australia", "design": "RCT (unblinded)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Pragmatic low-dose peanut oral immunotherapy", "control": "Peanut avoidance",
+  "sample_size": "54 children aged 1-4 years", "age_0_8": "Children aged 1-4",
+  "demographics": "Preschool children with peanut allergy",
+  "kf1": "[Possible wrong-author match] Low-dose peanut oral immunotherapy desensitized 74% of children vs 11% with avoidance and improved quality of life.",
+  "effect_sizes": "600mg tolerance 74% (OIT) vs 11% (avoidance)"
+ },
+ "https://openalex.org/W4406156250": {
+  "country": "U.S.", "design": "Single-center observational study (likely author mismatch – pediatric cardiology)",
+  "quant_qual": "quantitative", "type": "observational", "sample_size": "235 infants (<=30 days)", "age_0_8": "Infants <1 month",
+  "kf1": "[Possible wrong-author match] Preoperative oral feeding predicted full oral intake at discharge after neonatal cardiac surgery (OR 2.78).",
+  "effect_sizes": "Any preoperative PO feeding OR=2.78"
+ },
+ "https://openalex.org/W4413133836": {
+  "country": "U.S.", "design": "Cross-sectional survey (likely author mismatch – US college)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "507 university students", "age_adult": "University students",
+  "kf1": "[Possible wrong-author match] Basic-needs insecurities were common (82.6%) and negatively associated with GPA, with food and financial insecurity the strongest predictors.",
+  "effect_sizes": "Any BNI on GPA b=-0.45; food b=-0.47; financial b=-0.42"
+ },
+ "https://openalex.org/W4417433550": {
+  "country": "International", "design": "Systematic review and meta-analysis (longitudinal studies)", "quant_qual": "quantitative",
+  "type": "review", "sample_size": "17 studies; 1,182,501 individuals", "age_adult": "Adults",
+  "demographics": "Patients with severe unipolar/bipolar depression",
+  "kf1": "Electroconvulsive therapy was associated with reduced all-cause mortality (HR 0.70) and transient reduced suicide risk at 3 months.",
+  "effect_sizes": "All-cause mortality HR 0.70; suicide at 3mo HR 0.53"
+ },
+ "https://openalex.org/W4387116253": {
+  "country": "Afghanistan; Jordan", "design": "Conceptual/perspective paper", "quant_qual": "qualitative", "type": "review",
+  "demographics": "War-affected and refugee populations",
+  "kf1": "Argues multisystem approaches add conceptual, instrumental, capacity-building, and connectivity value to resilience and flourishing research in war and displacement contexts."
+ },
+ "https://openalex.org/W4389154382": {
+  "country": "International", "design": "Longitudinal dynamic symptom network", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "4,242 adults", "age_adult": "Adults",
+  "kf1": "Social support had a unidirectional protective effect on depressive symptoms, partly mediated through loneliness, with men benefiting more than women.",
+  "effect_sizes": "Support->anhedonia weight=-0.033; ->negative self-appraisal -0.038"
+ },
+ "https://openalex.org/W4392527642": {
+  "country": "Jordan", "setting": "Amman", "design": "RCT (cluster, mixed methods)", "randomized": "yes",
+  "quant_qual": "mixed", "type": "intervention", "intervention_name": "We Love Reading (volunteer read-aloud program)",
+  "sample_size": "105 Syrian refugee women", "age_adult": "Adult women", "age_caregiver": "Syrian refugee women",
+  "demographics": "Syrian refugee women from poor households",
+  "kf1": "We Love Reading significantly improved life satisfaction (Cantril β=3.00) among refugee women; empowerment and agency were key drivers of life satisfaction.",
+  "effect_sizes": "Life satisfaction Cantril β=3.00, p=0.002"
+ },
+ "https://openalex.org/W4402280291": {
+  "country": "International (13 countries)", "design": "Longitudinal survey (4 waves)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "7,909", "age_adult": "Adults",
+  "kf1": "Women reported greater increases in home/work responsibilities and higher depression, anxiety, and PTSD than men during the COVID-19 pandemic.",
+  "effect_sizes": "Depression above cut-off 32.5% women vs 23.6% men"
+ },
+ "https://openalex.org/W4400694992": {
+  "design": "Thematic analysis (public discourse)", "quant_qual": "qualitative", "type": "observational",
+  "demographics": "Humanitarian aid workers (Secret Aid Worker Guardian series)",
+  "kf1": "Thematic analysis of the 'Secret Aid Worker' series revealed a discourse of discontent that planted seeds of change on power-shifting, coloniality, racism, abuse, and duty of care."
+ },
+ "https://openalex.org/W4399177201": {
+  "country": "Jordan", "design": "Participatory mixed methods (Fuzzy Cognitive Mapping)", "quant_qual": "mixed",
+  "type": "observational", "age_adult": "Adult women",
+  "demographics": "Syrian refugee and Jordanian women in resource-poor families",
+  "kf1": "Women articulated cultural, financial, and psychological dimensions of empowerment and mapped how volunteering (We Love Reading) could catalyze change, especially cultural empowerment."
+ },
+ "https://openalex.org/W4417334596": {
+  "country": "Greece", "setting": "Schools", "design": "Cross-sectional (Bayesian variable selection)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "170 students; 165 teachers; 124 parents/guardians", "age_9_25": "Refugee adolescents",
+  "demographics": "Refugee students attending school in Greece",
+  "kf1": "Self-reported sense of belonging was the strongest protective factor for refugee adolescents' mental health and resilience, while bullying, discrimination, and disrupted schooling increased vulnerability."
+ },
+ "https://openalex.org/W4408062891": {
+  "country": "Jordan", "design": "Epigenetic study (EWAS, three generations)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "48 families (131 participants)", "age_0_8": "Children (1-2 per family)",
+  "age_caregiver": "Mothers", "demographics": "Three generations of Syrian refugees",
+  "biomarkers": "DNA methylation (buccal swabs); epigenetic age acceleration",
+  "kf1": "First report of an intergenerational epigenetic signature of war-related violence, with differentially methylated regions across germline, prenatal, and direct exposure and epigenetic age acceleration with prenatal exposure."
+ },
+ "https://openalex.org/W4407560904": {
+  "country": "United Arab Emirates", "design": "Mixed methods (Fuzzy Cognitive Mapping)", "quant_qual": "mixed",
+  "type": "observational", "sample_size": "78 Emirati female students", "age_adult": "Female students",
+  "demographics": "Emirati women/students",
+  "kf1": "We Love Reading boosted several dimensions of women's agency and life satisfaction in the UAE, identifying six core agency dimensions."
+ },
+ "https://openalex.org/W4416936117": {
+  "country": "Mauritania", "setting": "Nouakchott", "design": "Participatory systems mapping (Fuzzy Cognitive Mapping)",
+  "quant_qual": "qualitative", "type": "observational",
+  "demographics": "Diverse stakeholder groups (students, refugees, professors, diplomats, townspeople)",
+  "kf1": "Stakeholder groups reasoned differently about pathways to everyday peace, revealing disconnects and opportunities for inclusive peacebuilding."
+ },
+ "https://openalex.org/W4388557296": {
+  "country": "Brazil", "design": "Collaborative autoethnography", "quant_qual": "qualitative", "type": "observational",
+  "demographics": "Academic researchers and young citizen researchers",
+  "kf1": "Narrates lived experience of coproducing a digital mental-health intervention with young citizen researchers, highlighting accountability, capacity-building, and caring bonds."
+ },
+ "https://openalex.org/W4390168579": {
+  "country": "United Kingdom (England)", "design": "Participatory action research (protocol)", "quant_qual": "mixed",
+  "type": "observational", "sample_size": "100 young people aged 10-24", "age_9_25": "Young people aged 10-24",
+  "demographics": "Adolescents affected by adverse childhood experiences",
+  "kf1": "Protocol for participatory, arts-based research exploring how adverse childhood experiences affect diverse young people's mental health."
+ },
+ "https://openalex.org/W4390400151": {
+  "country": "United Kingdom (England)", "design": "Co-design protocol (Experience-Based Co-Design)", "quant_qual": "mixed",
+  "type": "intervention", "intervention_name": "Co-designed digital game for ACEs", "sample_size": "Young people aged 12-25",
+  "age_9_25": "Young people aged 12-25",
+  "demographics": "Adolescents who may have experienced adverse childhood experiences",
+  "kf1": "Protocol to co-design and evaluate the feasibility/acceptability of a digital game teaching 12-25-year-olds about ACEs and mental-health protection."
+ },
+ "https://openalex.org/W4386116153": {
+  "country": "International (51 countries)", "design": "Cross-sectional and experimental (multi-study)", "quant_qual": "quantitative",
+  "type": "observational", "age_adult": "Adults",
+  "kf1": "Five emotions were central to well-being across 51 countries during COVID-19, with emotional experiences preceding well-being changes; cultivating calm and hope are candidate intervention routes."
+ },
+ "https://openalex.org/W4389079431": {
+  "design": "Scoping review protocol", "quant_qual": "qualitative", "type": "review",
+  "kf1": "Protocol for a scoping review of concepts and practices in a youth mental-health domain."
+ },
+ "https://openalex.org/W4405649940": {
+  "country": "Brazil", "design": "Co-design and acceptability testing (mixed methods)", "quant_qual": "mixed",
+  "type": "intervention", "intervention_name": "Cadê o Kauê? chat-story (peer mental-health support)",
+  "sample_size": "Quant 1,768; multiple co-design/testing samples", "age_9_25": "Adolescents aged 15-18",
+  "demographics": "Brazilian adolescents",
+  "kf1": "Co-designed a chat-story intervention to enhance Brazilian adolescents' peer mental-health support and collective action; acceptability testing found it authentic and motivating."
+ },
+ "https://openalex.org/W4396887023": {
+  "design": "Systematic review", "quant_qual": "qualitative", "type": "review", "sample_size": "42 papers",
+  "kf1": "Systematic review of ethical opportunities and concerns around digital gaming interventions for mental health, finding urgent need for more ethical reflection on 'games on prescription'."
+ },
+ "https://openalex.org/W4405496286": {
+  "country": "United Kingdom (England)", "design": "Cross-sectional survey (OxWell)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "16,655 adolescents (aged 11-18)", "age_9_25": "Adolescents aged 11-18",
+  "demographics": "School-going adolescents in England",
+  "kf1": "Adolescents with a public social media account had higher odds of anxiety and depression (OR 1.41); 32.6% screened positive for anxiety/depression.",
+  "effect_sizes": "Public social media account OR 1.41 (95% CI 1.32-1.50)"
+ },
+ "https://openalex.org/W4405497502": {
+  "country": "United Kingdom (England)", "design": "Cross-sectional survey (OxWell; preprint)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "16,655 adolescents (aged 11-18)", "age_9_25": "Adolescents aged 11-18",
+  "demographics": "School-going adolescents in England",
+  "kf1": "Preprint: adolescents with a public social media account had higher odds of anxiety and depression (OR 1.41).",
+  "effect_sizes": "Public social media account OR 1.41"
+ }
+}

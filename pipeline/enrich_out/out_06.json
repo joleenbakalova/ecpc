@@ -1,0 +1,178 @@
+{
+ "https://openalex.org/W4392906240": {
+  "country": "United Kingdom", "design": "RCT", "randomized": "yes", "quant_qual": "mixed", "type": "intervention",
+  "intervention_name": "Coping during COVID (online peer-led course)", "control": "Wait-list",
+  "sample_size": "100 young people (aged 16-18)", "age_9_25": "Young people aged 16-18",
+  "demographics": "UK young people during COVID-19",
+  "kf1": "The online peer-led intervention significantly improved wellbeing, social connectedness, coping skills, sense of purpose, self-esteem, and self-compassion (medium-large effects) at 1 and 2 weeks.",
+  "effect_sizes": "Medium-large effect sizes across outcomes"
+ },
+ "https://openalex.org/W4395079455": {
+  "design": "Conceptual analysis (video games)", "quant_qual": "qualitative", "type": "other", "sample_size": "14 video games",
+  "kf1": "Analyzes multimodal metaphors for grief across 14 commercial video games and offers recommendations for serious-game designers and bereavement therapists."
+ },
+ "https://openalex.org/W4392983898": {
+  "country": "United Kingdom", "design": "Digital-game survey (Design Bioethics)", "quant_qual": "mixed",
+  "type": "observational", "sample_size": "7,337 adolescents (aged 16-18)", "age_9_25": "Adolescents aged 16-18",
+  "demographics": "UK adolescents",
+  "kf1": "Adolescents were willing to share mental-health risk information with parents/friends but had privacy concerns about school involvement and preferred face-to-face support over digital options."
+ },
+ "https://openalex.org/W4405131209": {
+  "country": "Brazil", "design": "Co-produced qualitative (interviews, focus groups)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "46 adolescents (aged 15-18)", "age_9_25": "Adolescents aged 15-18",
+  "demographics": "Brazilian adolescents",
+  "kf1": "Young people felt responsible for promoting peers' mental health but faced intrapersonal (skills, self-efficacy) and contextual (stigma, adultism) barriers, supporting an ecological view of youth participation."
+ },
+ "https://openalex.org/W4417508115": {
+  "country": "Brazil", "design": "Qualitative (reflexive thematic analysis)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "20 teachers",
+  "demographics": "Public high-school teachers across Brazil",
+  "kf1": "Youth protagonism is a multilevel dynamic; teacher competencies alone fail without school, family-community, and sociopolitical support."
+ },
+ "https://openalex.org/W4412568645": {
+  "design": "Conceptual/normative analysis", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Analyzes epistemic trust in conversational AI in psychotherapy, proposing to conceptualize AI as a fictional character to address its actual strengths and weaknesses."
+ },
+ "https://openalex.org/W7106223491": {
+  "design": "Conceptual/normative analysis", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Analyzes epistemic trust in conversational AI in psychotherapy (repository record)."
+ },
+ "https://openalex.org/W4415482806": {
+  "country": "United Kingdom (England)", "design": "Cross-sectional (MAIHDA intersectional)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "19,590 adolescents (aged 11-16)", "age_9_25": "Adolescents aged 11-16",
+  "demographics": "Adolescents in the OxWell 2023 Student Survey (180 intersectional strata)",
+  "kf1": "Maltreatment was associated with higher emotional problems across all strata; socioeconomically disadvantaged female and non-binary adolescents bore the highest burden.",
+  "effect_sizes": "Maltreatment effect +3.20 to +6.14 points"
+ },
+ "https://openalex.org/W4417279979": {
+  "design": "Ecological momentary assessment", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "189 (ages 12-18; 2,518 responses)", "age_9_25": "Adolescents aged 12-18",
+  "kf1": "Adolescents reported morally-valenced everyday events frequently and with rich emotional/relational content, challenging assumptions that morality is rare in daily life."
+ },
+ "https://openalex.org/W4414063726": {
+  "country": "Brazil", "design": "Implementation evaluation (qualitative, NASSS-CAT)", "quant_qual": "qualitative",
+  "type": "intervention", "intervention_name": "Cadê o Kauê? chat-story",
+  "kf1": "Uses the NASSS-CAT tool to map technology, organisation, and system complexities in the school implementation of the Cadê o Kauê? chat-story."
+ },
+ "https://openalex.org/W7133563902": {
+  "country": "International", "design": "Rapid review (economic evaluations)", "quant_qual": "quantitative",
+  "type": "review", "sample_size": "15 studies", "age_9_25": "Children and young people up to 25",
+  "kf1": "Most digital health interventions for youth mental health were reported cost-effective under certain conditions, though evidence is not conclusive due to short follow-up and methodological variability."
+ },
+ "https://openalex.org/W7163568000": {
+  "country": "United Kingdom (England)", "design": "Cross-sectional (MAIHDA intersectional)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "19,590 students (aged 11-16)", "age_9_25": "Adolescents aged 11-16",
+  "demographics": "OxWell 2023 Student Survey participants",
+  "kf1": "Maltreatment raised emotional problems across all intersectional strata, with the highest burden among socioeconomically disadvantaged female/non-binary adolescents."
+ },
+ "https://openalex.org/W7154155501": {
+  "country": "Brazil", "design": "Implementation evaluation (qualitative, NASSS-CAT)", "quant_qual": "qualitative",
+  "type": "intervention", "intervention_name": "Cadê o Kauê? chat-story",
+  "kf1": "Evaluates the school implementation of the Cadê o Kauê? chatbot using the NASSS framework to identify and manage sociotechnical complexity."
+ },
+ "https://openalex.org/W4417423092": {
+  "country": "Colombia", "setting": "Conflict-affected schools, Tumaco", "design": "Cluster RCT (mixed methods)",
+  "randomized": "yes", "quant_qual": "mixed", "type": "intervention", "intervention_name": "3C program",
+  "age_9_25": "Adolescents", "demographics": "Afro-Colombian adolescents affected by armed conflict",
+  "kf1": "The 3C program increased resilience (d=0.89 at 6 months) and lowered anxiety and PTSD across follow-ups, but depression and prosociality gains attenuated by 9 months without boosters.",
+  "effect_sizes": "Resilience +13.14 points, d=0.89 at 6 months"
+ },
+ "https://openalex.org/W7161743771": {
+  "country": "Colombia", "setting": "Conflict-affected schools, Tumaco", "design": "Phenomenological qualitative",
+  "quant_qual": "qualitative", "type": "intervention", "intervention_name": "3Cs psychosocial intervention",
+  "sample_size": "32 teachers", "age_teacher": "Teachers",
+  "demographics": "Teachers in conflict-affected schools in Tumaco",
+  "teacher_detail": "Teacher transformation; compassion; emotional regulation",
+  "kf1": "Teachers transformed through first-person engagement with 3Cs practices (not just delivery), with bidirectional teacher-student dynamics sustaining motivation; sustainability required institutional support."
+ },
+ "https://openalex.org/W4403967042": {
+  "country": "Colombia", "setting": "Bogotá and Malambo", "design": "Qualitative", "quant_qual": "qualitative",
+  "type": "observational", "age_caregiver": "Mothers and fathers",
+  "demographics": "Low-income caregivers in two Colombian cities",
+  "kf1": "Found tensions between parents' stated gender attitudes and actual parenting practices, shaped by SES, employment, family structure, child gender, and intergenerational transmission of gender norms."
+ },
+ "https://openalex.org/W4415970737": {
+  "country": "Colombia", "setting": "Bogotá and Soacha", "design": "Cross-sectional (structural equation modeling)",
+  "quant_qual": "quantitative", "type": "observational", "sample_size": "267 parents (child mean age 13.66 months)",
+  "age_0_8": "Young children (~14 months)", "age_caregiver": "Parents",
+  "demographics": "Low-income households in Bogotá and Soacha, Colombia",
+  "kf1": "Positive parental beliefs about violence reduced stimulating activities (lowering child effortful control/positive affect), and parental distress increased violent punishment (raising negative affectivity).",
+  "effect_sizes": "Structural equation model paths (beliefs/distress -> parenting -> child behavior)"
+ },
+ "https://openalex.org/W4386084038": {
+  "country": "U.S.", "design": "Cross-sectional (person-centered; social stress test)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "109 female adolescents (ages 12-17)", "age_9_25": "Female adolescents aged 12-17",
+  "biomarkers": "Salivary cortisol; fMRI fronto-limbic activation/connectivity",
+  "demographics": "Female adolescents oversampled for non-suicidal self-injury",
+  "kf1": "A discordant stress experience-expression-physiology group showed higher depressive symptoms, suicidal ideation, attempts, and NSSI; no significant brain-function group differences."
+ },
+ "https://openalex.org/W4391380455": {
+  "design": "Epigenome-wide association study (case-control)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "84 BD/SA; 79 BD/non-SA; 76 controls (replication 48/47)", "age_adult": "Adults",
+  "biomarkers": "Blood DNA methylation (>700,000 sites)",
+  "demographics": "Adults with bipolar disorder with/without suicide-attempt history",
+  "kf1": "Identified immune-related differentially methylated positions/regions distinguishing bipolar disorder with vs without suicide attempt; a combined epigenetic-clinical classifier reached AUC ~89%.",
+  "effect_sizes": "Combined classifier AUC 88.8% (discovery), 82.1% (replication)"
+ },
+ "https://openalex.org/W4391103340": {
+  "country": "Pakistan", "design": "Cross-sectional online survey", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "5,157",
+  "demographics": "Pakistani public (online survey respondents)",
+  "kf1": "Personal/social experiences of suicide and self-harm were common; mental illness was recognized as a key contributor; women and youth emerged as higher-risk groups, with social/financial barriers to help-seeking."
+ },
+ "https://openalex.org/W4411080083": {
+  "design": "Case-control biomarker study (extracellular vesicles)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "20 bipolar / 20 controls (L1CAM); 21/20 (bulk)", "age_adult": "Adults",
+  "biomarkers": "Blood extracellular-vesicle microRNA (L1CAM neural-enriched)",
+  "kf1": "34 microRNAs were differentially expressed in neural-enriched (L1CAM) extracellular vesicles in bipolar disorder, with clinical-feature associations only in the L1CAM fraction."
+ },
+ "https://openalex.org/W4415947581": {
+  "design": "Case-control biomarker study (extracellular vesicles)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "21 bipolar / 20 controls", "age_adult": "Adults",
+  "biomarkers": "Blood extracellular-vesicle microRNA (L1CAM and bulk)",
+  "kf1": "Neural-origin (L1CAM) extracellular-vesicle microRNA signatures (implicating PTEN) corresponded more closely to bipolar-disorder clinical features than bulk EV signatures."
+ },
+ "https://openalex.org/W4413375303": {
+  "country": "U.S.", "design": "Longitudinal cohort (ABCD)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "1,086", "age_0_8": "Late childhood (some)", "age_9_25": "Children/early adolescents",
+  "biomarkers": "Neurocognitive performance",
+  "kf1": "In late childhood, inconsistent reporting of self-injurious thoughts/behaviors over time was the norm (67-80%), associated with lower clinical severity, younger age, and lower neurocognitive performance."
+ },
+ "https://openalex.org/W4406682369": {
+  "design": "Qualitative (interpretative phenomenological analysis)", "quant_qual": "qualitative", "type": "observational",
+  "sample_size": "20 adults with bipolar disorder", "age_adult": "Adults",
+  "demographics": "Adults with clinically stable bipolar disorder",
+  "kf1": "Identified three domains of lived bipolar experience (benefit/burden; self/other; ineffability to meaning-making) to inform more individualized care."
+ },
+ "https://openalex.org/W4417130668": {
+  "design": "Experimental/survey (two studies)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "353 (two studies)",
+  "kf1": "A bottom-up person-in-situation approach quantified 'miserable functioning'; higher misery scores related to lower flourishing, more psychopathology, and goal-pursuit deficits, visible to peers."
+ },
+ "https://openalex.org/W7162130376": {
+  "design": "Critical integrative review", "quant_qual": "qualitative", "type": "review", "sample_size": "130 studies",
+  "kf1": "Conversational AI can scaffold early emotional stabilisation and self-reflection but is structurally limited for enduring growth; engagement-optimised design (flattery, validation) is a systematic barrier."
+ },
+ "https://openalex.org/W7156004041": {
+  "design": "Multi-method evaluation (LLM benchmarking)", "quant_qual": "mixed", "type": "other",
+  "kf1": "Across three studies, large language models detected psychosocial risk (suicide, IPV, substance misuse) with high accuracy and were perceived as empathic/useful, but suicidality was harder and supervision is needed before clinical deployment."
+ },
+ "https://openalex.org/W4391031896": {
+  "country": "Türkiye; Israel", "design": "Observational (human simulation sessions)", "quant_qual": "qualitative",
+  "type": "intervention", "intervention_name": "Co-constructive patient simulation (CCPS, locally adapted)",
+  "sample_size": "53 learners (psychiatry trainees and faculty)",
+  "demographics": "Child/adolescent psychiatry trainees and faculty in Türkiye and Israel",
+  "kf1": "Adapting co-constructive patient simulation to local languages and cultures strengthened reflective practice and regional psychiatric communities of practice, countering Western hegemony in training."
+ },
+ "https://openalex.org/W4387581247": {
+  "design": "Correction notice", "quant_qual": "quantitative", "type": "other",
+  "kf1": "Correction to an article on early childhood education/care quality and child outcomes."
+ },
+ "https://openalex.org/W4398521407": {
+  "country": "Jordan; Lebanon; Syria", "design": "Program/dataset (intervention adaptation)", "quant_qual": "mixed",
+  "type": "intervention", "intervention_name": "Reach Up and Learn (RUL) / Ahlan Simsim home visiting (phone-based)",
+  "age_0_8": "Children 6-42 months", "age_caregiver": "Caregivers",
+  "demographics": "Syrian refugee and host-community families",
+  "kf1": "Documents adaptation of the Reach Up and Learn home-visiting program to audio-only phone delivery for Syrian refugee and host families during COVID-19, with most caregivers preferring phone calls."
+ }
+}

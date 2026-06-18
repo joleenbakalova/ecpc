@@ -1,0 +1,215 @@
+{
+ "https://openalex.org/W4400024098": {
+  "country": "International", "design": "Delphi consensus (reporting-guideline development)",
+  "quant_qual": "mixed", "type": "review", "longitudinal": "no", "randomized": "not applicable",
+  "sample_size": "384 Delphi participants (321 in both rounds); 31 consensus-meeting experts",
+  "demographics": "Scientists, journal editors, and research funders (international)",
+  "kf1": "Developed CONSORT-SPI 2018, extending 9 CONSORT 2010 items and adding a stakeholder-involvement item, to improve transparent reporting of social/psychological intervention RCTs."
+ },
+ "https://openalex.org/W4400024048": {
+  "country": "International", "design": "Delphi consensus (reporting-guideline development)",
+  "quant_qual": "mixed", "type": "review", "longitudinal": "no", "randomized": "not applicable",
+  "sample_size": "384 Delphi participants; 31 consensus-meeting experts",
+  "demographics": "Behavioural and social scientists, journal editors, funders (international)",
+  "kf1": "CONSORT-SPI 2018 extends 9 of 25 CONSORT 2010 items and adds a stakeholder-involvement item for reporting social/psychological intervention RCTs."
+ },
+ "https://openalex.org/W4407162562": {
+  "country": "Colombia", "setting": "Schools (field testing in Chocó)",
+  "design": "Field note / intervention development", "quant_qual": "qualitative",
+  "type": "intervention", "intervention_name": "Coaching-Observing-Reflecting-Engaging (CORE) for Teachers",
+  "demographics": "Teachers in low- and middle-income/conflict-affected settings",
+  "teacher_detail": "Teacher wellbeing; classroom climate",
+  "kf1": "Describes development and field testing of CORE, an acceptance-and-commitment-therapy- and SEL-based intervention to improve teacher wellbeing; now ready for feasibility/effectiveness studies."
+ },
+ "https://openalex.org/W4407721156": {
+  "design": "Autobiographical book chapter", "type": "other", "quant_qual": "qualitative",
+  "longitudinal": "no",
+  "kf1": "Reflective career chapter tracing the author's path into developmental psychology and SEL intervention research in conflict-affected settings."
+ },
+ "https://openalex.org/W4412941865": {
+  "country": "Ghana", "setting": "Pre-primary schools",
+  "design": "Case study / methodological review", "type": "intervention",
+  "intervention_name": "In-service teacher training and parental-awareness program",
+  "demographics": "Pre-primary children; teachers; education ministry partners",
+  "teacher_detail": "Teacher training; classroom quality",
+  "kf1": "Reviews a research-practice partnership in Ghana that developed and evaluated teacher-training and parental-awareness programs to improve preprimary quality and school readiness."
+ },
+ "https://openalex.org/W4412033923": {
+  "country": "Nepal", "setting": "Secondary deaf schools",
+  "design": "RCT", "randomized": "yes", "type": "intervention", "quant_qual": "mixed",
+  "intervention_name": "Values affirmation intervention", "control": "Control writing exercise",
+  "demographics": "Deaf secondary-school students",
+  "kf1": "Values affirmation had a small effect lowering perceived stereotype threat and improving academic performance, stronger among students reporting fewer initial threats.",
+  "kf2": "Qualitative themes of self-identity growth and friendship predicted better academic performance in the treatment group."
+ },
+ "https://openalex.org/W7160414418": {
+  "country": "Lebanon", "setting": "Non-formal education support program",
+  "design": "Cluster RCT (secondary analysis)", "randomized": "yes", "type": "intervention",
+  "quant_qual": "quantitative", "sample_size": "2,757 students; 131 teachers",
+  "age_0_8": "Some (school-aged refugee children)",
+  "demographics": "Syrian refugee children in Lebanon",
+  "kf1": "Teacher-reported Working Memory Functioning had a unique bidirectional relationship with academic performance; no other SEL skill showed this pattern.",
+  "effect_sizes": "Multilevel modeling; bidirectional WMF<->academic performance significant"
+ },
+ "https://openalex.org/W4386030601": {
+  "country": "Bhutan; Rwanda", "design": "Mixed-methods case studies", "quant_qual": "mixed",
+  "type": "intervention", "intervention_name": "Prescription to Play (Bhutan); Sugira Muryango (Rwanda)",
+  "demographics": "Parents of young children; delivery workforce (health assistants/volunteers)",
+  "age_caregiver": "Parents", "caregiver_detail": "Parenting practices; workforce delivery quality",
+  "kf1": "Delivery quality was generally good (mean 2.36 Bhutan, 2.44 Rwanda of 3); scaling facilitators were institutionalized training/knowledgeable workforce (Bhutan) and strong supervision (Rwanda); barriers were overwork (Bhutan) and volunteer attrition (Rwanda).",
+  "effect_sizes": "Mean delivery-quality rating 2.36 (Bhutan), 2.44 (Rwanda) of 3"
+ },
+ "https://openalex.org/W4387909691": {
+  "country": "Rwanda", "design": "Cost-effectiveness analysis (RCT-based)", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Sugira Muryango (home-visiting)",
+  "demographics": "Families with young children",
+  "caregiver_detail": "Parent-child relationships; violence reduction",
+  "kf1": "Intervention cost US$456/family (projected <US$200 at scale); generated small but efficient improvements in cognitive development per home visit, with co-benefits of reduced violence.",
+  "effect_sizes": "US$456 per family"
+ },
+ "https://openalex.org/W4387439361": {
+  "country": "Global", "design": "Consensus statement / narrative review", "quant_qual": "qualitative",
+  "type": "review", "longitudinal": "no", "randomized": "not applicable",
+  "demographics": "Refugee adolescents",
+  "kf1": "Consensus statement applying an integrative risk-and-resilience model to refugee adolescents' developmental and acculturative tasks and psychological adjustment, with recommendations across ecological contexts."
+ },
+ "https://openalex.org/W4387564259": {
+  "country": "Sierra Leone", "design": "Qualitative (participatory adaptation, ADAPT-ITT)",
+  "quant_qual": "qualitative", "type": "intervention",
+  "intervention_name": "Youth Readiness Intervention (YRI) peer-delivery model",
+  "demographics": "Youth (Youth Community Advisory Boards)",
+  "kf1": "ADAPT-ITT framework feasibly guided adaptation of the YRI to a peer-delivery model; participatory methods produced modifications (storytelling, metaphor refinement, low-literacy accessibility, attention to gender)."
+ },
+ "https://openalex.org/W4391514532": {
+  "country": "Sierra Leone", "setting": "Secondary schools",
+  "design": "Cluster RCT (protocol; hybrid type 3)", "randomized": "yes", "type": "intervention",
+  "quant_qual": "mixed", "sample_size": "50 schools; 160 teachers; 1,200 youth",
+  "intervention_name": "Youth Readiness Intervention (YRI) with mobile-based supervision",
+  "control": "Standard in-person supervision; waitlist control",
+  "demographics": "Secondary-school teachers and youth",
+  "kf1": "Protocol to test feasibility, acceptability, cost, and fidelity of mobile- vs. standard supervision for teacher-delivered YRI in Sierra Leone."
+ },
+ "https://openalex.org/W4393150756": {
+  "design": "Framework application / case studies", "quant_qual": "qualitative", "type": "review",
+  "kf1": "Presents three case studies illustrating how the Exploration-Preparation-Implementation-Sustainment (EPIS) framework can be applied in implementation-science research."
+ },
+ "https://openalex.org/W4404831830": {
+  "country": "Colombia", "design": "Mixed-methods pilot (ADAPT-ITT / FRAME-IS)", "quant_qual": "mixed",
+  "type": "intervention", "intervention_name": "Youth Readiness Intervention (YRI)",
+  "sample_size": "Conflict-affected youth aged 18-28", "age_9_25": "Youth aged 18-28",
+  "demographics": "Conflict-affected Colombian youth aged 18-28",
+  "kf1": "YRI was successfully culturally adapted for conflict-affected Colombian youth; testing showed significant improvements in emotion regulation and functional impairment and high acceptability."
+ },
+ "https://openalex.org/W4393971121": {
+  "country": "Low- and middle-income (multiple)", "design": "Systematic review", "quant_qual": "quantitative",
+  "type": "review", "longitudinal": "no", "randomized": "not applicable",
+  "sample_size": "80 studies; n=18,193 participants",
+  "demographics": "Children/adolescents aged 0-24 in LMICs, including humanitarian settings",
+  "kf1": "80 studies covering 64 parenting/family interventions; 43 showed evidence of effect on child/adolescent mental health; common active ingredients were caregiver psychoeducation, communication skills, and differential reinforcement.",
+  "effect_sizes": "80 studies, n=18,193; 43/64 interventions effective"
+ },
+ "https://openalex.org/W4400103728": {
+  "country": "Palestine (Gaza)", "design": "Commentary/essay", "quant_qual": "qualitative", "type": "other",
+  "demographics": "Palestinian children living under occupation/blockade",
+  "kf1": "Essay on the psychological and social suffering of Palestinian children in Gaza living under prolonged occupation, violence, displacement, and blockade."
+ },
+ "https://openalex.org/W4404235448": {
+  "country": "U.S.", "design": "Qualitative (inductive thematic analysis)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "10 providers",
+  "demographics": "Health-care/service providers working with ethnic-Nepali Bhutanese American older adults",
+  "kf1": "Providers identified isolation and shifting responsibilities as barriers to older Bhutanese Americans' wellbeing, and storytelling/community events as a facilitator countering isolation."
+ },
+ "https://openalex.org/W4409021075": {
+  "country": "Rwanda", "design": "Spillover-effect cohort (RCT-embedded)", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Sugira Muryango (home-visiting)",
+  "sample_size": "247 younger siblings", "age_0_8": "Younger siblings (infants/toddlers)",
+  "demographics": "Younger siblings of children enrolled in Sugira Muryango",
+  "kf1": "No statistically significant spillover effects of Sugira Muryango on younger siblings' temperament (surgency, negative emotionality, orienting).",
+  "effect_sizes": "Surgency B=1.984 p=.24; negative emotionality B=-1.657 p=.36; orienting B=0.551 p=.75"
+ },
+ "https://openalex.org/W4415266593": {
+  "country": "Sierra Leone", "design": "Economic evaluation (return-on-investment / costing)",
+  "quant_qual": "quantitative", "type": "intervention",
+  "intervention_name": "Youth Readiness Intervention (YRI) + Entrepreneurship (ENTR)",
+  "demographics": "War-affected youth",
+  "kf1": "YRI+ENTR cost $305.44/participant (ENTR alone $177.05); ROI 1.01-1.95 for YRI+ENTR and 2.53-6.92 for ENTR alone, with 8.5-fold larger healthcare savings for YRI+ENTR.",
+  "effect_sizes": "ROI 1.01-1.95 (YRI+ENTR); 2.53-6.92 (ENTR alone)"
+ },
+ "https://openalex.org/W4407959055": {
+  "country": "Sierra Leone", "design": "Qualitative (grounded theory / thematic)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "228 (42 key-informant interviews; 27 focus groups)",
+  "demographics": "People affected by the 2014-16 Ebola Virus Disease outbreak",
+  "kf1": "Most stressors (isolation, rejection, stigma, discrimination) and supports emerged at the community level; spirituality/religion and avoidance were key coping strategies, with notable community resilience despite limited formal support."
+ },
+ "https://openalex.org/W4415267035": {
+  "country": "U.S.", "setting": "Omaha and Lincoln, Nebraska",
+  "design": "Cluster RCT (protocol; hybrid type I)", "randomized": "yes", "type": "intervention",
+  "quant_qual": "mixed", "sample_size": "154 US-born adolescents + 1 parent each (dyads)",
+  "age_9_25": "Adolescents ages 14-17", "age_caregiver": "Biological parents (resettled refugees)",
+  "intervention_name": "Family strengthening (multiple family groups) + Virtual TeenAge Health Consultants (TAHC)",
+  "control": "Usual care",
+  "demographics": "US-born children (14-17) of refugee parents and one biological parent",
+  "kf1": "Protocol to adapt/test a combined family-strengthening + peer-mentoring intervention addressing intergenerational trauma among US-born children of refugee parents."
+ },
+ "https://openalex.org/W7131241304": {
+  "design": "Commentary/analysis", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Argues that implementation and systems strengthening are urgently needed to integrate mental-health and psychosocial support across health, education, and social-protection platforms for conflict-affected children."
+ },
+ "https://openalex.org/W7148831116": {
+  "country": "Rwanda", "design": "Secondary analysis of cluster RCT", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "1,518 caregivers (309 with a child 12-36 months with developmental delay)",
+  "age_0_8": "Children 12-36 months with developmental delay", "age_caregiver": "Primary caregivers",
+  "demographics": "Caregivers of young children with disabilities/developmental delay",
+  "caregiver_detail": "Caregiver depression; family unity; intimate partner violence",
+  "kf1": "65% of caregivers of children with disabilities met the cut-off for likely depression; economic hardship, food insecurity, and caregiver illness were risk factors and family unity was protective.",
+  "effect_sizes": "Economic hardship β=0.158; caregiver illness β=0.183; family unity β=-0.013; IPV β=0.306 (all p<0.01)"
+ },
+ "https://openalex.org/W7147693013": {
+  "country": "Iraq", "setting": "Sinjar district and Duhok governorate",
+  "design": "Convergent mixed-methods", "quant_qual": "mixed", "type": "observational",
+  "sample_size": "30 former CAAFAGs; 10 providers",
+  "age_0_8": "Boys abducted aged 8-14", "age_9_25": "Male Yazidi youth (former child soldiers)",
+  "demographics": "Male Yazidi former children associated with armed forces/groups (abducted aged 8-14)",
+  "kf1": "70% of male Yazidi former CAAFAGs had received no mental-health care since captivity; 96.7% acknowledged needing care but only one was seeking it, revealing an MHPSS service gap for males."
+ },
+ "https://openalex.org/W4414835189": {
+  "country": "U.S.", "setting": "New England",
+  "design": "Hybrid Type II implementation-effectiveness RCT (EPIS)", "randomized": "yes",
+  "quant_qual": "mixed", "type": "intervention",
+  "intervention_name": "Family Strengthening Intervention for Resettlement (FSI-R)", "control": "Usual care",
+  "demographics": "Somali Bantu and Bhutanese resettled refugee families",
+  "caregiver_detail": "Family functioning; parental supervision",
+  "kf1": "Bhutanese families receiving FSI-R showed greater improvements in parental supervision vs. usual care; responsiveness to community needs supported implementation during COVID-19."
+ },
+ "https://openalex.org/W4408884306": {
+  "country": "Rwanda", "design": "Hybrid Type-2 implementation-effectiveness (embedded RCT)",
+  "randomized": "yes", "quant_qual": "quantitative", "type": "intervention",
+  "intervention_name": "Sugira Muryango (PLAY Collaborative scaling strategy)",
+  "sample_size": "538 households (778 caregivers, 555 children)",
+  "age_0_8": "Children under 3", "age_caregiver": "Caregivers",
+  "demographics": "Families eligible for social protection in three rural districts",
+  "caregiver_detail": "Stimulating care; father involvement; harsh discipline; caregiver mental health",
+  "kf1": "Child-protection volunteers delivered SM with high fidelity; embedded trial showed improved home stimulation (d=0.20), learning materials (d=0.37), father involvement (IRR=1.18), reduced harsh discipline (OR=0.34), and improved caregiver mental health (d=-0.13).",
+  "effect_sizes": "Stimulation d=0.20; involvement d=0.37; father IRR=1.18; harsh discipline OR=0.34; dietary diversity d=0.25; caregiver MH d=-0.13; safe water OR=3.14"
+ },
+ "https://openalex.org/W7131275388": {
+  "design": "Commentary/analysis", "quant_qual": "qualitative", "type": "other",
+  "demographics": "Children in fragile and conflict-affected settings",
+  "kf1": "Argues responses to children in fragile/conflict settings must move beyond event-based framings to address cumulative and intergenerational adversity."
+ },
+ "https://openalex.org/W4389332432": {
+  "design": "Machine-learning methods study (likely author mismatch – not ECD)",
+  "quant_qual": "quantitative", "type": "other",
+  "kf1": "[Likely wrong-author match] NLP study comparing GPT-Neo and GPT-2 for intent classification of consumer communications."
+ },
+ "https://openalex.org/W4389332427": {
+  "design": "Machine-learning methods study (likely author mismatch – not ECD)",
+  "quant_qual": "quantitative", "type": "other",
+  "kf1": "[Likely wrong-author match] NLP study classifying influencer tweets as sponsored vs. not using BERT/GPT-2/GPT-Neo."
+ },
+ "https://openalex.org/W4404916286": {
+  "design": "Machine-learning methods study (likely author mismatch – not ECD)",
+  "quant_qual": "quantitative", "type": "other",
+  "kf1": "[Likely wrong-author match] Ensemble GPT-2 + LSTM method for identifying transactional receipts in email."
+ }
+}

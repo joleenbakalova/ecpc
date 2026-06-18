@@ -1,0 +1,186 @@
+{
+ "https://openalex.org/W4391690798": {
+  "country": "U.S.", "design": "Cross-sectional survey", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "19 professionals across 15 schools of public health",
+  "demographics": "Public health school faculty",
+  "kf1": "Social innovation/entrepreneurship programming in US public-health schools faces sustainability concerns from insufficient funding and human resources."
+ },
+ "https://openalex.org/W4391754567": {
+  "country": "Palestine (Gaza)", "design": "Observational pre/post (geospatial/satellite)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "167,292 buildings; 106 medical complexes",
+  "kf1": "In the first month of the Gaza bombardment, ~9% of both medical complexes and other buildings were damaged, suggesting medical facilities did not receive the special protection required by international humanitarian law.",
+  "effect_sizes": "~9% damage to medical complexes and other buildings (p>0.73)"
+ },
+ "https://openalex.org/W4391140802": {
+  "country": "Eastern Mediterranean region", "design": "Ecological/secondary analysis (Global Burden of Disease)",
+  "quant_qual": "quantitative", "type": "observational",
+  "demographics": "Population-level orofacial cleft burden by age/gender",
+  "kf1": "Orofacial cleft prevalence and DALYs declined 1990-2019 but remained high; gender inequality (GII) was associated with cleft burden in the region.",
+  "effect_sizes": "Prevalence EAPC -0.05%; DALYs EAPC -2.10%; GII–DALY β female=0.48"
+ },
+ "https://openalex.org/W4399359480": {
+  "country": "Nepal", "setting": "Kathmandu", "design": "Qualitative (in-depth interviews)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "30 interviews", "age_adult": "Adult women",
+  "demographics": "Female sex workers in Kathmandu",
+  "kf1": "Shared mobile phones threatened female sex workers' privacy in a sharing culture; they used various strategies to conceal sex-work information, with mental/emotional burden."
+ },
+ "https://openalex.org/W4391539653": {
+  "country": "China", "setting": "Beijing and Wuhan", "design": "Cross-sectional (mediation)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "257 MSM newly diagnosed with HIV", "age_adult": "Adults",
+  "demographics": "Men who have sex with men living with HIV",
+  "kf1": "Social support mediated the relationship between HIV-related/family stigma and mental health among MSM living with HIV in China.",
+  "effect_sizes": "Total effect of stigma on MH β=-1.483; social-support mediation β=-0.321"
+ },
+ "https://openalex.org/W4390884756": {
+  "country": "Jordan", "design": "Qualitative (semi-structured interviews)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "17 SUD patients (male, aged 19-52)", "age_adult": "Adults",
+  "demographics": "Substance use disorder patients in Jordan",
+  "kf1": "COVID-19 affected substance availability, patterns of use, social life, tobacco smoking, and users' health and hygiene, informing intervention design."
+ },
+ "https://openalex.org/W4410488872": {
+  "country": "Syria", "setting": "Idlib Oncology Center", "design": "Retrospective case series", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "192 patients (median age 45.5; 56.5% internally displaced)", "age_adult": "Adult women",
+  "demographics": "Displaced and host women with breast cancer in northwest Syria",
+  "kf1": "High prevalence of late-stage breast cancer, high mastectomy rates, and long treatment delays in northwest Syria; displacement was associated with significantly lower survival.",
+  "effect_sizes": "Displacement–survival p=0.0038"
+ },
+ "https://openalex.org/W4413272488": {
+  "country": "Middle East and North Africa", "design": "Scoping review protocol", "quant_qual": "qualitative",
+  "type": "review", "demographics": "Forcibly displaced populations living with cancer",
+  "kf1": "Protocol for a scoping review of cancer-care interventions for forcibly displaced populations in MENA humanitarian settings."
+ },
+ "https://openalex.org/W4409864395": {
+  "country": "U.S.; Jordan", "design": "Program description/evaluation", "quant_qual": "mixed", "type": "other",
+  "kf1": "Describes the Yale-University of Jordan joint addiction-medicine training program, yielding cross-cultural education, research, and workforce-development outcomes."
+ },
+ "https://openalex.org/W4414565634": {
+  "country": "International", "design": "Systematic review and meta-analysis", "quant_qual": "quantitative", "type": "review",
+  "sample_size": "16 studies; 33,378 individuals",
+  "kf1": "Interventions to mitigate COVID-19 misinformation had a positive but non-significant pooled effect; more effective when participants were involved with the topic and text-only mitigation was used.",
+  "effect_sizes": "Pooled d=2.018 (95% CI -0.14 to 4.18), p=.065"
+ },
+ "https://openalex.org/W4408977330": {
+  "country": "Jordan", "design": "Educational intervention (pre-post)", "quant_qual": "quantitative", "type": "intervention",
+  "intervention_name": "Substance-use elective course for pharmacy students",
+  "sample_size": "99 students (53 in 2022; 46 in 2023)", "age_adult": "Adults (students)",
+  "demographics": "Pharmacy students in Jordan",
+  "kf1": "A novel substance-use elective increased knowledge (17.9 to 21.1/30) and improved attitudes toward harm reduction and non-stigmatizing terminology.",
+  "effect_sizes": "Knowledge 17.9 to 21.1 / 30"
+ },
+ "https://openalex.org/W4406435397": {
+  "country": "Ukraine", "setting": "Mariupol", "design": "Quasi-experimental (pre-post, satellite)", "quant_qual": "quantitative",
+  "type": "observational",
+  "kf1": "77% of medical facilities in Mariupol were damaged during Russia's siege; damage was unrelated to facility size, suggesting intentional targeting.",
+  "effect_sizes": "77% of medical facilities damaged"
+ },
+ "https://openalex.org/W7134833267": {
+  "country": "International", "design": "Cross-sectional analysis of published studies", "quant_qual": "qualitative",
+  "type": "review", "sample_size": "41 published papers",
+  "kf1": "Identified ten key ethical concepts and recommendations from 41 papers on HIV acquisition research in humanitarian crises."
+ },
+ "https://openalex.org/W7155621521": {
+  "country": "Syria", "design": "Narrative review (peer-reviewed + grey literature)", "quant_qual": "qualitative",
+  "type": "review", "age_adult": "Adult women",
+  "demographics": "Women with breast cancer in post-conflict Syria",
+  "kf1": "Syria's conflict fragmented oncology care (only two radiotherapy centers remain); rebuilding requires a cancer registry, decentralized tri-modality care, and workforce investment."
+ },
+ "https://openalex.org/W7129045923": {
+  "country": "Eastern Mediterranean region", "design": "Rapid systematic review and meta-analysis", "quant_qual": "quantitative",
+  "type": "review", "sample_size": "9 studies; n=2,465",
+  "demographics": "Forcibly displaced people from the Eastern Mediterranean Region",
+  "kf1": "Pooled prevalence of any mental-health disorder among EMR-origin forcibly displaced people was 28%, with PTSD and depression most measured and high heterogeneity.",
+  "effect_sizes": "Pooled prevalence 28% (95% CI 18-46%)"
+ },
+ "https://openalex.org/W4388035587": {
+  "design": "RCT (post-hoc dose-response analysis)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Cognitive training", "control": "Control group",
+  "sample_size": "26 intervention; 34 control (ages 6-13)", "age_0_8": "Children aged 6-8", "age_9_25": "Children aged 9-13",
+  "demographics": "Children aged 6-13 with ADHD",
+  "kf1": "Cognition improved significantly in the cognitive-training group but not controls; the number of completed sessions correlated with cognitive improvement (dose-response)."
+ },
+ "https://openalex.org/W4392291327": {
+  "design": "Postmortem single-cell transcriptomics (case-control)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "6 Tourette syndrome; 6 control post-mortem brains", "age_adult": "Adults (post-mortem)",
+  "biomarkers": "Single-cell transcriptomics and chromatin accessibility (caudate)",
+  "kf1": "Striatal interneurons were decreased ~50% in Tourette syndrome brains, with impaired mitochondrial/synaptic function and microglial immune activation."
+ },
+ "https://openalex.org/W4396811136": {
+  "country": "International", "design": "Scoping review", "quant_qual": "qualitative", "type": "review",
+  "sample_size": "6 relevant studies; 35 expert-identified interventions",
+  "demographics": "Children and adolescents affected by war",
+  "kf1": "Very limited evidence exists for digital mental-health interventions for war-affected children/adolescents; the review provides a framework for developing new ones."
+ },
+ "https://openalex.org/W4400738283": {
+  "country": "Brazil", "design": "Longitudinal cohort (growth mixture models)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "2,033 youths (ages 6-14 at baseline)",
+  "age_0_8": "Children aged 6-8 at baseline", "age_9_25": "Youth aged 9-14 (to young adulthood)",
+  "demographics": "Brazilian High-Risk Cohort for Mental Conditions",
+  "biomarkers": "Polygenic risk scores",
+  "kf1": "Three anxiety-symptom trajectories (high-decreasing, moderate/low-stable, low-increasing) emerged; lower IQ predicted the high-decreasing class and higher IQ the low-increasing class.",
+  "effect_sizes": "Low IQ OR=0.68 (high-decreasing); high IQ OR=1.95 (low-increasing)"
+ },
+ "https://openalex.org/W4415938882": {
+  "design": "Whole-exome sequencing (trio-based)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "1,466 Tourette trios; 6,714 autism trios; 5,880 control siblings",
+  "biomarkers": "De novo and rare inherited coding variants (whole-exome)",
+  "kf1": "Tourette syndrome showed exome-wide enrichment of protein-truncating de novo mutations distinct from autism, nominating PPP5C, EXOC1, and GXYLT1 as candidate risk genes."
+ },
+ "https://openalex.org/W4413244017": {
+  "design": "Case-control (resting-state EEG)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "137 children (51 TS, 24 ADHD, 29 TS+ADHD, 33 controls)", "age_9_25": "Children",
+  "biomarkers": "Resting-state EEG functional connectivity",
+  "kf1": "Tourette syndrome and ADHD were each independently associated with reduced functional connectivity (additive, not interactive), but externalizing problems showed a TS-by-ADHD interaction."
+ },
+ "https://openalex.org/W4413651023": {
+  "country": "Brazil", "design": "Machine learning (structural MRI)", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "209 anxiety; 232 healthy controls (ages 6-14)", "age_9_25": "Youth aged 6-14",
+  "biomarkers": "Structural MRI (FreeSurfer features)",
+  "kf1": "A random-forest classifier of anxiety from structural MRI achieved AUC 0.70 in testing but near-chance (AUC 0.51) in hold-out validation, indicating limited generalizability."
+ },
+ "https://openalex.org/W4415280910": {
+  "country": "Nigeria", "setting": "Secondary healthcare institutions (Yobe, Gombe, Borno)",
+  "design": "Qualitative (focus groups, interviews)", "quant_qual": "qualitative", "type": "intervention",
+  "intervention_name": "Digital-platform neonatal/essential newborn care education",
+  "demographics": "Frontline health workers",
+  "kf1": "Health workers learned essential newborn-care practices via digital learning and a neonatal simulator, but limited simulator access, connectivity, workload, and equipment shortages were barriers."
+ },
+ "https://openalex.org/W4410837991": {
+  "country": "Nigeria; Bangladesh", "design": "Prospective educational intervention (pre-post pilot)", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Essential Newborn Care (ENC) online course + low-dose high-frequency practice",
+  "sample_size": "18 facilitators; 236 frontline health workers (8 sites)",
+  "demographics": "Frontline health-care workers",
+  "kf1": "Remote-oriented facilitators trained 236 health workers; all sites showed significant knowledge and bag-mask-ventilation skill improvements, maintained at endline."
+ },
+ "https://openalex.org/W4406522606": {
+  "country": "U.S.", "design": "Qualitative pilot study", "quant_qual": "qualitative", "type": "observational",
+  "sample_size": "25 SEL stakeholders",
+  "demographics": "K-12 educators, administrators, policymakers, families, SEL researchers",
+  "kf1": "SEL research evidence currently lacks accessibility for policymakers and practitioners; stakeholders mostly access SEL evidence via news/education media, with limited translation to practice."
+ },
+ "https://openalex.org/W4406946780": {
+  "country": "U.S.", "design": "Qualitative pilot study", "quant_qual": "qualitative", "type": "observational",
+  "sample_size": "25 SEL stakeholders",
+  "demographics": "K-12 educators, administrators, policymakers, families, SEL researchers",
+  "kf1": "SEL evidence lacks accessibility for decision-makers; stakeholders access it diversely (mostly via media), limiting translation to practice (duplicate record)."
+ },
+ "https://openalex.org/W4406970310": {
+  "country": "U.S.", "design": "Qualitative pilot study", "quant_qual": "qualitative", "type": "observational",
+  "sample_size": "25 SEL stakeholders",
+  "demographics": "K-12 educators, administrators, policymakers, families, SEL researchers",
+  "kf1": "SEL evidence lacks accessibility for decision-makers; stakeholders access it diversely (mostly via media), limiting translation to practice (duplicate record)."
+ },
+ "https://openalex.org/W4385583530": {
+  "country": "International", "design": "Evidence and gap map protocol", "quant_qual": "quantitative", "type": "review",
+  "age_0_8": "Young children aged 3-8", "demographics": "Young children aged 3-11",
+  "kf1": "Protocol for a live evidence and gap map of universal school-based social-and-emotional-learning programmes for young children aged 3-11."
+ },
+ "https://openalex.org/W4401080759": {
+  "design": "Educational evaluation (likely author mismatch – occupational therapy)", "quant_qual": "quantitative", "type": "other",
+  "kf1": "[Likely wrong-author match] Evaluation of a continuing-education session on 'meaningful engagement' in occupational therapy practice."
+ },
+ "https://openalex.org/W4397013757": {
+  "design": "Cross-sectional pilot survey (likely author mismatch – occupational therapy/women's health)", "quant_qual": "quantitative",
+  "type": "observational", "age_adult": "Adult women",
+  "kf1": "[Likely wrong-author match] Pilot study of workplace behaviors and urinary incontinence in adult women."
+ }
+}

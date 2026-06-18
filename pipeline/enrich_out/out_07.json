@@ -1,0 +1,184 @@
+{
+ "https://openalex.org/W4388521516": {
+  "country": "U.S.", "design": "Quasi-experimental", "quant_qual": "quantitative", "type": "intervention",
+  "intervention_name": "CareerAdvance (two-generation) + Head Start", "age_caregiver": "Low-income parents",
+  "demographics": "Low-income parents of young children",
+  "kf1": "CareerAdvance promoted parents' educational advancement over three years, with weaker evidence for career/psychological benefits and no economic gains; effects were larger for parents without baseline postsecondary credentials."
+ },
+ "https://openalex.org/W4387167677": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer ($333 vs $20/month)", "control": "Low-cash gift ($20/month)",
+  "sample_size": "1,000 mother-infant dyads (4 US cities)", "age_0_8": "Infants/young children", "age_caregiver": "Low-income mothers",
+  "demographics": "Low-income mothers (42% Black, 41% Hispanic)",
+  "kf1": "No statistically detectable differences between high- and low-cash groups in maternal assessments of children's health, sleep, or nutrition.",
+  "effect_sizes": "Effect sizes 0.01-0.08"
+ },
+ "https://openalex.org/W4395693556": {
+  "country": "China", "design": "Longitudinal", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "364 families", "age_0_8": "Infancy/toddlerhood (14-24 months, maternal sensitivity)",
+  "age_9_25": "Adolescents (age 15)", "demographics": "Chinese families",
+  "kf1": "Maternal sensitivity in infancy predicted lower adolescent friend conflict, partially mediated by secure base script knowledge; the script also buffered loneliness under high friend conflict.",
+  "effect_sizes": "Maternal sensitivity->friend conflict β=-0.17; script moderation β=-0.15"
+ },
+ "https://openalex.org/W4401890623": {
+  "country": "U.S.", "design": "RCT (mixed methods)", "randomized": "yes", "quant_qual": "mixed", "type": "intervention",
+  "intervention_name": "Two-Generation ESL program + Head Start", "sample_size": "189 immigrant parents (67 in focus groups)",
+  "age_caregiver": "Immigrant parents", "demographics": "Latinx and Zomi immigrant parents and their children",
+  "kf1": "Treatment parents reported higher English writing skills and self-esteem and lower language brokering and material hardship; no significant differences in children's outcomes."
+ },
+ "https://openalex.org/W4399215446": {
+  "country": "Global", "design": "Conceptual review", "quant_qual": "qualitative", "type": "review",
+  "age_0_8": "Young children (0-6)", "age_caregiver": "Caregivers",
+  "demographics": "Children 0-6 and their caregivers worldwide",
+  "kf1": "Argues two-generation approaches addressing children's and caregivers' interrelated needs are more effective than single-generation approaches; identifies five global models."
+ },
+ "https://openalex.org/W4401077602": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer", "control": "Low-cash gift",
+  "sample_size": "563 mothers and 1-year-olds", "age_0_8": "1-year-olds", "age_caregiver": "Low-income mothers",
+  "demographics": "Racially diverse low-income US mothers",
+  "kf1": "Monthly unconditional cash transfers did not affect mothers' child-directed speech or child vocalizations during home play, though variability was wide.",
+  "effect_sizes": "Effect sizes -.08 to .02"
+ },
+ "https://openalex.org/W4399049405": {
+  "country": "U.S.", "design": "Mixed methods (intersectional)", "quant_qual": "mixed", "type": "observational",
+  "sample_size": "38 students; 58 advisors", "age_9_25": "Youth",
+  "demographics": "Youth and advisors in gender-sexuality alliances",
+  "kf1": "Critical intersectional conversations on race/sexuality/gender occurred infrequently in GSAs; youth desired them and wanted advisors to facilitate critically reflective discussions."
+ },
+ "https://openalex.org/W4395465598": {
+  "design": "Longitudinal (9-year)", "quant_qual": "quantitative", "type": "observational", "age_9_25": "Youth",
+  "kf1": "A developmental antecedent was associated with later adherence to masculinity norms, significant only for boys."
+ },
+ "https://openalex.org/W4401178358": {
+  "country": "U.S.", "setting": "Tulsa, Oklahoma", "design": "Quasi-experimental (matched comparison)",
+  "quant_qual": "quantitative", "type": "intervention", "intervention_name": "CareerAdvance + Head Start",
+  "sample_size": "286 children (147 CareerAdvance; 139 comparison; M=3.6 years)", "age_0_8": "Preschool children (~3.6 years)",
+  "demographics": "Children of low-income parents (40% Black, 33% mixed/other)",
+  "kf1": "Adding parent education/workforce training to Head Start neither improved nor worsened children's academic, language, math, or inhibitory-control outcomes over three years."
+ },
+ "https://openalex.org/W4401396166": {
+  "country": "Ghana", "setting": "Pre-primary classrooms", "design": "Psychometric/observational (factor analysis)",
+  "quant_qual": "quantitative", "type": "observational", "sample_size": "420 classrooms (videos)", "age_0_8": "Pre-primary children",
+  "teacher_detail": "Support for engaged/playful learning (exploration, social connectedness, emotional climate)",
+  "kf1": "The PLAY observational tool captured three classroom domains of engaged learning; a teacher professional-development program had large impacts on all three (d=0.55-1.01).",
+  "effect_sizes": "Professional-development impacts d=0.55-1.01"
+ },
+ "https://openalex.org/W4399124305": {
+  "country": "China", "setting": "Nanjing", "design": "Qualitative (interviews)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "62 father-mother pairs", "age_caregiver": "Parents",
+  "demographics": "Chinese father-mother pairs",
+  "kf1": "Chinese parents believed fathers steer 'broad' child development and masculinity cultivation while mothers handle 'trivial' tasks, reflecting pressure around rigid masculinity standards."
+ },
+ "https://openalex.org/W4404012494": {
+  "country": "U.S.", "setting": "Massachusetts", "design": "Psychometric (factor analysis, measurement invariance)",
+  "quant_qual": "quantitative", "type": "observational", "sample_size": "823 youth", "age_9_25": "Youth",
+  "demographics": "Straight and sexual/gender-minority Black, Latinx, and white youth",
+  "kf1": "Critical-consciousness measures showed separate reflection and political-efficacy factors with partial invariance across groups; political efficacy related to better mental health and grades across groups."
+ },
+ "https://openalex.org/W4393864876": {
+  "country": "U.S.", "design": "Measurement validation within an intervention", "quant_qual": "quantitative", "type": "intervention",
+  "intervention_name": "Transformative curiosity/active-listening training", "sample_size": "293", "age_9_25": "Early adolescents",
+  "kf1": "A new active-listening measure (open-ended and follow-up questions) was reliable and sensitive to intervention change; follow-up questions related to empathy and being perceived as a good listener."
+ },
+ "https://openalex.org/W4396238336": {
+  "country": "Global", "design": "Systematic review of reviews", "quant_qual": "quantitative", "type": "review",
+  "sample_size": "67 studies/reviews",
+  "demographics": "Children experiencing violence in the home (INSPIRE strategies)",
+  "kf1": "Found extensive evidence for parent/caregiver-support interventions to prevent violence against children, but scarce evidence on other INSPIRE strategies and underrepresentation of LMIC/conflict-affected samples."
+ },
+ "https://openalex.org/W4392058380": {
+  "country": "Global", "design": "Conceptual framework", "quant_qual": "qualitative", "type": "review",
+  "kf1": "Presents a bioecological/dynamic-systems framework for how acute and chronic climate-change risks experienced prenatally and early in life threaten human development."
+ },
+ "https://openalex.org/W4405564842": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer ($333 vs $20/month)", "control": "Low-cash gift",
+  "sample_size": "1,000 (n=891 at year 4)", "age_0_8": "Preschoolers (~4 years)", "age_caregiver": "Low-income mothers",
+  "biomarkers": "EEG (brain activity)",
+  "kf1": "After four years, monthly unconditional cash transfers showed no significant impacts on children's language, executive function, social-emotional, or brain-activity outcomes.",
+  "effect_sizes": "No significant impacts on primary outcomes"
+ },
+ "https://openalex.org/W4401760009": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer", "control": "Low-cash gift",
+  "sample_size": "1,000 mothers", "age_0_8": "Children to age 3", "age_caregiver": "Low-income mothers",
+  "kf1": "No statistically detectable impacts of the high-cash gift on maternal reports of children's language, socioemotional development, or developmental-delay concerns."
+ },
+ "https://openalex.org/W4405587357": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer", "control": "Low-cash gift",
+  "sample_size": "~1,000", "age_0_8": "Preschoolers", "age_caregiver": "Low-income mothers",
+  "biomarkers": "EEG (brain activity)",
+  "kf1": "Four years of monthly cash transfers had no impact on the primary brain-activity index; an exploratory analysis showed higher alpha power in the high-cash group, needing replication.",
+  "effect_sizes": "Higher alpha power in high-cash group (exploratory)"
+ },
+ "https://openalex.org/W4398194297": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer", "control": "Low-cash gift",
+  "sample_size": "1,000 mothers", "age_0_8": "Infants (first year)", "age_caregiver": "Low-income mothers",
+  "kf1": "Cash transfers did not change breastfeeding, child-care use, or employment overall, but delayed child-care start by ~1 month and increased mothers' ability to meet breastfeeding intentions."
+ },
+ "https://openalex.org/W4408939972": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer", "control": "Low-cash gift",
+  "sample_size": "1,000 families", "age_caregiver": "Low-income mothers",
+  "kf1": "Cash transfers were associated with a trend of increased pregnancy after three years but no impacts on births, miscarriages, or terminations."
+ },
+ "https://openalex.org/W4411343763": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer ($333 vs $20/month)", "control": "Low-cash gift",
+  "sample_size": "1,000 mother-infant dyads (n=891 at year 4)", "age_0_8": "Children (~4 years)", "age_caregiver": "Low-income mothers",
+  "kf1": "After four years, no statistically detectable differences in maternal depression, anxiety, or BMI, or in child health/BMI between cash groups.",
+  "effect_sizes": "Maternal depression ES 0.04; anxiety ES 0.12 (n.s.)"
+ },
+ "https://openalex.org/W4414494792": {
+  "country": "U.S.", "design": "Consensus / research agenda", "quant_qual": "qualitative", "type": "review",
+  "demographics": "Undocumented, unaccompanied, and citizen children of undocumented immigrant parents",
+  "kf1": "Convening of scholars and providers established consensus areas and gaps to set a research agenda on immigrant children affected by undocumented status."
+ },
+ "https://openalex.org/W4407028715": {
+  "country": "Niger", "setting": "Primary schools, Diffa (conflict-affected)", "design": "Qualitative (interviews)",
+  "quant_qual": "qualitative", "type": "intervention", "intervention_name": "Social-emotional learning interventions",
+  "sample_size": "58 interviews", "demographics": "Education stakeholders (officials, NGOs, teachers, parents)",
+  "kf1": "Identified five stakeholder-varying conceptualisations of SEL in conflict-affected Diffa, shaped by conflict, trauma, psychosocial support, poverty, and religion."
+ },
+ "https://openalex.org/W4413118124": {
+  "country": "U.S.", "design": "RCT (Baby's First Years)", "randomized": "yes", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Unconditional cash transfer ($333 vs $20/month)", "control": "Low-cash gift",
+  "sample_size": "1,000 mothers", "age_0_8": "Infants/toddlers", "age_caregiver": "Low-income mothers",
+  "demographics": "Mothers below the federal poverty threshold",
+  "kf1": "Cash transfers moderately increased income and reduced poverty but did not improve subjective economic hardship or most maternal well-being measures; high-cash mothers engaged more in enriching child activities.",
+  "effect_sizes": "Moderate income increase; mostly non-significant well-being effects"
+ },
+ "https://openalex.org/W4412853744": {
+  "country": "Global", "design": "Measurement framework", "quant_qual": "quantitative", "type": "other",
+  "kf1": "Introduces LEVANTE, a global framework for coordinated, longitudinal data collection to measure variability in children's learning and development (literacy, numeracy, cognitive/social constructs)."
+ },
+ "https://openalex.org/W4412407329": {
+  "country": "U.S.", "design": "Longitudinal", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "Youth in 51 GSAs (mean age 15.13)", "age_9_25": "Youth (~15 years)",
+  "demographics": "LGBTQ+ youth in gender-sexuality alliances",
+  "kf1": "Greater advocacy involvement and inclusive school policies were associated with higher self-worth among LGBTQ+ youth, with a GSA-level contextual effect beyond individual advocacy."
+ },
+ "https://openalex.org/W4416995156": {
+  "design": "Longitudinal", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "Adolescents with 247 mothers and 191 fathers (Year 10 and Year 15)", "age_9_25": "Children to adolescents (age 10 to 15)",
+  "age_caregiver": "Mothers and fathers",
+  "kf1": "Maternal supportive emotion socialization predicted girls' increased self-esteem and decreased depressive symptoms over time; paternal emotion socialization was inversely linked to boys' depressive symptoms."
+ },
+ "https://openalex.org/W4410311272": {
+  "country": "U.S.", "design": "Psychometric (factor analysis, measurement invariance)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "Sexual/gender-minority youth aged 13-17", "age_9_25": "Youth aged 13-17",
+  "demographics": "Sexual and gender minority youth",
+  "kf1": "Validated a new outness measure for sexual and gender minority youth, confirming it accurately assesses sexual- and gender-identity outness and supports subgroup comparisons."
+ },
+ "https://openalex.org/W4410580585": {
+  "design": "Conceptual chapter", "quant_qual": "qualitative", "type": "review",
+  "kf1": "Reviews individual-level psychological acculturation, distinguishing it from group-level acculturation and outlining principles, processes, and future directions."
+ },
+ "https://openalex.org/W4410580756": {
+  "design": "Conceptual chapter", "quant_qual": "qualitative", "type": "review",
+  "kf1": "Reviews individual-level psychological acculturation, distinguishing it from group-level acculturation (duplicate record)."
+ }
+}

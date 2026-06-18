@@ -1,0 +1,185 @@
+{
+ "https://openalex.org/W4391598248": {
+  "country": "International", "design": "Systematic review", "quant_qual": "quantitative", "type": "review",
+  "sample_size": "415 studies; 19,311 participants (13,812 with substance use disorders)",
+  "biomarkers": "Functional MRI drug cue reactivity (FDCR)",
+  "demographics": "Individuals with/without substance use disorders",
+  "kf1": "Systematic review of 415 fMRI drug-cue-reactivity studies (1998-2022) outlining a pathway and framework for developing and qualifying FDCR-based addiction biomarkers."
+ },
+ "https://openalex.org/W4417497415": {
+  "country": "U.S.", "design": "Experimental (within-subject fMRI task)", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Cue Labeling Task (affect labeling)", "control": "Gender labeling; neutral matching",
+  "sample_size": "50 daily smokers (24 women, ages 20-65)", "age_adult": "Adults",
+  "biomarkers": "fMRI (precuneus activation)",
+  "kf1": "Cue labeling reduced cigarette craving and precuneus activity vs. cue matching, especially among older midlife adults (cutoff 46.7 years).",
+  "effect_sizes": "Craving Hedges' g=-0.11 (whole sample); g=-0.29 in older subsample"
+ },
+ "https://openalex.org/W4416771938": {
+  "design": "Deep-learning methods study (MRI classification)", "quant_qual": "quantitative", "type": "other",
+  "sample_size": "79 subjects (63 Alzheimer's, 16 controls; 12,947 slices)", "age_adult": "Adults",
+  "biomarkers": "Structural T1 MRI",
+  "kf1": "ConvNeXt-Base classified Alzheimer's disease from structural MRI with 98.37% accuracy (AUC 0.992) on coronal slices."
+ },
+ "https://openalex.org/W4412486871": {
+  "design": "Deep-learning methods study (MRI classification; preprint)", "quant_qual": "quantitative", "type": "other",
+  "sample_size": "79 subjects (63 Alzheimer's, 16 controls)", "age_adult": "Adults", "biomarkers": "Structural T1 MRI",
+  "kf1": "Preprint of ConvNeXt deep-learning model classifying Alzheimer's disease from MRI (98.37% accuracy, AUC 0.992)."
+ },
+ "https://openalex.org/W4412702965": {
+  "country": "U.S.", "design": "Case-control (PET imaging)", "quant_qual": "quantitative", "type": "observational",
+  "age_adult": "Adults", "biomarkers": "PET dopamine D2/D3 receptor availability",
+  "demographics": "Adults with stimulant use disorder vs controls",
+  "kf1": "Weaker working memory in people who use stimulants reflected a deficit in cortical D2/3 receptor signaling."
+ },
+ "https://openalex.org/W4408691119": {
+  "design": "Conceptual/model paper", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Proposes an integrative contingency-management model incorporating intrinsic rewards to enhance effectiveness for substance use disorders."
+ },
+ "https://openalex.org/W7141154168": {
+  "country": "U.S.", "setting": "California", "design": "Randomized online experiment", "randomized": "yes",
+  "quant_qual": "quantitative", "type": "intervention", "sample_size": "409 youth aged 16-20",
+  "age_9_25": "Youth aged 16-20", "demographics": "California youth (16-20) susceptible to cannabis use",
+  "kf1": "Specific cannabis-ad features shaped youth perceptions of cannabis as fun, healthy, or dangerous, informing potential marketing regulations."
+ },
+ "https://openalex.org/W7141645135": {
+  "country": "U.S.", "setting": "California", "design": "Randomized online experiment", "randomized": "yes",
+  "quant_qual": "quantitative", "type": "intervention", "sample_size": "409 youth aged 16-20",
+  "age_9_25": "Youth aged 16-20", "demographics": "California youth (16-20) susceptible to cannabis use",
+  "kf1": "Cannabis-ad features shaped youth perceptions of cannabis as fun, healthy, or dangerous (data record)."
+ },
+ "https://openalex.org/W7141741929": {
+  "country": "U.S.", "setting": "California", "design": "Randomized online experiment", "randomized": "yes",
+  "quant_qual": "quantitative", "type": "intervention", "sample_size": "409 youth aged 16-20",
+  "age_9_25": "Youth aged 16-20", "demographics": "California youth (16-20) susceptible to cannabis use",
+  "kf1": "Cannabis-ad features shaped youth perceptions of cannabis as fun, healthy, or dangerous (data record)."
+ },
+ "https://openalex.org/W7150983576": {
+  "design": "Case-control neuroimaging", "quant_qual": "quantitative", "type": "observational",
+  "sample_size": "2,782 with substance use disorder; 1,951 controls", "age_adult": "Adults",
+  "biomarkers": "Structural MRI morphometry; connectivity and receptor mapping",
+  "kf1": "Addiction-related brain morphometric differences aligned with cortical hubs and contrasting cannabinoid-opioid vs dopaminergic neurotransmitter axes, consistent across six substances."
+ },
+ "https://openalex.org/W7125608628": {
+  "country": "U.S.", "design": "Cross-sectional neuroimaging (HCP-A/AABC)", "quant_qual": "quantitative",
+  "type": "observational", "age_adult": "Adults (midlife 36-59; young-old 60-79; older 80+)",
+  "biomarkers": "Structural MRI (cortical thickness)",
+  "demographics": "Healthy adults across midlife to late adulthood",
+  "kf1": "High cognitive performers showed greater cortical thickness across somatomotor, visual, auditory, frontal, parietal, and insular regions."
+ },
+ "https://openalex.org/W4403051866": {
+  "country": "U.S.", "setting": "Connecticut (Yale/YNHH)", "design": "Cross-sectional survey", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "92 providers (88 included)", "age_adult": "Adults (providers)",
+  "demographics": "Health-care providers across specialties",
+  "kf1": "Knowledge of Chagas disease was deficient and positively associated with screening practices and negatively with perceived barriers."
+ },
+ "https://openalex.org/W4406733078": {
+  "country": "Colombia", "design": "Cross-sectional bibliometric analysis", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "6,088 articles from 54 journals",
+  "demographics": "Authors of Colombian medical/surgical journals",
+  "kf1": "Persistent gender disparities in first/last authorship in Colombian medical journals, independent of time, geography, or specialty."
+ },
+ "https://openalex.org/W4388850488": {
+  "country": "Germany", "setting": "Schools (summer programme)", "design": "Pilot evaluation",
+  "quant_qual": "quantitative", "type": "intervention", "sample_size": "Unclear (pilot)",
+  "intervention_name": "Huckepack summer programme",
+  "age_0_8": "Some newcomer children under 4", "demographics": "Newcomer/refugee pupils in Germany",
+  "kf1": "Pilot evaluation of a summer programme supporting newcomer pupils' school-transition expectations in Germany."
+ },
+ "https://openalex.org/W4395076411": {
+  "country": "East and Southeast Asia (14 countries)", "design": "Systematic literature review",
+  "quant_qual": "quantitative", "type": "review", "sample_size": "109 studies from 14 countries",
+  "demographics": "School counselling systems in East and Southeast Asia",
+  "kf1": "Identified nine main school-counselling needs across the region, including up-to-date training, country-specific role models, and overcoming mental-health stigma."
+ },
+ "https://openalex.org/W4405205114": {
+  "country": "Germany", "design": "Qualitative (content/thematic analysis)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "22 Arab parents; 24 educators (21+23 interviews)",
+  "age_caregiver": "Arab migrant parents", "demographics": "Arab migrant parents and educators in Germany",
+  "kf1": "Parents and educators defined trust elaborately but showed little overlap and a partial mismatch in perceived signs of (un)trustworthiness."
+ },
+ "https://openalex.org/W4407063519": {
+  "country": "Bhutan", "design": "Survey (mixed methods)", "quant_qual": "mixed", "type": "observational",
+  "sample_size": "162 counsellors; 49 teachers; 16 principals",
+  "demographics": "School guidance counsellors, teachers, principals in Bhutan",
+  "kf1": "Bhutanese school guidance counsellors rated counselling activities more appropriate than teachers/principals did; the profession needs clearer roles, resources, and anti-stigma efforts."
+ },
+ "https://openalex.org/W4408460183": {
+  "country": "Germany", "setting": "Berlin", "design": "Pilot evaluation (pre-post)", "quant_qual": "quantitative",
+  "type": "intervention", "intervention_name": "Families Make the Difference (FMD)",
+  "sample_size": "135 caregivers", "age_caregiver": "Arab refugee/migrant caregivers",
+  "demographics": "Arab families with refugee/migration backgrounds in Berlin",
+  "caregiver_detail": "Parental stress; parenting; co-parenting; paternal engagement; social support",
+  "kf1": "Mostly small non-significant changes; female participants reported decreased parental stress over time while males increased; social-support gains were linked to reduced stress and more sensitive parenting."
+ },
+ "https://openalex.org/W4408576945": {
+  "country": "United Kingdom; United States", "design": "Psychometric validation", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "3,470 students (52.1% male)",
+  "age_9_25": "Middle childhood and early adolescence", "demographics": "Students in the UK and US",
+  "kf1": "Aurora-a, a 17-subtest assessment of analytical/practical/creative abilities, showed unidimensionality, adequate reliability, and validity (r=.20-.72 with academic criteria).",
+  "effect_sizes": "Criterion correlations r=.20 to .72"
+ },
+ "https://openalex.org/W4414486084": {
+  "country": "Germany", "design": "Cross-sectional (mediation analysis)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "221 adolescents (69.7% female; mean age 16.9)",
+  "age_9_25": "Adolescents (mean age 16.9)", "demographics": "German adolescents",
+  "kf1": "Higher violent-pornography use was associated with greater acceptance of sexual coercion, mediated by risky sexual scripts and low sexual self-esteem."
+ },
+ "https://openalex.org/W4407115023": {
+  "country": "Bhutan", "design": "Qualitative (phenomenological/thematic)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "28 interviews",
+  "demographics": "School guidance counsellors in Bhutan",
+  "kf1": "Counsellors reported insufficient resources for rising mental-health needs and cultural barriers (stigma, corporal punishment); needs include training, role clarity, awareness, and time."
+ },
+ "https://openalex.org/W4387531210": {
+  "design": "Conceptual/critical perspective", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Argues for strengthening existing integrated psychosocial-peacebuilding approaches rather than merging separate MHPSS and peacebuilding fields."
+ },
+ "https://openalex.org/W7143739238": {
+  "design": "Book / conceptual framework", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Book presenting a conceptual framework and field-tested tools for psychosocial peacebuilding centered on intrapersonal transformation (IAHV/Art of Living model)."
+ },
+ "https://openalex.org/W4387956345": {
+  "country": "Lebanon; Jordan; Egypt", "setting": "Villages and refugee camps",
+  "design": "Pilot / implementation evaluation", "quant_qual": "mixed", "type": "intervention",
+  "intervention_name": "ARC multi-sectoral responsive caregiving program",
+  "age_caregiver": "Parents", "demographics": "Disadvantaged families and Syrian/Palestinian refugees",
+  "caregiver_detail": "Parental well-being; stress; positive discipline; knowledge/attitudes/behaviors",
+  "kf1": "Describes adapting a responsive-caregiving parenting program to face-to-face and online modalities during COVID-19 for refugee/vulnerable families in Lebanon and Jordan."
+ },
+ "https://openalex.org/W4387362535": {
+  "country": "Middle East, North Africa and Türkiye", "design": "Systematic review protocol",
+  "quant_qual": "mixed", "type": "review",
+  "demographics": "Forced migrants from the MENAT region",
+  "kf1": "Protocol for a systematic review/meta-analysis of substance-use and mental-health disorder epidemiology among forced migrants from the MENAT region."
+ },
+ "https://openalex.org/W4385633222": {
+  "country": "Ukraine", "setting": "Mariupol", "design": "Quasi-experimental (pre-post, satellite imagery)",
+  "quant_qual": "quantitative", "type": "observational",
+  "demographics": "Medical facilities during Russia's siege",
+  "kf1": "77% of medical facilities in Mariupol were damaged during the siege (Feb 24-May 20, 2022); damage was unrelated to facility size, suggesting deliberate targeting.",
+  "effect_sizes": "77% of medical facilities damaged"
+ },
+ "https://openalex.org/W4386022959": {
+  "country": "Iran", "design": "Historical/policy analysis", "quant_qual": "qualitative", "type": "other",
+  "kf1": "Historical analysis arguing Iran's substance-use policies prioritized revenue, diplomacy, and power over medical approaches, using stigmatization to obscure deeper social problems."
+ },
+ "https://openalex.org/W4390732760": {
+  "country": "China", "design": "Cross-sectional (psychometric adaptation)", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "489 nursing undergraduates", "age_adult": "Adults (students)",
+  "demographics": "Chinese nursing undergraduates",
+  "kf1": "Ethical sensitivity was positively correlated with humanistic care ability among Chinese nursing students; age, school year, and ethics experience were relevant predictors.",
+  "effect_sizes": "Ethical sensitivity–care ability r=0.576"
+ },
+ "https://openalex.org/W4396587174": {
+  "country": "Syria", "setting": "Idlib governorate", "design": "Cohort / chart review", "quant_qual": "quantitative",
+  "type": "observational", "sample_size": "188 patients (108 with displacement status)",
+  "age_adult": "Adult women", "demographics": "Displaced (IDP) and host women with breast cancer",
+  "kf1": "No significant differences in breast-cancer clinicopathologic features or treatment between IDPs and host populations in northwest Syria; a trend toward shorter time to treatment for IDPs."
+ },
+ "https://openalex.org/W4402700984": {
+  "country": "Syria", "setting": "Idlib city", "design": "Qualitative (thematic analysis)", "quant_qual": "qualitative",
+  "type": "observational", "sample_size": "22 women", "age_adult": "Adult women",
+  "demographics": "Women with breast cancer in northwest Syria",
+  "kf1": "Women with breast cancer faced financial strain, long travel, and social expectations; faith, children, compassionate staff, and peer support aided coping."
+ }
+}

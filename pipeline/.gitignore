@@ -1,0 +1,5 @@
+.env
+pdf_cache/
+ecpc_repository.xlsx
+ecpc_*.xlsx
+__pycache__/

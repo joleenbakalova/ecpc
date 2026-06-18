@@ -1,0 +1,2530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ECPC Research Repository — Early Childhood Peacebuilding Evidence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,800&family=Inter:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canvas:#F4F6F3; --ink:#14241F; --ink-soft:#46554F; --pine:#1C5D4C; --pine-deep:#123F34;
+    --amber:#E08A1E; --amber-soft:#F6E2C2; --link:#2F6F8F; --sage-bg:#E5EDE6; --sage-tx:#2E5B4C;
+    --mist:#DCE3DD; --card:#FFFFFF; --shadow:0 1px 2px rgba(20,36,31,.06),0 8px 24px rgba(20,36,31,.06);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--canvas);color:var(--ink);font-family:Inter,system-ui,sans-serif;
+    font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:var(--link)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .mono{font-family:"Spline Sans Mono",ui-monospace,monospace}
+  .eyebrow{font-family:"Spline Sans Mono",monospace;font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--pine);font-weight:600}
+
+  /* header */
+  header.top{position:sticky;top:0;z-index:50;background:rgba(244,246,243,.85);
+    backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--mist)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:600}
+  .mark{width:30px;height:30px;flex:none}
+  .brand b{font-family:Fraunces;font-weight:600;font-size:18px;letter-spacing:.01em}
+  .brand span{display:block;font-size:11px;color:var(--ink-soft);font-weight:500;letter-spacing:.02em}
+  .top nav{display:flex;gap:18px;font-size:14px}
+  .top nav a{color:var(--ink-soft);text-decoration:none}
+  .top nav a:hover{color:var(--pine)}
+  @media(max-width:720px){.top nav{display:none}}
+
+  /* hero */
+  .hero{padding:46px 0 30px;border-bottom:1px solid var(--mist)}
+  .hero-grid{display:grid;grid-template-columns:1.55fr .95fr;gap:40px;align-items:start}
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+  .focus-label{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .focus-label .dotline{flex:1;height:1px;background:var(--mist)}
+  .finding{font-family:Fraunces;font-optical-sizing:auto;font-weight:500;font-size:clamp(26px,3.6vw,42px);
+    line-height:1.16;letter-spacing:-.01em;margin:0;min-height:1.16em}
+  .finding em{font-style:italic;color:var(--pine)}
+  .finding-meta{margin-top:18px;font-size:14.5px;color:var(--ink-soft);max-width:54ch}
+  .finding-meta a{font-weight:600;text-decoration:none;border-bottom:1px solid transparent}
+  .finding-meta a:hover{border-bottom-color:var(--link)}
+  .dots{display:flex;gap:8px;margin-top:22px}
+  .dots button{width:9px;height:9px;border-radius:50%;border:0;background:var(--mist);cursor:pointer;padding:0}
+  .dots button[aria-current="true"]{background:var(--amber);width:26px;border-radius:5px}
+
+  .stat-card{background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:20px 20px 8px;
+    box-shadow:var(--shadow)}
+  .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+  .stat .n{font-family:Fraunces;font-weight:600;font-size:30px;line-height:1.1;color:var(--pine-deep)}
+  .stat .l{font-size:12px;color:var(--ink-soft);margin:2px 0 14px}
+  .yearbars{margin-top:6px;border-top:1px dashed var(--mist);padding-top:14px}
+  .yearbars .cap{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
+    font-family:"Spline Sans Mono",monospace;margin-bottom:10px}
+  .ybar{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:12px}
+  .ybar .yr{width:34px;color:var(--ink-soft);font-family:"Spline Sans Mono",monospace}
+  .ybar .track{flex:1;height:9px;background:var(--sage-bg);border-radius:5px;overflow:hidden}
+  .ybar .fill{height:100%;background:linear-gradient(90deg,var(--pine),#2f8a72);border-radius:5px}
+  .ybar .c{width:18px;text-align:right;color:var(--ink-soft);font-family:"Spline Sans Mono",monospace}
+
+  /* toolbar */
+  .toolbar{position:sticky;top:62px;z-index:40;background:var(--canvas);padding:18px 0 10px;border-bottom:1px solid var(--mist)}
+  .toolbar .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .search{flex:1;min-width:220px;position:relative}
+  .search input{width:100%;padding:11px 14px 11px 40px;border:1px solid var(--mist);border-radius:10px;
+    background:var(--card);font-size:15px;font-family:inherit;color:var(--ink)}
+  .search input:focus{outline:2px solid var(--pine);outline-offset:1px;border-color:transparent}
+  .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ink-soft)}
+  select{padding:10px 12px;border:1px solid var(--mist);border-radius:10px;background:var(--card);
+    font-family:inherit;font-size:14px;color:var(--ink);cursor:pointer}
+  .ghost{background:transparent;border:1px solid var(--mist);border-radius:10px;padding:10px 14px;
+    font:inherit;font-size:14px;color:var(--ink-soft);cursor:pointer}
+  .ghost:hover{border-color:var(--pine);color:var(--pine)}
+
+  /* layout */
+  .main{padding:26px 0 60px}
+  .layout{display:grid;grid-template-columns:240px 1fr;gap:34px;align-items:start}
+  @media(max-width:880px){.layout{grid-template-columns:1fr;gap:18px}}
+  .filters h3{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
+    font-family:"Spline Sans Mono",monospace;margin:18px 0 9px;font-weight:600}
+  .filters h3:first-child{margin-top:0}
+  .chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--mist);background:var(--card);
+    color:var(--ink-soft);border-radius:999px;padding:5px 11px;font-size:13px;cursor:pointer;margin:0 6px 6px 0;
+    transition:all .12s}
+  .chip:hover{border-color:var(--pine)}
+  .chip[aria-pressed="true"]{background:var(--pine);border-color:var(--pine);color:#fff}
+  .chip .ct{opacity:.6;font-size:11px}
+  @media(max-width:880px){.filters{border:1px solid var(--mist);border-radius:12px;padding:14px;background:var(--card)}
+    details.fwrap>summary{cursor:pointer;font-weight:600;font-size:14px;list-style:none}
+    details.fwrap>summary::-webkit-details-marker{display:none}}
+
+  .resbar{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;gap:10px;flex-wrap:wrap}
+  .resbar .count{font-size:14px;color:var(--ink-soft)}
+  .resbar .count b{color:var(--ink);font-weight:600}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+  .card{position:relative;background:var(--card);border:1px solid var(--mist);border-radius:14px;
+    padding:18px 18px 16px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+    transition:transform .14s,box-shadow .14s}
+  .card:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(20,36,31,.07),0 14px 32px rgba(20,36,31,.1)}
+  .card::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:4px;background:var(--pine)}
+  .card.t-grey::before{background:var(--amber)}
+  .card.t-book::before{background:var(--link)}
+  .c-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:9px}
+  .c-year{font-family:"Spline Sans Mono",monospace;font-weight:600;font-size:13px;color:var(--pine-deep)}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+  .b{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:6px;font-weight:600;font-family:"Spline Sans Mono",monospace}
+  .b-peer{background:var(--sage-bg);color:var(--sage-tx)} .b-grey{background:var(--amber-soft);color:#8a5410}
+  .b-book{background:#e0ecf2;color:#235066}
+  .b-new{background:var(--pine);color:#fff}
+  .b-lead{background:#fbeede;color:#9a5a12;border:1px dashed #d79a4e}
+  .c-title{font-family:Fraunces;font-weight:600;font-size:18px;line-height:1.25;margin:0 0 6px;letter-spacing:-.005em}
+  .c-auth{font-size:13px;color:var(--ink-soft);margin:0 0 4px}
+  .c-auth b{color:var(--pine-deep);font-weight:600}
+  .c-venue{font-size:12.5px;color:var(--ink-soft);font-style:italic;margin:0 0 12px}
+  .c-find{font-size:14px;color:var(--ink);background:#fbfcfa;border-left:2px solid var(--amber);
+    padding:9px 11px;border-radius:0 8px 8px 0;margin:0 0 12px}
+  .c-find .lab{display:block;font-family:"Spline Sans Mono",monospace;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--amber);margin-bottom:3px}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+  .tag{font-size:11.5px;background:var(--sage-bg);color:var(--sage-tx);padding:3px 9px;border-radius:999px}
+  .tag.region{background:#eef3f6;color:#2c5b70}
+  .c-foot{display:flex;align-items:center;justify-content:space-between;margin-top:13px;
+    padding-top:12px;border-top:1px solid var(--mist)}
+  .c-foot .age{font-size:12px;color:var(--ink-soft)}
+  .c-link{font-size:13px;font-weight:600;text-decoration:none;color:var(--link);display:inline-flex;align-items:center;gap:4px}
+  .c-link:hover{text-decoration:underline}
+
+  .empty{text-align:center;padding:60px 20px;color:var(--ink-soft)}
+  .empty b{display:block;font-family:Fraunces;font-size:20px;color:var(--ink);margin-bottom:6px}
+
+  footer{border-top:1px solid var(--mist);background:#fff;padding:30px 0 50px;font-size:13px;color:var(--ink-soft)}
+  footer .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+  @media(max-width:720px){footer .wrap{grid-template-columns:1fr}}
+  footer h4{font-family:Fraunces;font-size:16px;color:var(--ink);margin:0 0 8px}
+  .note{background:var(--canvas);border:1px solid var(--mist);border-radius:10px;padding:12px 14px;line-height:1.55}
+
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#1C5D4C"/>
+        <path d="M20 30c0-6 4-9 9-9-1 6-4 9-9 9z" fill="#E08A1E"/>
+        <path d="M20 30c0-6-4-9-9-9 1 6 4 9 9 9z" fill="#7FB7A6"/>
+        <path d="M20 29V14" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="20" cy="11" r="3.4" fill="#fff"/>
+      </svg>
+      <div><b>ECPC Research Repository</b><span>Early childhood peacebuilding evidence</span></div>
+    </div>
+    <nav>
+      <a href="#explore">Explore</a>
+      <a href="#explore">Findings</a>
+      <a href="#about">About the data</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="focus-label"><span class="eyebrow">Finding in focus</span><span class="dotline"></span></div>
+      <p class="finding" id="focusText">—</p>
+      <p class="finding-meta" id="focusMeta"></p>
+      <div class="dots" id="focusDots" role="tablist" aria-label="Featured findings"></div>
+    </div>
+    <aside class="stat-card" aria-label="Repository at a glance">
+      <div class="stat-row">
+        <div class="stat"><div class="n" id="sPub">0</div><div class="l">Publications logged<br>(Aug 2023–Jun 2026)</div></div>
+        <div class="stat"><div class="n" id="sMem">0</div><div class="l">ECPC members<br>represented</div></div>
+        <div class="stat"><div class="n" id="sCty">0</div><div class="l">Countries &<br>settings studied</div></div>
+        <div class="stat"><div class="n" id="sNew">0</div><div class="l">From 2025–26<br>(newest evidence)</div></div>
+      </div>
+      <div class="yearbars">
+        <div class="cap">Output by year</div>
+        <div id="yearChart"></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="toolbar" id="explore">
+  <div class="wrap">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search titles, authors, findings, countries…" aria-label="Search publications">
+    </div>
+    <select id="sort" aria-label="Sort">
+      <option value="new">Newest first</option>
+      <option value="old">Oldest first</option>
+      <option value="rel">Most relevant</option>
+      <option value="mem">By member (A–Z)</option>
+    </select>
+    <button class="ghost" id="reset">Reset filters</button>
+  </div>
+</div>
+
+<main class="main">
+  <div class="wrap layout">
+    <div class="filters">
+      <details class="fwrap" open>
+        <summary style="display:none"></summary>
+        <h3>Type</h3><div id="fType"></div>
+        <h3>Theme</h3><div id="fTheme"></div>
+        <h3>Region</h3><div id="fRegion"></div>
+        <h3>ECPC member</h3><div id="fMember"></div>
+        <h3>Relevance</h3><div id="fRel"></div>
+      </details>
+    </div>
+    <div>
+      <div class="resbar">
+        <div class="count" id="count"></div>
+        <div class="eyebrow" style="color:var(--ink-soft)">Click a card's link to open the source</div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden><b>No matches</b>Try removing a filter or clearing the search.</div>
+    </div>
+  </div>
+</main>
+
+<footer id="about">
+  <div class="wrap">
+    <div>
+      <h4>About this data</h4>
+      <p>This repository continues the ECPC evidence review for the period after its 31 July 2023 cutoff. Each record links to a publisher page, open-access source, or the author's official profile so findings can be verified at the source.</p>
+      <div class="note">
+        <strong>Status badges.</strong> <span class="b b-peer" style="display:inline-block">Peer-reviewed</span>, <span class="b b-grey" style="display:inline-block">Grey</span> and <span class="b b-book" style="display:inline-block">Book</span> denote output type. A <span class="b b-lead" style="display:inline-block">Lead</span> badge marks a strong lead whose exact date, venue, or DOI still needs manual confirmation — treat it as a to-do, not a finished record. Sources used: publisher sites, PubMed/PMC, institutional portals, ORCID, Google Scholar, and ecdpeace.org. The licensed databases in the original protocol (Web of Science, PsycINFO, ERIC, Medline, APA PsycArticles, SocINDEX) were <em>not</em> searched here.
+      </div>
+    </div>
+    <div>
+      <h4>Coverage so far</h4>
+      <p>Authors fully or partly swept in this build: <b>Aber, Yoshikawa, Connolly, Dunne, Miller, Betancourt</b>. The remaining ECPC members are queued — the companion spreadsheet holds a full-list source link (ORCID / portal / Scholar) for all 46 so coverage can be completed and audited.</p>
+      <p style="margin-top:14px;font-size:12px">Built as a working prototype for the Early Childhood Peacebuilding Consortium evidence library. Findings quoted are extracted from the full text of each publication; open each source for complete results.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const DATA = [
+ {
+  "id": "aber-2026-investigating-the",
+  "title": "Investigating the bidirectional relationships between social and emotional learning and…",
+  "authors": "Abiraahmi Shankar, Ha Yeon Kim, Caroline Tubbs-Dolan, Roxane Caires, J. Lawrence Aber, Mayarí Montes de Oca, Patrick Anker",
+  "members": [
+   "Aber"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "International Journal of Behavioral Development",
+  "type": "peer",
+  "age": "0–8 & 9–25 + teachers",
+  "country": "Lebanon",
+  "region": "Middle East & North Africa",
+  "link": "https://doi.org/10.1177/01650254261434433",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Social-emotional learning"
+  ],
+  "finding": "Bidirectional multilevel models (2,757 students, 131 teachers; ~17-week interval) controlling for child, teacher, household-risk and site covariates."
+ },
+ {
+  "id": "aber-2026-skill-targeted-uni",
+  "title": "Skill-Targeted Universal Social and Emotional Learning Interventions for Education in Conflict and Crisis: Experimental Impacts in Niger",
+  "authors": "Ha Yeon Kim, Lindsay E. Brown, Carly Tubbs Dolan, Erick Ngoga, Rebecca Finney Fernandes, Zezhen Wu, J. Lawrence Aber",
+  "members": [
+   "Aber"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Journal of Research on Educational Effectiveness",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Niger",
+  "region": "Sub-Saharan Africa",
+  "link": "https://doi.org/10.1080/19345747.2025.2591604",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Social-emotional learning"
+  ],
+  "finding": "Cluster-RCT in 30 Diffa public schools (1,795 grade 2–4 students; 19% Nigerian refugees). CYCLE 1: adding Mindfulness to HCT significantly improved children's sadness dysregulation (ES=-0.30, p=.003) and marginally reactive aggression (ES=-0.29, p=.029); no impacts on school-related stress, other…"
+ },
+ {
+  "id": "betancourt-2026-integrating-child",
+  "title": "Integrating child mental health responses into recovery, development, and peacebuilding…",
+  "authors": "Georgia Dominguez, Theresa S. Betancourt, Lindsay Stark, Abdulai Jawo Bah, Rajeev Seth, Joseph Haddad, Zulfiqar A Bhutta",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "BMJ",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Fragile & conflict-affected settings (global)",
+  "region": "Global / multi-country",
+  "link": "https://www.bmj.com/content/bmj/392/bmj-2025-086044.full.pdf",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Mental health & psychosocial",
+   "Peacebuilding & social cohesion"
+  ],
+  "finding": "Commentary (BMJ Collection; BRANCH Consortium). With ~473 million children living in fragile and conflict-affected settings and <1% of development assistance allocated to mental health, the authors call for renewed global commitments and funding mechanisms to integrate child mental health respons…"
+ },
+ {
+  "id": "betancourt-2026-mechanisms-of-chan",
+  "title": "Mechanisms of Change Underlying Effects of an Early Parenting Intervention on Child…",
+  "authors": "Sarah K. G. Jensen, Matias Placencio‐Castro, Shauna M. Murray, Vincent Sezibera, Theresa S. Betancourt",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Children",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Rwanda",
+  "region": "Sub-Saharan Africa",
+  "link": "https://www.mdpi.com/2227-9067/13/3/344/pdf?version=1772193854",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Violence prevention"
+  ],
+  "finding": "Structural equation modeling test of the Sugira Muryango (SM) theory of change in rural Rwanda (cluster-RCT, 1,049 families): did SM improve child development (ASQ) via changes in caregivers’ home-environment behaviors? Improvements in POSITIVE caregiving practices captured by the HOME (stimulati…"
+ },
+ {
+  "id": "black-2026-long-term-effects",
+  "title": "Long term effects of childhood exposure to violence in fragile and conflict affected…",
+  "authors": "Naeha Sharma, Rana Dajani, Fahmida Tofail, Candace Jasmine Black, Nhial T. Tutlam, Zulfiqar A Bhutta",
+  "members": [
+   "Black"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "BMJ",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Fragile & conflict-affected settings (global)",
+  "region": "Global / multi-country",
+  "link": "https://www.bmj.com/content/bmj/392/bmj-2025-086040.full.pdf",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Mental health & psychosocial",
+   "Violence prevention"
+  ],
+  "finding": "Commentary (BMJ Collection; BRANCH Consortium). With >460 million children living in armed-conflict zones, the authors argue the global response must move BEYOND event-based framings to address the cumulative and intergenerational adversity (violence, poverty, insecurity, family disruption, servi…"
+ },
+ {
+  "id": "connolly-2026-parental-attitudes",
+  "title": "Parental Attitudes and Digital Parenting in the Early Years: Development and Validation…",
+  "authors": "Katrina McLaughlin, Lisa Bunting, Paul Connolly, Karen Winter, Rosie Flewitt, Sandra El Gemayel, Lorna Arnott, Andrea Dalziell, Julia Gillen, Janet Goodall, Mengfen Liu, Sabina Savadova, Sarah Timmins",
+  "members": [
+   "Connolly"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Child Care Health and Development",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United Kingdom",
+  "region": "Europe / UK",
+  "link": "https://doi.org/10.1111/cch.70199",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Media (Sesame / digital)"
+  ],
+  "finding": "Development and validation of the 15-item Parental Attitudes to Digital Technology Scale (PADTS) with a nationally balanced UK sample (N=934 parents of 0–3-year-olds; Toddlers, Tech and Talk study)."
+ },
+ {
+  "id": "cuartas-2026-digital-support-sy",
+  "title": "Digital support systems to improve child development in Peru: A cluster-randomized controlled open-label trial",
+  "authors": "Günther Fink, Dana Charles McCoy, Lena Jäggi, Kristen Hinckley, Andreana Castellanos, … Jorge Cuartas, … Stella Hartinger Peña, Daniel Mäusezahl",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Science Advances",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Peru",
+  "region": "Latin America & Caribbean",
+  "link": "https://doi.org/10.1126/sciadv.aeb9403",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Media (Sesame / digital)",
+   "Measurement & methods"
+  ],
+  "finding": "Cluster-RCT in rural Peru (2,461 caregiver–child dyads) evaluating an AI-supported digital parenting chatbot and traditional home visits to improve child development."
+ },
+ {
+  "id": "cuartas-2026-prenatal-and-early",
+  "title": "Prenatal and Early Childhood Ambient Heat Exposure and Developmental Outcomes: A Systematic Review",
+  "authors": "Jorge Cuartas et al.",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Clinical Child and Family Psychology Review",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Global",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1007/s10567-026-00569-3",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Mental health & psychosocial",
+   "Violence prevention",
+   "Climate & environment"
+  ],
+  "finding": "Systematic review synthesizing evidence on prenatal and early-childhood ambient heat exposure and developmental outcomes."
+ },
+ {
+  "id": "dunne-2026-evaluating-the-eff",
+  "title": "Evaluating the Effects of the Crescendo Programme on Music and Self-Regulation with…",
+  "authors": "Liam O’Hare, Conneth Poland, Leeanne O’Hara, Aideen Gildea, Junyi Wang, Sarah Miller, Laura Dunne",
+  "members": [
+   "Dunne"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Education Sciences",
+  "type": "peer",
+  "age": "0–8",
+  "country": "United Kingdom (Northern Ireland)",
+  "region": "Europe / UK",
+  "link": "https://www.mdpi.com/2227-7102/16/1/92/pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Social-emotional learning",
+   "Cash transfers & poverty",
+   "Policy & frameworks"
+  ],
+  "finding": "Quasi-experimental, rolling-cohort evaluation of Crescendo—a community-led, orchestra-delivered music-based SEL programme—comparing 559 children aged 5–6 in four participating schools vs four matched control schools (Year 1 of 7), in disadvantaged Northern Ireland communities."
+ },
+ {
+  "id": "gutierrez-torres-2026-evidence-based-men",
+  "title": "Evidence based mental health interventions for children in fragile and conflict affected settings: expanding reach and system strengthening",
+  "authors": "Serhat Yildirim, Maria Alejandra Gutierrez-Torres, William Byansi, Peter Ventevogel, Tania Bosqui, Theresa S. Betancourt",
+  "members": [
+   "Gutierrez-Torres"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "BMJ",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Fragile & conflict-affected settings (global)",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1136/bmj-2025-086043",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Mental health & psychosocial"
+  ],
+  "finding": "Commentary (BMJ Collection on Child Mental Health in Conflict Settings). The authors argue that decades of evidence show MHPSS interventions can reduce mental distress even in active fragile and conflict-affected settings, yet they remain confined to short-term, externally managed pilots rather t…"
+ },
+ {
+  "id": "hein-2026-remotely-assessing",
+  "title": "Remotely assessing foundational skills of 5–14-year-old children: A six-country psychometric evaluation of the remote assessment of learning (ReAL)",
+  "authors": "Elizabeth Hentschel, Sascha Hein, Nan Li, Clay Westrope, Julia Taladay, Gillian Valentine, James Leckman, et al.",
+  "members": [
+   "Hein"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Child Development",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Cambodia; Mozambique; Niger; occupied Palestinian territories; Philippines; Sudan",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1093/chidev/aacag044",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Media (Sesame / digital)",
+   "Measurement & methods"
+  ],
+  "finding": "Psychometric evaluation of Save the Children's Remote Assessment of Learning (ReAL), a remotely administered tool for 5–14-year-olds' foundational literacy and numeracy, motivated by ~250 million out-of-school children worldwide."
+ },
+ {
+  "id": "rey-guerra-2026-the-apapacho-early",
+  "title": "The Apapacho early childhood violence prevention parenting program: A mixed methods pilot evaluation",
+  "authors": "Jorge Cuartas, Juliana Borbón, Luciana Beccassino, Isabella García, Catalina Rey‐Guerra, Melissa Guerra, Geraldine Moreno, Maria Cristina Agudo, Melissa Valderrama, Daniela Trujillo, Oscar Daniel Páez Pineda",
+  "members": [
+   "Rey-Guerra"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Child Abuse & Neglect",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Colombia",
+  "region": "Latin America & Caribbean",
+  "link": "#",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Social-emotional learning",
+   "Parenting & caregiving"
+  ],
+  "finding": "Mixed-methods pilot (convergent parallel; difference-in-differences + thematic analysis) of Apapacho, an early-childhood violence-prevention parenting program developed in a research–practice partnership and integrated into Colombia's national Modalidad Familiar service."
+ },
+ {
+  "id": "yoshikawa-2026-effects-of-an-earl",
+  "title": "Effects of an early childhood father engagement program in Rohingya camps and host…",
+  "authors": "Yeshim Iqbal, Hirokazu Yoshikawa, Duja Michael, Sneha Bolisetty, Sakila Yesmin, Ashraf Uddin Mian, Maung Ting Nyeu, Sangyoo Lee, A. Brooks Bowden, Kate Schwartz, Kuri Chisim, A. R. M. Mehrab Ali, Sadia Sumaia Chowdhury, Anika Ibnat Binte Alam, Jere R. Behrman",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "BMC Global and Public Health",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Bangladesh (Cox’s Bazar)",
+  "region": "Asia-Pacific",
+  "link": "https://doi.org/10.1186/s44263-026-00266-x",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Social-emotional learning",
+   "Parenting & caregiving"
+  ],
+  "finding": "Cluster-RCT (N=2,002 fathers) of a 6-month early-childhood father-engagement intervention added to an existing mother-focused ECD program in the Rohingya camps and host communities (Cox's Bazar)."
+ },
+ {
+  "id": "yoshikawa-2026-fathers-engagemen",
+  "title": "Fathers’ Engagement with and perceptions of child play: Evidence from the Rohingya camps…",
+  "authors": "Fatima Tuz Zahra, Shikhty Sunny, Sneha Bolisetty, Hirokazu Yoshikawa, Yeshim Iqbal, Sharon Kim",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "Early Childhood Research Quarterly",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Bangladesh (Cox’s Bazar)",
+  "region": "Asia-Pacific",
+  "link": "https://doi.org/10.1016/j.ecresq.2026.01.005",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Refugees & displacement",
+   "Parenting & caregiving"
+  ],
+  "finding": "Qualitative interview study (25 Rohingya fathers, aged 23–48) of fathers' perceptions of children's play in structured (Humanitarian Play Labs) and unstructured (home/surrounding) settings in the Cox's Bazar refugee camps."
+ },
+ {
+  "id": "yoshikawa-2026-the-impact-of-a-mo",
+  "title": "The impact of a monthly unconditional cash transfer on child brain activity: A 4-year…",
+  "authors": "Hirokazu Yoshikawa, Lisa A. Gennetian, Timothy Nelson, Sarah Black, Nathan Fox, Greg Duncan, Michael D. Georgieff, Sonya V. Troller-Renfree, Kimberly G. Noble, Katherine Magnuson, Jennifer M Nelson, Debra S. Karhson, Molly A. Costanzo",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2026,
+  "date": "2026",
+  "venue": "PsyArXiv (OSF Preprints)",
+  "type": "grey",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://osf.io/dw2em",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Cash transfers & poverty",
+   "ECE quality & access"
+  ],
+  "finding": "Baby's First Years RCT EEG study: four years of monthly cash ($333 vs $20) produced NO impact on the primary preregistered outcome (aggregated mid-to-high-frequency brain activity) or secondary outcome (frontal gamma power)."
+ },
+ {
+  "id": "aber-2025-improving-classroo",
+  "title": "Improving Classroom Quality and Children’s Learning in Early Childhood Education:…",
+  "authors": "Sharon Wolf, J. Lawrence Aber, Jere R. Behrman, Edward Tsinigo",
+  "members": [
+   "Aber"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Working paper / report",
+  "type": "peer",
+  "age": "0–8",
+  "country": "Ghana",
+  "region": "Sub-Saharan Africa",
+  "link": "https://doi.org/10.1108/978-1-80117-624-820251001",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Social-emotional learning",
+   "Parenting & caregiving"
+  ],
+  "finding": "Research–practice partnership case study reviewing the Quality Preschool for Ghana (QP4G) cluster-RCT (240 schools; 3 arms)."
+ },
+ {
+  "id": "aber-2025-sel-in-countries-a",
+  "title": "SEL in Countries Affected by Armed Conflicts and Protracted Crises",
+  "authors": "Ha Yeon Kim, Rena Deitz, J. Lawrence Aber",
+  "members": [
+   "Aber"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Handbook of Social and Emotional Learning, 2nd ed. (J. A. Durlak et al., Eds.), Guilford Press — Chapter 39",
+  "type": "book",
+  "age": "0–8 & 9–25",
+  "country": "Multi-country (narrative review)",
+  "region": "Global / multi-country",
+  "link": "#",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Social-emotional learning",
+   "Mental health & psychosocial"
+  ],
+  "finding": "Conceptual chapter (Handbook of Social and Emotional Learning, 2nd ed., Guilford Press, Ch. 39) arguing that SEL research in conflict-affected and crisis (CAC) contexts must be INTEGRATED into—not siloed from—the broader SEL field, since 1 in 5 children globally live in conflict-affected areas (≥…"
+ },
+ {
+  "id": "betancourt-2025-exploring-outcomes",
+  "title": "Exploring outcomes between single and dual caregiver households participating in a…",
+  "authors": "Joyeuse Ukwishaka, Vincent Sezibera, María Piñeros-Leaño, Theresa S. Betancourt",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "BMC Public Health",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Rwanda",
+  "region": "Sub-Saharan Africa",
+  "link": "https://link.springer.com/content/pdf/10.1186/s12889-025-25445-7.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving"
+  ],
+  "finding": "Secondary analysis of the Sugira Muryango cluster-RCT (Rwanda) testing whether caregiver household type (single vs dual) modified intervention effects on child growth/development, dietary diversity, and healthcare-seeking 12 months post-intervention (959 children; linear/logistic mixed-effects mo…"
+ },
+ {
+  "id": "betancourt-2025-four-year-follow-u",
+  "title": "Four-year follow-up to a home-visiting intervention to promote early childhood…",
+  "authors": "Sarah K. G. Jensen, Matias Placencio‐Castro, Shauna M. Murray, Jess Littman, Stephanie M. Bazubagira, Dieudonné Uwizeye, Vincent Sezibera, Theresa S. Betancourt",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "BMJ Global Health",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Rwanda",
+  "region": "Sub-Saharan Africa",
+  "link": "https://gh.bmj.com/content/10/6/e017866.full.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Social-emotional learning",
+   "Parenting & caregiving",
+   "Violence prevention"
+  ],
+  "finding": "4-year follow-up (2022) of the Sugira Muryango home-visiting cluster-RCT in rural Rwanda (n=1,009 households, 93% retention; mixed-effect models vs usual care)."
+ },
+ {
+  "id": "black-2025-delivering-a-famil",
+  "title": "Delivering a family‐based child mental health promotion program among two resettled…",
+  "authors": "Euijin Jung, Candace Jasmine Black, Matias Placencio‐Castro, Lila K. Chamlagai, Rilwan Osman, Morgan Hoffman, William R. Beardslee, Theresa S. Betancourt",
+  "members": [
+   "Black"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "American Journal of Community Psychology",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ajcp.70021",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Parenting & caregiving",
+   "Mental health & psychosocial"
+  ],
+  "finding": "Hybrid Type II Implementation-Effectiveness trial (EPIS framework) of the co-developed Family Strengthening Intervention for Resettlement (FSI-R) vs usual care among Somali Bantu and Bhutanese resettled refugee families in New England during COVID-19."
+ },
+ {
+  "id": "black-2025-scaling-up-home-vi",
+  "title": "Scaling up home‐visiting to promote early childhood development and prevent violence in…",
+  "authors": "Candace Jasmine Black, Matias Placencio‐Castro, Gabriela Phend, Jean Marie Vianney Havugimana, Grace Umulisa, Pacifique Uwamahoro, Marie Gaudence Nyirahabimana, Laura Bond, Kayla Hernandez, Sarah K. G. Jensen, Ursula Kajani, Shauna M. Murray, Laura B. Rawlings, Vincent Sezibera, Theresa S. Betancourt",
+  "members": [
+   "Black"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Journal of Child Psychology and Psychiatry",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Rwanda",
+  "region": "Sub-Saharan Africa",
+  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jcpp.14160",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Violence prevention"
+  ],
+  "finding": "Hybrid Type-2 Implementation-Effectiveness study of the PLAY Collaborative strategy to scale Sugira Muryango (SM) through Rwandan government child-protection volunteers in three rural districts, with an embedded trial of 538 households (778 caregivers, 555 children)."
+ },
+ {
+  "id": "connolly-2025-the-rights-of-very",
+  "title": "The Rights of Very Young Children in the Digital Environment of the Family Home: Findings…",
+  "authors": "Karen Winter, Rosie Flewitt, Sandra El Gemayel, Lisa Bunting, Lorna Arnott, Paul Connolly, Andrew Dalziell, Julia Gillén, Janet Goodall, Mengfen Liu, Katrina McLaughlin, Sabina Savadova, Sarah Timmins",
+  "members": [
+   "Connolly"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Children & Society",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United Kingdom",
+  "region": "Europe / UK",
+  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/chso.12968",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Cash transfers & poverty",
+   "Media (Sesame / digital)"
+  ],
+  "finding": "Online survey (n=1,444 parents/guardians of 0–36-month-olds across the four UK nations; phase 1 of the ESRC Toddlers, Tech and Talk study), framed by the UNCRC General Comment No. 25 on children's digital rights."
+ },
+ {
+  "id": "cuartas-2025-ambient-heat-and-e",
+  "title": "Ambient heat and early childhood development: a cross‐national analysis",
+  "authors": "Jorge Cuartas, Lenin Balza, Andrés Felipe Camacho, Nicolás Gómez‐Parra",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Journal of Child Psychology and Psychiatry",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Georgia; The Gambia; Madagascar; Malawi; Sierra Leone; State of Palestine",
+  "region": "Global / multi-country",
+  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jcpp.70081",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Social-emotional learning",
+   "Mental health & psychosocial",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Cross-national cross-sectional analysis (Early Childhood Development Index; linear probability models with geographic & seasonality fixed effects) of 19,607 children aged 3–4 across six countries, merging MICS (2017–2020) with ERA5-Land temperature data."
+ },
+ {
+  "id": "cuartas-2025-high-temperatures",
+  "title": "High temperatures and violent child punishment at home: Evidence from six countries.",
+  "authors": "Jorge Cuartas, Andrés Felipe Camacho",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Psychology of Violence",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Six countries (Multiple Indicator Cluster Surveys)",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1037/vio0000651",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Violence prevention",
+   "Climate & environment"
+  ],
+  "finding": "Cross-sectional study merging geolocated MICS from six countries with ERA5-Land climate data (19,607 mother–child dyads; children 36–59 months) to estimate ACUTE effects of higher-than-typical regional/seasonal temperatures on caregiver discipline."
+ },
+ {
+  "id": "cuartas-2025-nurturing-care-as",
+  "title": "Nurturing care as a critical buffer against climate change impacts on child development",
+  "authors": "Jorge Cuartas, Francis Vergunst",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "PLOS Global Public Health",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Global",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1371/journal.pgph.0004441",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Climate & environment",
+   "Policy & frameworks"
+  ],
+  "finding": "Conceptual review examining nurturing care—stable environments promoting children's health/nutrition, safety/security, learning opportunities, and emotionally supportive relationships—as a critical buffer between climate-change hazards (heatwaves, wildfires, storms, floods) and adverse child-deve…"
+ },
+ {
+  "id": "dunne-2025-editorial-inclusi",
+  "title": "Editorial: Inclusion of children with social-emotional or behavioral needs in early…",
+  "authors": "Huichao Xie, Seaneen Sloan, Ching-I Chen, Laura Dunne",
+  "members": [
+   "Dunne"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Frontiers in Education",
+  "type": "peer",
+  "age": "0–8",
+  "country": "Hungary; Romania; Slovakia; United Kingdom; Quebec (Canada); Bangladesh",
+  "region": "Global / multi-country",
+  "link": "https://public-pages-files-2025.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1739990/pdf",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Social-emotional learning",
+   "ECE quality & access",
+   "Policy & frameworks"
+  ],
+  "finding": "Editorial synthesizing a 7-article Frontiers Research Topic on inclusion of young children with social-emotional or behavioral needs in early childhood education."
+ },
+ {
+  "id": "hein-2025-migrant-children-t",
+  "title": "Migrant children transitioning from kindergarten to primary school in Germany: educators’…",
+  "authors": "Julie Larran, Isabell Schuster, Sascha Hein",
+  "members": [
+   "Hein"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "European Early Childhood Education Research Journal",
+  "type": "peer",
+  "age": "caregivers/adults & teachers",
+  "country": "Germany",
+  "region": "Europe / UK",
+  "link": "https://doi.org/10.1080/1350293x.2025.2563852",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Refugees & displacement",
+   "Parenting & caregiving",
+   "ECE quality & access"
+  ],
+  "finding": "Mixed-methods study of how 36 educators (survey + focus groups, pre-transition) and 116 parents (survey, post-transition) of migrant children across Germany perceived kindergarten-to-primary-school transition activities."
+ },
+ {
+  "id": "hein-2025-pilot-evaluation-o",
+  "title": "Pilot Evaluation of the Families Make the Difference Parenting Program With Arab Families…",
+  "authors": "Sascha Hein, Isabell Schuster, Israa Alassi, Aumnia Mohamad",
+  "members": [
+   "Hein"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "European Journal of Psychology and Educational Research",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Germany",
+  "region": "Europe / UK",
+  "link": "https://pdf.ejper.com/EJPER_8_1_35.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Parenting & caregiving",
+   "Mental health & psychosocial"
+  ],
+  "finding": "We found small but statistically non-significant changes in most outcome measures over time. | The only statistically significant finding indicated that female participants reported a decrease in parental stress over time, whereas male participants, on average, reported an increase."
+ },
+ {
+  "id": "littman-2025-remote-facilitatio",
+  "title": "Remote Facilitation of Essential Newborn Care: A Multinational, Multicenter Pilot Study",
+  "authors": "Monika Patil, Mohammad Abdul Mannan, Bolaji Akala, Maimunat Alex-Adeomi, Rumpa Mani Chowdhury, Sanjoy Kumer Dey, Abubakar Garba Farouk, Maria Ahuoiza Garba, Md Golam Hafiz, Md Golam Mothabbir, Lia Harris, Naji Hattar, Shahidul Hoque, Ismat Jahan, Allison Judkins",
+  "members": [
+   "Littman"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Pediatrics Open Science",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Nigeria; Bangladesh",
+  "region": "Global / multi-country",
+  "link": "https://publications.aap.org/pediatricsopenscience/article-pdf/doi/10.1542/pedsos.2024-000356/1813613/pedsos_2024000356.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Media (Sesame / digital)"
+  ],
+  "finding": "Prospective multinational pilot of Essential Newborn Care (ENC) training using the AAP/Laerdal online platform plus low-dose high-frequency (LDHF) manikin practice."
+ },
+ {
+  "id": "mccarthy-2025-disentangling-the",
+  "title": "Disentangling the effects of social and emotional learning programs on student academic achievement across grades 1–12: A systematic review and meta-analysis",
+  "authors": "Cheyeon Ha, Michael F. McCarthy, Christina Cipriano, et al.",
+  "members": [
+   "McCarthy"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Review of Educational Research",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "International (K-12)",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.3102/00346543251367769",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Social-emotional learning",
+   "Measurement & methods"
+  ],
+  "finding": "Systematic review and meta-analysis (Review of Educational Research) disentangling the effects of universal school-based SEL programs on student ACADEMIC achievement across grades 1–12."
+ },
+ {
+  "id": "mccarthy-2025-navigating-social",
+  "title": "Navigating social and emotional learning evidence in a polarized socio-political…",
+  "authors": "Michael F. McCarthy, Eliya Ahmad Herskowitz, Sophie P. Barnes, Zi Jia Ng, Cheyeon Ha, Christina Cipriano",
+  "members": [
+   "McCarthy"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Social and Emotional Learning Research Practice and Policy",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.1016/j.sel.2025.100170",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Social-emotional learning",
+   "Parenting & caregiving",
+   "Climate & environment"
+  ],
+  "finding": "Qualitative pilot study examining whether and how 25 SEL stakeholders (K-12 educators, administrators, district staff, policymakers, parents, researchers/advocates) understand, access, and use SEL research evidence amid a polarized US socio-political climate that is fueling SEL misinformation/dis…"
+ },
+ {
+  "id": "miller-2025-exploring-developm",
+  "title": "Exploring Developmental Outcomes for Children Attending Community-based Pre-Schools in…",
+  "authors": "Laura Dunne, Aoibheann Brennan‐Wilson, Leonardo Ferreira Soares, Dulce Martins da Silva, Antero Benedito Da Silva, Nicole Gleghorne, Sarah Miller, Paul Connolly",
+  "members": [
+   "Miller"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Child Care in Practice",
+  "type": "peer",
+  "age": "0–8",
+  "country": "Timor-Leste",
+  "region": "Asia-Pacific",
+  "link": "https://doi.org/10.1080/13575279.2025.2449852",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Social-emotional learning",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Quasi-experimental pre/post-test evaluation (LINKS study) of UNICEF community-based alternative pre-schools (CBAPs) vs public pre-schools in Timor-Leste, with 607 children from 33 pre-schools (508 post-tested after ~9 months), assessed with the East-Asia Pacific Early Childhood Development Scales…"
+ },
+ {
+  "id": "panter-brick-2025-a-preliminary-inve",
+  "title": "A Preliminary Investigation of Associations Between Traumatic Events Experienced During…",
+  "authors": "Kyle S. Wiley, Gisele Rodrigues Gouveia, Caroline Camilo, Verônica Euclydes, Catherine Panter‐Brick, Alícia Matijasevich, Alexandre Archanjo Ferraro, Lislaine Aparecida Fracolli, Anna Maria Chiesa, Eurı́pedes Constantino Miguel, Guilherme V. Polanczyk, Helena Brentani",
+  "members": [
+   "Panter-Brick"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "American Journal of Human Biology",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Brazil",
+  "region": "Latin America & Caribbean",
+  "link": "https://doi.org/10.1002/ajhb.70004",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Violence prevention"
+  ],
+  "finding": "Investigation of associations between maternal interpersonal-violence/trauma history and maternal & infant diurnal salivary cortisol among adolescent mothers (14–19) and infants in São Paulo, Brazil (n=23 mothers, 32 infants; 12 months postpartum)."
+ },
+ {
+  "id": "panter-brick-2025-epigenetic-signatu",
+  "title": "Epigenetic signatures of intergenerational exposure to violence in three generations of…",
+  "authors": "Connie J. Mulligan, Edward B. Quinn, Dima Hamadmad, Christopher L. Dutton, Lisa Nevell, Alexandra M. Binder, Catherine Panter‐Brick, Rana Dajani",
+  "members": [
+   "Panter-Brick"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Scientific Reports",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Jordan",
+  "region": "Middle East & North Africa",
+  "link": "https://www.nature.com/articles/s41598-025-89818-z.pdf",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Mental health & psychosocial"
+  ],
+  "finding": "In this study, we use the DOHaD hypothesis as a framework to investigate epigenetic variation as a mechanism that mediates the impact of psychosocial trauma on future generations. | Specifically, we propose the presence of differentially methylate"
+ },
+ {
+  "id": "panter-brick-2025-supporting-the-men",
+  "title": "Supporting the mental health of forcibly displaced children",
+  "authors": "Michael Pluess, Felicity L. Brown, Catherine Panter‐Brick",
+  "members": [
+   "Panter-Brick"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Nature Reviews Psychology",
+  "type": "peer",
+  "age": "0–8 & 9–25 + caregivers/adults",
+  "country": "International",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1038/s44159-025-00447-9",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Mental health & psychosocial"
+  ],
+  "finding": "Review consolidating knowledge on mental health among forcibly displaced children (~50 million under 18). Synthesizes prevalence of mental disorders in displacement settings, individual differences in response to war/displacement, and existing MHPSS approaches."
+ },
+ {
+  "id": "rey-guerra-2025-parental-input-as",
+  "title": "Parental input as a mediating pathway for gender differences in early academic skills",
+  "authors": "Marina Vasilyeva, Catalina Rey‐Guerra, Linxi Lu, Eric Dearing",
+  "members": [
+   "Rey-Guerra"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Early Childhood Research Quarterly",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Russia",
+  "region": "Europe / UK",
+  "link": "https://doi.org/10.1016/j.ecresq.2025.02.002",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Media (Sesame / digital)"
+  ],
+  "finding": "Longitudinal study (N=1,240 Russian first-graders; 49.5% female) testing whether parental input mediates gender differences in early academic skills."
+ },
+ {
+  "id": "rey-guerra-2025-parenting-beliefs",
+  "title": "Parenting beliefs and psychological distress → stimulation and punishment → young…",
+  "authors": "Jorge Cuartas, Catalina Rey‐Guerra, Juliana Borbón",
+  "members": [
+   "Rey-Guerra"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "PLoS ONE",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Colombia",
+  "region": "Latin America & Caribbean",
+  "link": "https://doi.org/10.1371/journal.pone.0336106",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Violence prevention"
+  ],
+  "finding": "Structural equation modeling indicated that positive parental beliefs about violence were linked to reduced engagement in stimulating activities, predicting lower child effortful control and positive affectivity, while parental psychological distress was associated with greater use of violent pun…"
+ },
+ {
+  "id": "yoshikawa-2025-cash-transfers-and",
+  "title": "Cash Transfers and Their Effect on Maternal and Young Children’s Health",
+  "authors": "Greg J. Duncan, Katherine Magnuson, Alicia Kunin‐Batson, Hirokazu Yoshikawa, Nathan A. Fox, Sarah Halpern‐Meekin, Nicholas J. Ainsworth, Sarah R. Black, Jennifer Nelson, Timothy D. Nelson, Michael Georgieff, Debra S. Karhson, Lisa A. Gennetian, Kimberly G. Noble",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "JAMA Pediatrics",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://jamanetwork.com/journals/jamapediatrics/articlepdf/2834896/jamapediatrics_duncan_2025_oi_250026_1748962171.48097.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Mental health & psychosocial",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years RCT after 4 years of monthly cash ($333 vs $20): NO statistically detectable group differences in maternal depressive symptoms (ES 0.04), anxiety (ES 0.12), or BMI (ES −0.06), nor in child BMI percentile or maternal-reported child health (data from 891 dyads)."
+ },
+ {
+  "id": "yoshikawa-2025-cohort-profile-a",
+  "title": "Cohort profile: a prenatal birth cohort study of intergenerational risk and resilience…",
+  "authors": "Alice J. Wuermli, Mary Caroline Hiott, Elisa Ugarte, M Sajjadur Rahman, Mahbub Elahi, AK Rahim, Goutam Kumar Dutta, Md Shakil Ahamed, Bharati Roy, Reza Mostary Akhter, Eamam Hossain, Duja Michael, Tasnim Kabir Ayrin, Subah Hasneen Haseen, Rayhan Bin Alam",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "BMJ Open",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Bangladesh (Cox’s Bazar)",
+  "region": "Asia-Pacific",
+  "link": "https://bmjopen.bmj.com/content/bmjopen/15/11/e099052.full.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Mental health & psychosocial"
+  ],
+  "finding": "Cohort profile of the first large prenatal birth-cohort study in a refugee context in an LMIC (Cox's Bazar, Bangladesh; N=2,888, 80% Rohingya)."
+ },
+ {
+  "id": "yoshikawa-2025-maternal-sensitivi",
+  "title": "Maternal Sensitivity Predicts Child Attachment in a Non-Western Context: A 9-Year…",
+  "authors": "Theodore E. A. Waters, Rui Yang, Yufei Gu, Victoria Zhu, Lixian Cui, Xuan Li, Niobe Way, Hirokazu Yoshikawa, Xinyin Chen, Sumie Okazaki, Kristin Bernard, Guangzhen Zhang, Zongbao Liang",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Child Development",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "China",
+  "region": "Asia-Pacific",
+  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cdev.14256",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Policy & frameworks"
+  ],
+  "finding": "9-year prospective Chinese cohort (N=356): early maternal sensitivity (observed at 14 & 24 months) positively predicted children's attachment representations at age 10 (β=0.20, p<.01), supporting the cross-cultural universality of the sensitivity→attachment-security hypothesis outside Western con…"
+ },
+ {
+  "id": "yoshikawa-2025-the-effect-of-a-mo",
+  "title": "The Effect of a Monthly Unconditional Cash Transfer on Children’s Development at Four…",
+  "authors": "Kimberly G. Noble, Katherine Magnuson, Greg J. Duncan, Lisa A. Gennetian, Hirokazu Yoshikawa, Nathan A. Fox, Sarah Halpern‐Meekin, Sonya V. Troller‐Renfree, Sangdo Han, Shannon Dailey, Timothy Nelson, Jennifer Nelson, Sarah Black, Michael Georgieff, Debra S. Karhson",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "National Bureau of Economic Research",
+  "type": "grey",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.3386/w33844",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Social-emotional learning",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years RCT after 4 years of monthly cash ($333 vs $20; n=891): NO statistically significant impacts on four preregistered primary outcomes (language, executive function, social-emotional problems, high-frequency brain activity) or three secondary outcomes (visual processing/spatial pe…"
+ },
+ {
+  "id": "yoshikawa-2025-the-effects-of-mon",
+  "title": "The Effects of Monthly Unconditional Cash Support Among Latina Families",
+  "authors": "Lisa A. Gennetian, Hema Shah, Luis Basurto, Laura Stilwell, Hirokazu Yoshikawa, Silvana Freire, Katherine Magnuson, Kimberly G. Noble, Greg J. Duncan, Nathan A. Fox, Sarah Halpern‐Meekin",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2025,
+  "date": "2025",
+  "venue": "Working paper / report",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.59377/590p8000g",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years subgroup analysis of how the cash gift ($333 vs $20/month) affected Latina families over ~36 months. High-cash households spent MORE on child-specific goods and MORE time on child-specific early-learning activities than low-cash households, and reported lower public-benefit rec…"
+ },
+ {
+  "id": "aber-2024-patterns-of-self-r",
+  "title": "Patterns of self-regulation and emotional well-being among Syrian refugee children in…",
+  "authors": "J. Lawrence Aber, Ha Yeon Kim, Zezhen Wu",
+  "members": [
+   "Aber"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Development and Psychopathology",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Lebanon",
+  "region": "Middle East & North Africa",
+  "link": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3F0E4B1C90E62D3FE586DD0D2DB401BE/S0954579424001202a.pdf/div-class-title-patterns-of-self-regulation-and-emotional-well-being-among-syrian-refugee-children-in-lebanon-an-exploratory-person-centered-approach-div.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Social-emotional learning"
+  ],
+  "finding": "Latent profile analysis of 18 self-regulation & emotional well-being indicators identified 7 distinct profiles among 2,132 Syrian refugee children: (1) Happy & positive (11%); (2) Poorly regulated (9%); (3) Sensitive to interpersonal conflict/otherwise regulated (21%); (4) Troubled in classrooms…"
+ },
+ {
+  "id": "betancourt-2024-maternal-subjectiv",
+  "title": "Maternal Subjective Wellbeing and the Cognitive and Socioemotional Outcomes of 3- to…",
+  "authors": "Ngozi V. Enelamah, Margaret Lombe, Theresa S. Betancourt, Ce Shen, David R. Williams",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Journal of Child and Family Studies",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Nigeria",
+  "region": "Sub-Saharan Africa",
+  "link": "https://doi.org/10.1007/s10826-023-02763-1",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Media (Sesame / digital)"
+  ],
+  "finding": "Structural equation modeling on a nationally representative MICS sample (N=3,176) of Nigerian mothers/caregivers (15–24) and their 3–4-year-olds."
+ },
+ {
+  "id": "betancourt-2024-parenting-and-fami",
+  "title": "Parenting and family interventions in lower and middle-income countries for child and…",
+  "authors": "Tania Bosqui, Anas Mayya, Sally Farah, Zahraa Shaito, Mark J. D. Jordans, Gloria A. Pedersen, Theresa S. Betancourt, Alan Carr, Michael Donnelly, Felicity L. Brown",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Comprehensive Psychiatry",
+  "type": "peer",
+  "age": "All ages / N.A.",
+  "country": "Low- and middle-income countries (incl. humanitarian settings)",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1016/j.comppsych.2024.152483",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Systematic review (update) of parenting/family interventions for children/adolescents aged 0–24 in LMICs, including humanitarian settings, measuring child/adolescent mental health."
+ },
+ {
+  "id": "betancourt-2024-psychological-and",
+  "title": "Psychological and Social Suffering of Another Generation of Palestinian Children Living…",
+  "authors": "Tania Bosqui, Sawsan Abdulrahim, Rima Afifi, Alastair Ager, Theresa S. Betancourt, Alan Carr, Kristin Hadfield, Ghena Ismail, Mark J. D. Jordans, Salam Jabbour, Zeena Khazendar, Bassam Marshoud, Eve S. Puffer",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "PubMed",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Palestine (Gaza & occupied Palestinian territories)",
+  "region": "Middle East & North Africa",
+  "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11197870/pdf/hhr-26-01-147.pdf",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Refugees & displacement",
+   "Mental health & psychosocial",
+   "Violence prevention"
+  ],
+  "finding": "Commentary in Health and Human Rights describing the psychological and social suffering of Palestinian children—the fifth generation to live under occupation characterized by violence, restricted movement, and displacement—and the decades-long Gaza land/air/sea blockade."
+ },
+ {
+  "id": "betancourt-2024-task-sharing-to-pr",
+  "title": "Task-sharing to promote caregiver mental health, positive parenting practices, and…",
+  "authors": "Alethea Desrosiers, Indrani Saran, Ariana M. Albanese, Cara M. Antonaccio, Sarah Elizabeth Neville, Rebecca Esliker, Musu Jambai, Mahmoud Feika, Theresa S. Betancourt",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "BMC Psychiatry",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Sierra Leone",
+  "region": "Sub-Saharan Africa",
+  "link": "https://bmcpsychiatry.biomedcentral.com/counter/pdf/10.1186/s12888-024-06209-w",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Parenting & caregiving",
+   "Mental health & psychosocial"
+  ],
+  "finding": "Pilot RCT (mixed methods) of a culturally adapted, community-health-worker-delivered FSI-ECD+VP vs treatment-as-usual among 80 dual-caregiver households (160 caregivers; child age 6–36 months) in rural Makeni, Sierra Leone."
+ },
+ {
+  "id": "cuartas-2024-conflict-climate",
+  "title": "Conflict, Climate, and Cash: Protecting Children in Nigeria's Conflict Zones",
+  "authors": "Hernando Grueso, Delamónica Enrique, Oliver Fiala, Ololade Julius Baruwa, Jorge Cuartas, Lucie Cluver",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "SSRN Electronic Journal",
+  "type": "grey",
+  "age": "caregivers/adults",
+  "country": "Nigeria",
+  "region": "Sub-Saharan Africa",
+  "link": "https://doi.org/10.2139/ssrn.5054962",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Climate & environment"
+  ],
+  "finding": "Quasi-experimental IV study (MICS 2021 + UCDP geo-coded conflict + satellite climate) of armed-conflict exposure and child food insecurity in Nigeria's arid regions, using current-year rainfall fluctuations as an instrument for conflict-zone exposure."
+ },
+ {
+  "id": "cuartas-2024-estimating-the-ass",
+  "title": "Estimating the association between spanking and early childhood development using…",
+  "authors": "Jorge Cuartas",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Psychology of Violence",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Bhutan; Cambodia; Ethiopia; Rwanda",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1037/vio0000502",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Social-emotional learning",
+   "Violence prevention"
+  ],
+  "finding": "Longitudinal analysis using between- AND within-child variation (random- and fixed-effects models) across four LMIC cohorts (Bhutan, Cambodia, Ethiopia, Rwanda; N=3,048; IDELA assessments)."
+ },
+ {
+  "id": "cuartas-2024-global-development",
+  "title": "Global development assistance for early childhood care and education in 134 low- and…",
+  "authors": "Yiqun Luan, Dominic Hodgkin, Jere R. Behrman, Alan Stein, Linda Richter, Jorge Cuartas, Chunling Lu",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "BMJ Global Health",
+  "type": "peer",
+  "age": "All ages / N.A.",
+  "country": "134 low- and middle-income countries",
+  "region": "Global / multi-country",
+  "link": "https://gh.bmj.com/content/9/11/e015991.full.pdf",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Cash transfers & poverty",
+   "ECE quality & access"
+  ],
+  "finding": "Analysis of OECD Creditor Reporting System aid data for early childhood care and education (ECCE) across 134 LMICs (2007–2021). Lower-bound ECCE aid totaled US$3,646 million—only 1.7% of total education aid—falling short of UNICEF's suggested 10% minimum; the World Bank provided 53.3%."
+ },
+ {
+  "id": "cuartas-2024-infrastructure-ser",
+  "title": "Infrastructure Services and Early Childhood Development in Latin America and the…",
+  "authors": "Lenin Balza, Jorge Cuartas, Nicolás Gómez‐Parra, Tomás Serebrisky",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "World Development",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Latin America & the Caribbean (18 countries)",
+  "region": "Latin America & Caribbean",
+  "link": "https://doi.org/10.1016/j.worlddev.2024.106817",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving"
+  ],
+  "finding": "Cross-sectional MICS/DHS analysis across 18 Latin American & Caribbean countries. Access to water and sanitation was significantly POSITIVELY associated with early childhood development and with reduced stunting; access to improved garbage-collection services was negatively associated with stunti…"
+ },
+ {
+  "id": "cuartas-2024-prevention-of-viol",
+  "title": "Prevention of Violence Against Children: A Qualitative Exploration of Colombian…",
+  "authors": "Jorge Cuartas, Luciana Beccassino, Helen Baker‐Henningham, Oscar Iván Pineda Díaz, María Fernanda Rodríguez",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Child Care Health and Development",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Colombia",
+  "region": "Latin America & Caribbean",
+  "link": "https://doi.org/10.1111/cch.13325",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Violence prevention"
+  ],
+  "finding": "Qualitative study (interviews & focus groups) of policymakers (N=10), parenting-programme facilitators (N=20), and parents/caregivers (N=38) examining the implementation ecosystem of violence-against-children (VAC) prevention programmes in Colombia."
+ },
+ {
+  "id": "cuartas-2024-the-cost-of-not-in",
+  "title": "The cost of not investing in the next 1000 days: implications for policy and practice",
+  "authors": "Milagros Nores, Claudia Mónica Vázquez, Emily Gustafsson‐Wright, Sarah Osborne, Jorge Cuartas, Mark Lambiris, Dana Charles McCoy, Florencia López Bóo, Jere R. Behrman, Raquel Bernal, Catherine E. Draper, Anthony D. Okely, Mark S. Tremblay, Aisha K. Yousafzai, Joan Lombardi, Günther Fink",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "The Lancet",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Global (low- and middle-income focus)",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1016/s0140-6736(24)01390-4",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Cash transfers & poverty",
+   "ECE quality & access"
+  ],
+  "finding": "Second paper in a Lancet Series on early childhood development and the 'next 1000 days' (ages 2–5). Summarizes benefits and costs of key multisectoral strategies—early childhood care and education (ECCE), parenting interventions, and cash transfers—building on first-1000-days investments."
+ },
+ {
+  "id": "foulds-2024-using-diverse-dist",
+  "title": "Using Diverse Distribution Platforms to Support Young Children’s Coping Strategies in the…",
+  "authors": "Kim Foulds, Senait Solomon, Scott B. Cameron, Carolina Casas, David Cohen, Tara Wright, Shanna Kohn, Julia Tomchinsky",
+  "members": [
+   "Foulds"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Communication Studies",
+  "type": "peer",
+  "age": "0–8",
+  "country": "United States; Latin America; Middle East",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1080/10510974.2024.2339565",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Media (Sesame / digital)"
+  ],
+  "finding": "Practice/lessons-learned paper describing three ways educational mass media and its diverse distribution platforms can support young children's understanding and use of COPING strategies amid adversity, using examples reaching refugee and migrant children in the US, Latin America, and the Middle…"
+ },
+ {
+  "id": "hein-2024-intergenerational",
+  "title": "Intergenerational Pathways to Peace: Putting Children First",
+  "authors": "Matthew Elmore Merritt, Emma Peterson, Roaa Shaheen, Alison Zerbib, Sabrina Mellinghoff, Shreya Nuli, Sophia De Oliveira, Jordi Bertran Ramirez, Sascha Hein, Cara Fallon, Catherine Panter-Brick",
+  "members": [
+   "Hein"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Yale Jackson School of Global Affairs (Policy Brief)",
+  "type": "grey",
+  "age": "0–8",
+  "country": "Global (low- and middle-income / conflict-affected focus)",
+  "region": "Global / multi-country",
+  "link": "#",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Peacebuilding & social cohesion",
+   "Policy & frameworks"
+  ],
+  "finding": "Policy brief (Yale Jackson School) arguing that Early Childhood Development (ECD) is a catalyst for intergenerational peacebuilding and community stability."
+ },
+ {
+  "id": "leckman-2024-scoping-review-di",
+  "title": "Scoping Review: Digital Mental Health Interventions for Children and Adolescents Affected…",
+  "authors": "Andrea Danese, Dmytro Martsenkovskyi, Barbara Remberk, Monika Youssef Khalil, Emma Diggins, Eleanor Keiller, Saba Masood, Isang Awah, Corrado Barbui, Renée Beer, Rachel Calam, Marcio Gagliato, Tine K. Jensen, Zlatina Kostova, James F. Leckman",
+  "members": [
+   "Leckman"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Journal of the American Academy of Child & Adolescent Psychiatry",
+  "type": "peer",
+  "age": "0–8 & 9–25 + caregivers/adults",
+  "country": "International",
+  "region": "Global / multi-country",
+  "link": "http://www.jaacap.org/article/S0890856724002430/pdf",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Social-emotional learning",
+   "Parenting & caregiving"
+  ],
+  "finding": "Pre-registered scoping review mapping digital mental health interventions for children/adolescents affected by war (>200 million live in conflict-affected countries with complex needs and poor access to services)."
+ },
+ {
+  "id": "mccarthy-2024-a-systematic-revie",
+  "title": "A systematic review and meta-analysis of the effects of universal school-based SEL programs in the United States: Considerations for marginalized students",
+  "authors": "Michael F. McCarthy, Christina Cipriano, et al.",
+  "members": [
+   "McCarthy"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Social and Emotional Learning: Research, Practice, and Policy",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.1016/j.sel.2024.100029",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Social-emotional learning",
+   "Measurement & methods"
+  ],
+  "finding": "US-specific systematic review and meta-analysis of universal school-based SEL programs (90 studies, 47 programs, 20,626 K-12 students, 2008–2020). Students who participated experienced significantly improved academic achievement, school functioning, and social-emotional outcomes."
+ },
+ {
+  "id": "panter-brick-2024-father-involvement",
+  "title": "Father Involvement and Child Development: A Prospective Study of Syrian Refugee Families",
+  "authors": "Kristin Hadfield, Majd Al‐Soleiti, Rana Dajani, Isabelle Mareschal, Catherine Panter‐Brick",
+  "members": [
+   "Panter-Brick"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Journal of Child and Family Studies",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Jordan",
+  "region": "Middle East & North Africa",
+  "link": "https://doi.org/10.1007/s10826-024-02809-y",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Social-emotional learning",
+   "Parenting & caregiving"
+  ],
+  "finding": "Prospective study of father involvement in Syrian refugee families in Jordan (father–mother–child triads, n=160 T1 / 105 T2; children 4–8). Syrian fathers rated themselves as highly involved—about 13% MORE involved than mothers reported them to be."
+ },
+ {
+  "id": "panter-brick-2024-physiological-and",
+  "title": "Physiological and genomic signatures of war and displacement: A comprehensive literature…",
+  "authors": "Jelena Jankovic‐Rankovic, Catherine Panter‐Brick",
+  "members": [
+   "Panter-Brick"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Psychoneuroendocrinology",
+  "type": "peer",
+  "age": "9–25 + caregivers/adults",
+  "country": "International (refugees in Europe & the Middle East)",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1016/j.psyneuen.2024.107084",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Policy & frameworks"
+  ],
+  "finding": "Comprehensive review (37 publications since 2000, mostly refugees relocated in Europe and the Middle East) of physiological and genomic biomarkers of war and forced displacement."
+ },
+ {
+  "id": "ponguta-2024-caregiver-psychopa",
+  "title": "Caregiver Psychopathology, Resilience, and Their Associations with Social-Emotional…",
+  "authors": "Sascha Hein, Liliana A. Ponguta, José M. Flores, Amalia Londoño Tobón, Isaac N. S. Johnson, Julie Larran, Ana María Ortiz Hoyos, Óscar Gómez, Lina María González Ballesteros, Camila Andrea Castellanos Roncancio, James F. Leckman",
+  "members": [
+   "Ponguta"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Child Psychiatry & Human Development",
+  "type": "peer",
+  "age": "All ages / N.A.",
+  "country": "Colombia",
+  "region": "Latin America & Caribbean",
+  "link": "https://link.springer.com/content/pdf/10.1007/s10578-024-01787-y.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Social-emotional learning"
+  ],
+  "finding": "Caregivers reported substantial levels of psychopathology ranging from 12.84% of caregivers with elevated anxiety levels, 24.5% who scored above the cutoff on the PTSD measure, and 44.7% who screened positive for depression."
+ },
+ {
+  "id": "ponguta-2024-effect-of-a-youth",
+  "title": "Effect of a youth-led early childhood care and education programme on children's…",
+  "authors": "Aisha K. Yousafzai, Saima Siyal, Emily Franchett, Quanyi Dai, Karima Rehmani, Christopher R. Sudfeld, Shelina Bhamani, Shahnaz Hakro, Chin R. Reyes, Günther Fink, Liliana A. Ponguta",
+  "members": [
+   "Ponguta"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "The Lancet Child & Adolescent Health",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Pakistan",
+  "region": "Asia-Pacific",
+  "link": "https://ecommons.aku.edu/pakistan_fhs_mc_women_childhealth_paediatr/1574",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "ECE quality & access"
+  ],
+  "finding": "Cluster-RCT of LEAPS—a youth-led early childhood care and education program in which trained female youth deliver community preschools in rural Sindh, Pakistan. LEAPS was implemented in 91 of 99 villages; 3,858 children were assessed with the IDELA across four rounds (Jan 2019–Mar 2021)."
+ },
+ {
+  "id": "pruett-2024-navigating-the-gap",
+  "title": "Navigating the Gap Between Correlational and Intervention Studies of Fatherhood and…",
+  "authors": "Philip A. Cowan, Carolyn Pape Cowan, Marsha Kline Pruett, Kyle D. Pruett",
+  "members": [
+   "Pruett"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Parenting",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "United States (conceptual)",
+  "region": "North America",
+  "link": "https://doi.org/10.1080/15295192.2024.2411503",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Policy & frameworks"
+  ],
+  "finding": "Conceptual review (Cowan, Cowan, M. K. Pruett, K. Pruett) examining the gap between CORRELATIONAL and INTERVENTION studies of fatherhood and children's development, argued through a family-systems ecological perspective."
+ },
+ {
+  "id": "yoshikawa-2024-a-family-centered",
+  "title": "A Family-Centered Approach to Learning English as a Second Language: A Mixed-Methods…",
+  "authors": "Lauren A. Tighe, Teresa Eckrich Sommer, Terri J. Sabol, P. Lindsay Chase‐Lansdale, Hirokazu Yoshikawa, Jeanne Brooks‐Gunn, Amanda Sheffield Morris, Christopher T. King",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Educational Evaluation and Policy Analysis",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.3102/01623737241268074",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Social-emotional learning",
+   "Parenting & caregiving"
+  ],
+  "finding": "Two-year experimental mixed-methods evaluation of a Two-Generation ESL program (high-dosage child-oriented ESL curriculum for parents + Head Start + family services)."
+ },
+ {
+  "id": "yoshikawa-2024-a-global-call-for",
+  "title": "A Global Call for Two-Generation Approaches to Child Development and Caregivers'…",
+  "authors": "Teresa Eckrich Sommer, Emily Franchett, Hirokazu Yoshikawa, Joan Lombardi",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Child Development Perspectives",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Global",
+  "region": "Global / multi-country",
+  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cdep.12516",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Conceptual review arguing that, globally, two-generation approaches (harnessing synergies between children's development and caregivers' education/livelihood/well-being) are likely more effective than single-generation approaches against poverty."
+ },
+ {
+  "id": "yoshikawa-2024-can-cash-transfers",
+  "title": "Can Cash Transfers Improve Maternal Well-being and Family Processes among Families with…",
+  "authors": "Katherine Magnuson, Greg J. Duncan, Hirokazu Yoshikawa, Paul D. Yoo, Sangdo Han, Lisa A. Gennetian, Nathan A. Fox, Sarah Halpern‐Meekin, Kimberly G. Noble",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "SSRN Electronic Journal",
+  "type": "grey",
+  "age": "caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.2139/ssrn.4955765",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Mental health & psychosocial",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Experimental analysis (Baby's First Years RCT; $333 vs $20/month) of whether monthly unconditional cash transfers improve maternal well-being and family processes among families with young children."
+ },
+ {
+  "id": "yoshikawa-2024-child-directed-spe",
+  "title": "Child-directed speech in a large sample of U.S. mothers with low income",
+  "authors": "Shannon Dailey, Lisa A. Gennetian, Katherine Magnuson, Greg J. Duncan, Hirokazu Yoshikawa, Nathan A. Fox, Kimberly G. Noble",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Child Development",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145882/pdf/nihms-2081217.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years RCT analysis (N=563 mothers and 1-year-olds): monthly unconditional cash transfers did NOT impact mothers' child-directed speech during a 10-min at-home play session (effect sizes −.08 to .02), though within-sample variability was wide."
+ },
+ {
+  "id": "yoshikawa-2024-cluster-randomized",
+  "title": "Cluster randomized controlled trial of a phone-based caregiver support and parenting…",
+  "authors": "Joyce Rafla, Kate Schwartz, Hirokazu Yoshikawa, Dennis Hilgendorf, Anaga Ramachandran, Mohammad Khanji, Rawan Abu Seriah, Mohammad Al Aabed, Ragheb Fityan, Phoebe Sloane, Ayat Al Aqra, Razan Mousa, Tareq Sharawi, Andrés Molano, Kimberly Foulds",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Early Childhood Research Quarterly",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Jordan",
+  "region": "Middle East & North Africa",
+  "link": "https://doi.org/10.1016/j.ecresq.2024.07.004",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Social-emotional learning",
+   "Parenting & caregiving"
+  ],
+  "finding": "Cluster-RCT of a phone-based caregiver-support and parenting program for Syrian and Jordanian families with young children. The program produced a small but statistically significant REDUCTION in caregiver depressive symptoms (n=2,298; β=−0.06, p=.021, adj."
+ },
+ {
+  "id": "yoshikawa-2024-does-adding-parent",
+  "title": "Does adding parent education and workforce training to Head Start promote or interfere…",
+  "authors": "Terri J. Sabol, Elise Chor, Teresa Eckrich Sommer, Lauren A. Tighe, P. Lindsay Chase‐Lansdale, Amanda Sheffield Morris, Jeanne Brooks‐Gunn, Hirokazu Yoshikawa, Christopher T. King",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Child Development",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cdev.14141",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Policy & frameworks"
+  ],
+  "finding": "Quasi-experimental study of whether adding parent education/workforce training (CareerAdvance) to Head Start helps or harms children's academic, language, math, and inhibitory-control outcomes over 3 years (147 CareerAdvance vs 139 matched comparison children)."
+ },
+ {
+  "id": "yoshikawa-2024-effects-on-materna",
+  "title": "Effects on Maternal Bandwidth of Monthly Unconditional Cash Starting at Birth Among U.S.…",
+  "authors": "Shannon Dailey, Lisa A. Gennetian, Greg J. Duncan, Nathan A. Fox, Katherine Magnuson, Kimberly G. Noble, Hirokazu Yoshikawa",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "SSRN Electronic Journal",
+  "type": "grey",
+  "age": "caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "http://dx.doi.org/10.2139/ssrn.4940902",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years RCT (N=828): preregistered intent-to-treat analyses found NO differences in low-income U.S. mothers' cognitive bandwidth after receiving a high-cash ($333/month) vs low-cash ($20/month) gift for 48 months post-childbirth—contrary to scarcity theory predictions."
+ },
+ {
+  "id": "yoshikawa-2024-the-impact-of-mont",
+  "title": "The Impact of Monthly Unconditional Cash on Food Security, Spending, and Consumption:…",
+  "authors": "Lisa A. Gennetian, Matthew Maury, Laura Stilwell, Hema Shah, Katherine Magnuson, Kimberly G. Noble, Greg J. Duncan, Nathan A. Fox, Sarah Halpern‐Meekin, Hirokazu Yoshikawa",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "SSRN Electronic Journal",
+  "type": "grey",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.2139/ssrn.4781670",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years research brief on the impact of monthly unconditional cash ($333 vs $20/month) on food security, household spending, and consumption at the 3-year follow-up, situating cash transfers alongside SNAP/WIC in reducing child poverty and hunger and supporting child development."
+ },
+ {
+  "id": "yoshikawa-2024-the-developmental",
+  "title": "The developmental consequences of early exposure to climate change-related risks",
+  "authors": "Jorge Cuartas, Dana Charles McCoy, Isabella Torres, Lindsey Burghardt, Jack P. Shonkoff, Hirokazu Yoshikawa",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Child Development Perspectives",
+  "type": "peer",
+  "age": "0–8",
+  "country": "Global",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1111/cdep.12503",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Mental health & psychosocial",
+   "Climate & environment"
+  ],
+  "finding": "Conceptual framework (bioecological and dynamic-systems) for how the distinctive dual time frame of acute (extreme weather events) and chronic (ecological degradation) climate-change risks, experienced prenatally and early in life across ecological contexts, can threaten human development."
+ },
+ {
+  "id": "yoshikawa-2024-the-effect-of-unco",
+  "title": "The effect of unconditional cash transfers on maternal assessments of children’s early…",
+  "authors": "Emma R. Hart, Lisa A. Gennetian, Jessica F. Sperber, Renata Penalva, Katherine Magnuson, Greg J. Duncan, Sarah Halpern‐Meekin, Hirokazu Yoshikawa, Nathan A. Fox, Kimberly G. Noble",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Developmental Psychology",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.1037/dev0001824",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years RCT registered report: NO statistically detectable impacts of the high-cash gift ($333 vs $20/month) on maternal reports of children's early language and socioemotional development, concerns for developmental delay, or early-intervention enrollment, across ages 1–3."
+ },
+ {
+  "id": "yoshikawa-2024-unconditional-cash",
+  "title": "Unconditional Cash and Breastfeeding, Child Care, and Maternal Employment among Families…",
+  "authors": "Laura Stilwell, Maritza Morales-Gracia, Katherine Magnuson, Lisa A. Gennetian, Maria Sauval, Nathan A. Fox, Sarah Halpern‐Meekin, Hirokazu Yoshikawa, Kimberly G. Noble",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2024,
+  "date": "2024",
+  "venue": "Social Service Review",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11323047/pdf/nihms-2004550.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years RCT (1,000 low-income U.S. mothers): likelihood/length of breastfeeding, nonparental childcare use, and maternal employment did NOT differ between high- ($333) and low-cash ($20) groups in the infant's first year."
+ },
+ {
+  "id": "aber-2023-evaluating-program",
+  "title": "Evaluating Program Enhancement Strategies for Remedial Tutoring: A Cluster-Randomized Control Trial With Syrian Refugee Students in Lebanon",
+  "authors": "Lindsay Brown, Kalina Gjicali, Ha Yeon Kim, Carly Tubbs Dolan, Paul Frisoli, Mahmoud Bwary, J. Lawrence Aber",
+  "members": [
+   "Aber"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "AERA Open",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Lebanon",
+  "region": "Middle East & North Africa",
+  "link": "https://doi.org/10.1177/23328584231209268",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Social-emotional learning"
+  ],
+  "finding": "Cluster-RCT (4,017 Syrian refugee students; 76 sites). Vs 10 weeks, 26 weeks of HCT MARGINALLY improved literacy (ES=0.04, p=.097), SIGNIFICANTLY improved behavioral regulation (ES=0.31, p<.001), and reduced internalizing symptoms, hostile attribution and emotion dysregulation—BUT students report…"
+ },
+ {
+  "id": "betancourt-2023-a-tale-of-two-prog",
+  "title": "A Tale of Two Programs for Parents of Young Children: Independently-Conducted Case…",
+  "authors": "Frances E. Aboud, Karma Choden, Michael Tusiimi, Rafael Contreras Gomez, Rachel Hatch, Sara Dang, Theresa S. Betancourt, Karma Dyenka, Grace Umulisa, Carina Omoeva",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Children",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Bhutan; Rwanda",
+  "region": "Global / multi-country",
+  "link": "https://www.mdpi.com/2227-9067/10/8/1413/pdf?version=1692436474",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Measurement & methods"
+  ],
+  "finding": "Independently-conducted implementation case studies of two parenting programs—Prescription to Play (Bhutan, group-based) and Sugira Muryango (Rwanda, home-visiting)—focused on the delivery workforce. Workers were trained 10–11 days using demonstrations, role plays, and manuals."
+ },
+ {
+  "id": "betancourt-2023-measuring-the-cost",
+  "title": "Measuring the cost-effectiveness of a home-visiting intervention to promote early child…",
+  "authors": "Chris Desmond, Kathryn Watt, Sarah K. G. Jensen, Erik Simmons, Shauna M. Murray, Jordan Farrar, Matias Placencio‐Castro, Vincent Sezibera, Laura B. Rawlings, Briana Wilson, Theresa S. Betancourt",
+  "members": [
+   "Betancourt"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "PLOS Global Public Health",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Rwanda (Sugira Muryango trial)",
+  "region": "Sub-Saharan Africa",
+  "link": "https://journals.plos.org/globalpublichealth/article/file?id=10.1371/journal.pgph.0002473&type=printable",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Violence prevention",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Cost-effectiveness analysis of the Sugira Muryango (SM) home-visiting cluster-RCT in rural Rwanda, proposing improvement in cognitive development per home-visit session as a single comparable efficiency metric."
+ },
+ {
+  "id": "cuartas-2023-climate-change-is",
+  "title": "Climate change is a threat multiplier for violence against children",
+  "authors": "Jorge Cuartas, Amiya Bhatia, Daniel Carter, Lucie Cluver, Carolina V. N. Coll, Elizabeth Donger, Catherine E. Draper, Frances Gardner, Bess Herbert, Orla Kelly, Jamie M. Lachman, Najat Maalla M’jid, Frederique Seidel",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Child Abuse & Neglect",
+  "type": "peer",
+  "age": "All ages / N.A.",
+  "country": "Global",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1016/j.chiabu.2023.106430",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Refugees & displacement",
+   "Violence prevention",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Commentary arguing that climate change is a 'threat multiplier' for violence against children: climate-related shocks and stressors operate through social-ecological pathways (economic hardship, food/water insecurity, displacement, disrupted services, family stress) that increase children's expos…"
+ },
+ {
+  "id": "cuartas-2023-corporal-punishmen",
+  "title": "Corporal punishment and child development in low- and middle-income countries: Progress, challenges, and directions",
+  "authors": "Jorge Cuartas",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Child Psychiatry & Human Development",
+  "type": "peer",
+  "age": "0–8 & 9–25 + caregivers/adults",
+  "country": "64 low- and middle-income countries",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1007/s10578-022-01362-3",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Social-emotional learning",
+   "Violence prevention"
+  ],
+  "finding": "Rapid review of >42 studies across 64 LMICs on associations between corporal punishment and children's cognitive and social-emotional development."
+ },
+ {
+  "id": "cuartas-2023-country-level-impr",
+  "title": "Country-Level Improvements in Nurturing Care and Child Development",
+  "authors": "Dana Charles McCoy, Jorge Cuartas, Jonathan Seiden",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "JAMA Pediatrics",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "31 low- and middle-income countries",
+  "region": "Global / multi-country",
+  "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/10616762",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Parenting & caregiving",
+   "Violence prevention",
+   "ECE quality & access"
+  ],
+  "finding": "Cross-sectional analysis of country-level change across 31 LMICs using ≥2 nationally representative MICS waves (2010–2019), framed by the WHO/UNICEF/World Bank Nurturing Care Framework."
+ },
+ {
+  "id": "cuartas-2023-family-play-readi",
+  "title": "Family play, reading, and other stimulation and early childhood development in five low- and middle-income countries",
+  "authors": "Jorge Cuartas, Dana McCoy, Juliana Sánchez, Jere Behrman, Claudia Cappa, Georgina Donati, Jody Heymann, Chunling Lu, Abbie Raikes, Nirmala Rao, Linda Richter, Alan Stein, Hirokazu Yoshikawa",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Developmental Science",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Five low- and middle-income countries",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1111/desc.13404",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Social-emotional learning",
+   "Parenting & caregiving",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Across five LMIC longitudinal studies, random-effects and more conservative child-fixed-effects models showed that FAMILY STIMULATION—caregivers' engagement in nine activities (e.g., reading, playing, singing)—predicted increments in children's early numeracy, literacy, social-emotional, motor, a…"
+ },
+ {
+  "id": "cuartas-2023-the-acute-effects",
+  "title": "The acute effects of community violence on young children’s regulatory, behavioral, and developmental outcomes in a low-income urban sample in Brazil",
+  "authors": "Dana C. McCoy, Marta Dormal, Jorge Cuartas, Angélica Carreira dos Santos, Günther Fink, Alexandra Brentani",
+  "members": [
+   "Cuartas"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Journal of Child Psychology and Psychiatry",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Brazil",
+  "region": "Latin America & Caribbean",
+  "link": "#",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Violence prevention",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Quasi-experimental study leveraging natural variation in the timing/location of community homicides to estimate ACUTE effects on São Paulo 3-year-olds (N=3,241), comparing children assessed soon after a nearby recent homicide with neighbors not recently exposed."
+ },
+ {
+  "id": "dunne-2023-an-evaluation-of-l",
+  "title": "An evaluation of Lifestart, a universal home-based parenting programme in Ireland aimed at improving parent and child outcomes",
+  "authors": "Sarah Miller, Laura Dunne, Sharon Millen, Erin Early, Liam Grant, Jennifer Davison, Clare McGeady",
+  "members": [
+   "Dunne"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Irish Educational Studies",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Ireland",
+  "region": "Europe / UK",
+  "link": "https://doi.org/10.1080/03323315.2023.2185275",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial"
+  ],
+  "finding": "Five-year RCT of the Lifestart universal home-visiting parenting programme (birth–5) in Ireland (424 parent–child pairs; outcomes at <12 months, age 3, age 5)."
+ },
+ {
+  "id": "foulds-2023-formative-research",
+  "title": "Formative research adaptations and innovations",
+  "authors": "Kim Foulds, Samera Zaidi, Belynda Agu, Rehnuma Akhter, Carolina Casas, Ayobisi Osuntusa, Mari Payne, Apurba Shikder, Sukhna Sawhney",
+  "members": [
+   "Foulds"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Working paper / report",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "Bangladesh; Brazil; Colombia; India; Jordan; Lebanon; Mexico; Nigeria; South Africa",
+  "region": "Global / multi-country",
+  "link": "https://api.taylorfrancis.com/content/chapters/oa-edit/download?identifierName=doi&identifierValue=10.4324/9781003415213-10&type=chapterpdf",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Parenting & caregiving"
+  ],
+  "finding": "Methods chapter documenting adaptations to Sesame Workshop's formative research model for the Watch, Play, Learn early-learning videos supporting families affected by crisis and displacement across nine countries (Bangladesh, Brazil, Colombia, India, Jordan, Lebanon, Mexico, Nigeria, South Africa)."
+ },
+ {
+  "id": "hein-2023-school-transition",
+  "title": "School Transition Expectations of Newcomer Pupils in Germany: A Pilot Evaluation of a…",
+  "authors": "Sascha Hein, Isabell Schuster, Julie Larran, Barış Altındağ, Maria Schriefer, Shanti D‘Sa",
+  "members": [
+   "Hein"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Working paper / report",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "Germany",
+  "region": "Europe / UK",
+  "link": "https://www.degruyter.com/document/doi/10.1515/9783111010649-013/pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Measurement & methods"
+  ],
+  "finding": "Pilot evaluation of the Huckepack summer programme supporting newcomer (refugee/asylum-seeker) pupils' transition into the German school system."
+ },
+ {
+  "id": "issa-2023-parenting-support",
+  "title": "Parenting support for refugee and vulnerable communities in Lebanon and Jordan during…",
+  "authors": "Ghassan Issa, Muna E. Abbas, Lara C. Aoude, Grace J. Boutros, Asma S. Al Khatib, Sahar L. Matarneh, Dima M. AlFayez, Nael H. Alami, Najla A. Lakkis",
+  "members": [
+   "Issa"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Working paper / report",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "Lebanon; Egypt; Jordan",
+  "region": "Middle East & North Africa",
+  "link": "https://api.taylorfrancis.com/content/chapters/oa-edit/download?identifierName=doi&identifierValue=10.4324/9781003415213-6&type=chapterpdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Refugees & displacement",
+   "Education in emergencies",
+   "Parenting & caregiving"
+  ],
+  "finding": "Implementation evaluation of the Arab Resource Collective's multi-sectoral responsive-caregiving/positive-parenting program (originally developed 2012 in Lebanon, Egypt, Jordan), testing three delivery modalities—adapted face-to-face and a new online modality after COVID-19—piloted in one Mount L…"
+ },
+ {
+  "id": "mccarthy-2023-the-state-of-evide",
+  "title": "The state of evidence for social and emotional learning: A contemporary meta-analysis of universal school-based SEL interventions",
+  "authors": "Christina Cipriano, Michael F. McCarthy, et al.",
+  "members": [
+   "McCarthy"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Child Development",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "53 countries (international)",
+  "region": "Global / multi-country",
+  "link": "#",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Social-emotional learning",
+   "Climate & environment",
+   "Measurement & methods"
+  ],
+  "finding": "Contemporary systematic review and meta-analysis updating Durlak et al. (2011): 424 studies from 53 countries (2008–2020), 252 discrete universal school-based (USB) SEL interventions, 575,361 K-12 students."
+ },
+ {
+  "id": "mccarthy-2023-towards-an-inclusi",
+  "title": "Towards an inclusive social and emotional learning",
+  "authors": "Christina Cipriano, Michael F. McCarthy, et al.",
+  "members": [
+   "McCarthy"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Social and Emotional Learning: Research, Practice, and Policy",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "International (K-12)",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1016/j.sel.2023.100008",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Education in emergencies",
+   "Social-emotional learning",
+   "Measurement & methods"
+  ],
+  "finding": "Perspectives article drawing on a recent systematic review and meta-analysis of 13 years of universal school-based (USB) SEL interventions for K-12 students."
+ },
+ {
+  "id": "miller-2023-updated-protocol",
+  "title": "UPDATED PROTOCOL: Universal school‐based programmes for improving social and emotional…",
+  "authors": "Jennifer Hanratty, Sarah Miller, Leonor Rodríguez, Paul Connolly, Jennifer Roberts, Seaneen Sloan, Aoibheann Brennan‐Wilson, Daragh Bradshaw, Christopher Coughlan, Nicole Gleghorne, Laura Dunne, Sharon Millen, Aimee Smith, Cadhla O’Sullivan",
+  "members": [
+   "Miller"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Campbell Systematic Reviews",
+  "type": "peer",
+  "age": "0–8 & 9–25",
+  "country": "International",
+  "region": "Global / multi-country",
+  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cl2.1346",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Social-emotional learning",
+   "Measurement & methods"
+  ],
+  "finding": "Protocol for a live, searchable evidence and gap map (EGM) to identify and map all primary studies (including randomized and cluster-randomized trials) and systematic reviews on universal, school-based social and emotional learning programmes for young children aged 3–11 years."
+ },
+ {
+  "id": "rey-guerra-2023-gender-similaritie",
+  "title": "Gender similarities and differences in early childhood development in low- and…",
+  "authors": "Catalina Rey‐Guerra, Aisha K. Yousafzai, Eric Dearing",
+  "members": [
+   "Rey-Guerra"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "International Journal of Behavioral Development",
+  "type": "peer",
+  "age": "All ages / N.A.",
+  "country": "Low- And Middle-Income",
+  "region": "Global / multi-country",
+  "link": "https://doi.org/10.1177/01650254231217465",
+  "status": "confirmed",
+  "rel": 2,
+  "themes": [
+   "Social-emotional learning",
+   "Cash transfers & poverty",
+   "Measurement & methods"
+  ],
+  "finding": "Country-level gender development index explained a substantial amount of variation in gender differences across countries."
+ },
+ {
+  "id": "yoshikawa-2023-three-year-outcome",
+  "title": "Three-Year Outcomes for Low-Income Parents of Young Children in a Two-Generation…",
+  "authors": "Elise Chor, P. Lindsay Chase‐Lansdale, Teresa Eckrich Sommer, Terri J. Sabol, Lauren A. Tighe, Jeanne Brooks‐Gunn, Hirokazu Yoshikawa, Amanda Sheffield Morris, Christopher T. King",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "Journal of Research on Educational Effectiveness",
+  "type": "peer",
+  "age": "caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://doi.org/10.1080/19345747.2023.2273511",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Parenting & caregiving",
+   "Mental health & psychosocial",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Quasi-experimental study of CareerAdvance (postsecondary healthcare training for parents paired with Head Start) over 3 years."
+ },
+ {
+  "id": "yoshikawa-2023-unconditional-cash",
+  "title": "Unconditional Cash Transfers and Maternal Assessments of Children's Health, Nutrition,…",
+  "authors": "Jessica F. Sperber, Lisa A. Gennetian, Emma R. Hart, Alicia Kunin‐Batson, Katherine Magnuson, Greg J. Duncan, Hirokazu Yoshikawa, Nathan A. Fox, Sarah Halpern‐Meekin, Kimberly G. Noble",
+  "members": [
+   "Yoshikawa"
+  ],
+  "year": 2023,
+  "date": "2023",
+  "venue": "JAMA Network Open",
+  "type": "peer",
+  "age": "0–8 + caregivers/adults",
+  "country": "United States",
+  "region": "North America",
+  "link": "https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2809968/sperber_2023_oi_231012_1695236872.53666.pdf",
+  "status": "confirmed",
+  "rel": 3,
+  "themes": [
+   "Education in emergencies",
+   "Cash transfers & poverty"
+  ],
+  "finding": "Baby's First Years RCT ($333 vs $20/month for 3 years; 1,000 dyads) testing poverty reduction on child health. No statistically detectable differences between high- and low-cash groups in maternal assessments of children's health/medical care, sleep disturbances, or healthy/unhealthy food consump…"
+ }
+];
+
+const TYPE_LABEL = {peer:"Peer-reviewed", grey:"Grey literature", book:"Book"};
+const state = {q:"", sort:"new", type:new Set(), theme:new Set(), region:new Set(), member:new Set(), rel:new Set()};
+
+// ---- featured findings (only those with a written finding) ----
+const featured = DATA.filter(d=>d.finding).sort((a,b)=>b.year-a.year).slice(0,6);
+let fi=0, ftimer=null;
+function renderFocus(i){
+  const d=featured[i]; if(!d) return;
+  const ft=document.getElementById('focusText');
+  ft.innerHTML = '“'+d.finding.replace(/—/g,'<em>—</em>')+'”';
+  document.getElementById('focusMeta').innerHTML =
+    d.authors.split(',')[0]+' et al. · <em>'+d.venue+'</em>, '+d.date+
+    '   <a href="'+d.link+'" target="_blank" rel="noopener">Open source →</a>';
+  document.querySelectorAll('#focusDots button').forEach((b,bi)=>b.setAttribute('aria-current', bi===i?'true':'false'));
+  fi=i;
+}
+function buildDots(){
+  const wrap=document.getElementById('focusDots');
+  wrap.innerHTML='';
+  featured.forEach((_,i)=>{
+    const b=document.createElement('button'); b.setAttribute('role','tab');
+    b.setAttribute('aria-label','Finding '+(i+1));
+    b.onclick=()=>{renderFocus(i); restartTimer()};
+    wrap.appendChild(b);
+  });
+}
+function restartTimer(){ if(ftimer)clearInterval(ftimer);
+  ftimer=setInterval(()=>renderFocus((fi+1)%featured.length), 6500); }
+
+// ---- stats + year chart ----
+function stats(){
+  document.getElementById('sPub').textContent = DATA.length;
+  const mem=new Set(); DATA.forEach(d=>d.members.forEach(m=>mem.add(m)));
+  document.getElementById('sMem').textContent = mem.size;
+  const cty=new Set(); DATA.forEach(d=>{ d.country.split(/[;/(]/)[0].split('&').forEach(c=>{const t=c.trim(); if(t&&!/refugees|families/i.test(t))cty.add(t);}); });
+  document.getElementById('sCty').textContent = cty.size;
+  document.getElementById('sNew').textContent = DATA.filter(d=>d.year>=2025).length;
+  const yrs={}; DATA.forEach(d=>yrs[d.year]=(yrs[d.year]||0)+1);
+  const order=[2023,2024,2025,2026]; const max=Math.max(...Object.values(yrs));
+  document.getElementById('yearChart').innerHTML = order.map(y=>{
+    const c=yrs[y]||0; const w=max?Math.round(c/max*100):0;
+    return '<div class="ybar"><span class="yr">'+y+'</span><span class="track"><span class="fill" style="width:'+w+'%"></span></span><span class="c">'+c+'</span></div>';
+  }).join('');
+}
+
+// ---- filter chips ----
+function uniq(key){ const m={}; DATA.forEach(d=>{ const v=d[key]; (Array.isArray(v)?v:[v]).forEach(x=>m[x]=(m[x]||0)+1); }); return m; }
+function memberCounts(){ const m={}; DATA.forEach(d=>d.members.forEach(x=>m[x]=(m[x]||0)+1)); return m; }
+function chipset(elId, entries, setRef, labelFn){
+  const el=document.getElementById(elId); el.innerHTML='';
+  entries.forEach(([val,ct])=>{
+    const b=document.createElement('button'); b.className='chip'; b.setAttribute('aria-pressed','false');
+    b.innerHTML=(labelFn?labelFn(val):val)+' <span class="ct">'+ct+'</span>';
+    b.onclick=()=>{ if(setRef.has(val)){setRef.delete(val);b.setAttribute('aria-pressed','false');}
+      else{setRef.add(val);b.setAttribute('aria-pressed','true');} render(); };
+    el.appendChild(b);
+  });
+}
+function buildFilters(){
+  chipset('fType', Object.entries({peer:cnt('type','peer'),grey:cnt('type','grey'),book:cnt('type','book')}).filter(e=>e[1]), state.type, v=>TYPE_LABEL[v]);
+  chipset('fTheme', Object.entries(uniq('themes')).sort((a,b)=>b[1]-a[1]), state.theme);
+  chipset('fRegion', Object.entries(uniq('region')).sort((a,b)=>b[1]-a[1]), state.region);
+  chipset('fMember', Object.entries(memberCounts()).sort((a,b)=>a[0].localeCompare(b[0])), state.member);
+  chipset('fRel', [["High",DATA.filter(d=>d.rel===3).length],["Medium",DATA.filter(d=>d.rel===2).length]], state.rel);
+}
+function cnt(k,v){return DATA.filter(d=>d[k]===v).length;}
+
+// ---- render ----
+function matches(d){
+  if(state.type.size && !state.type.has(d.type)) return false;
+  if(state.region.size && !state.region.has(d.region)) return false;
+  if(state.member.size && !d.members.some(m=>state.member.has(m))) return false;
+  if(state.theme.size && !d.themes.some(t=>state.theme.has(t))) return false;
+  if(state.rel.size && !state.rel.has(d.rel===3?'High':'Medium')) return false;
+  if(state.q){ const s=(d.title+' '+d.authors+' '+d.venue+' '+d.finding+' '+d.country+' '+d.themes.join(' ')+' '+d.members.join(' ')).toLowerCase();
+    if(!s.includes(state.q.toLowerCase())) return false; }
+  return true;
+}
+function sortFn(a,b){
+  if(state.sort==='new') return b.year-a.year || a.title.localeCompare(b.title);
+  if(state.sort==='old') return a.year-b.year || a.title.localeCompare(b.title);
+  if(state.sort==='rel') return b.rel-a.rel || b.year-a.year;
+  if(state.sort==='mem') return a.members[0].localeCompare(b.members[0]) || b.year-a.year;
+  return 0;
+}
+function card(d){
+  const isNew = d.year>=2025;
+  const badges = [];
+  badges.push('<span class="b b-'+(d.type==='peer'?'peer':d.type)+'">'+(d.type==='peer'?'Peer-reviewed':d.type==='grey'?'Grey':'Book')+'</span>');
+  if(d.status==='lead') badges.push('<span class="b b-lead">Lead</span>');
+  if(isNew) badges.push('<span class="b b-new">New</span>');
+  const memberHi = d.authors; // members already bolded via list below
+  const memberLine = 'ECPC: <b>'+d.members.join(', ')+'</b> · '+d.authors;
+  const find = d.finding ? '<div class="c-find"><span class="lab">Key finding</span>'+d.finding+'</div>' : '';
+  const tags = d.themes.map(t=>'<span class="tag">'+t+'</span>').join('')+'<span class="tag region">'+d.region+'</span>';
+  return '<article class="card t-'+d.type+'">'
+    +'<div class="c-top"><span class="c-year">'+d.date+'</span><span class="badges">'+badges.join('')+'</span></div>'
+    +'<h3 class="c-title">'+d.title+'</h3>'
+    +'<p class="c-auth">'+memberLine+'</p>'
+    +'<p class="c-venue">'+d.venue+'</p>'
+    + find
+    +'<div class="tags">'+tags+'</div>'
+    +'<div class="c-foot"><span class="age">'+d.age+'</span>'
+    +'<a class="c-link" href="'+d.link+'" target="_blank" rel="noopener">Open source <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>'
+    +'</article>';
+}
+function render(){
+  const list = DATA.filter(matches).sort(sortFn);
+  const grid=document.getElementById('grid'), empty=document.getElementById('empty');
+  grid.innerHTML = list.map(card).join('');
+  empty.hidden = list.length>0;
+  const active = state.type.size+state.theme.size+state.region.size+state.member.size+state.rel.size + (state.q?1:0);
+  document.getElementById('count').innerHTML = '<b>'+list.length+'</b> of '+DATA.length+' publications'+(active?' · '+active+' filter'+(active>1?'s':'')+' active':'');
+}
+
+// ---- wire up ----
+document.getElementById('q').addEventListener('input', e=>{state.q=e.target.value; render();});
+document.getElementById('sort').addEventListener('change', e=>{state.sort=e.target.value; render();});
+document.getElementById('reset').addEventListener('click', ()=>{
+  state.q="";state.sort="new";['type','theme','region','member','rel'].forEach(k=>state[k].clear());
+  document.getElementById('q').value=""; document.getElementById('sort').value="new";
+  document.querySelectorAll('.chip[aria-pressed="true"]').forEach(c=>c.setAttribute('aria-pressed','false'));
+  render();
+});
+
+stats(); buildFilters(); buildDots(); renderFocus(0); restartTimer(); render();
+</script>
+</body>
+</html>
