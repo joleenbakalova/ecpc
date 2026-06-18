@@ -61,11 +61,12 @@
   .yearbars{margin-top:6px;border-top:1px dashed var(--mist);padding-top:14px}
   .yearbars .cap{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
     font-family:"Spline Sans Mono",monospace;margin-bottom:10px}
-  .ybar{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:12px}
-  .ybar .yr{width:34px;color:var(--ink-soft);font-family:"Spline Sans Mono",monospace}
-  .ybar .track{flex:1;height:9px;background:var(--sage-bg);border-radius:5px;overflow:hidden}
-  .ybar .fill{height:100%;background:linear-gradient(90deg,var(--pine),#2f8a72);border-radius:5px}
-  .ybar .c{width:18px;text-align:right;color:var(--ink-soft);font-family:"Spline Sans Mono",monospace}
+  .ybar{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:12px}
+  .ybar .yr{width:34px;color:var(--ink-soft);font-family:"Spline Sans Mono",monospace;font-weight:600}
+  .ybar .track{flex:1;background:var(--sage-bg);border-radius:6px;overflow:hidden}
+  .ybar .fill{height:22px;min-width:26px;background:linear-gradient(90deg,var(--pine),#2f8a72);border-radius:6px;
+    display:flex;align-items:center;justify-content:flex-end;padding-right:8px;box-sizing:border-box;
+    color:#fff;font-weight:700;font-size:11px;font-family:"Spline Sans Mono",monospace;transition:width .4s ease}
 
   /* toolbar */
   .toolbar{position:sticky;top:62px;z-index:40;background:var(--canvas);padding:18px 0 10px;border-bottom:1px solid var(--mist)}
@@ -118,6 +119,10 @@
   .b-book{background:#e0ecf2;color:#235066}
   .b-new{background:var(--pine);color:#fff}
   .b-lead{background:#fbeede;color:#9a5a12;border:1px dashed #d79a4e}
+  .b-oa{background:#e3f3ea;color:#1f7a4d}
+  .b-closed{background:#efeae3;color:#7a6750}
+  .c-link.closed{color:var(--ink-soft)}
+  .c-link.closed:hover{color:var(--ink)}
   .c-title{font-family:Fraunces;font-weight:600;font-size:18px;line-height:1.25;margin:0 0 6px;letter-spacing:-.005em}
   .c-auth{font-size:13px;color:var(--ink-soft);margin:0 0 4px}
   .c-auth b{color:var(--pine-deep);font-weight:600}
@@ -264,6 +269,7 @@ const DATA = [
   "country": "Lebanon",
   "region": "Middle East & North Africa",
   "link": "https://doi.org/10.1177/01650254261434433",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -288,6 +294,7 @@ const DATA = [
   "country": "Niger",
   "region": "Sub-Saharan Africa",
   "link": "https://doi.org/10.1080/19345747.2025.2591604",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -311,7 +318,8 @@ const DATA = [
   "age": "0–8 & 9–25",
   "country": "Fragile & conflict-affected settings (global)",
   "region": "Global / multi-country",
-  "link": "https://www.bmj.com/content/bmj/392/bmj-2025-086044.full.pdf",
+  "link": "https://doi.org/10.1136/bmj-2025-086044",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -335,7 +343,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Rwanda",
   "region": "Sub-Saharan Africa",
-  "link": "https://www.mdpi.com/2227-9067/13/3/344/pdf?version=1772193854",
+  "link": "https://doi.org/10.3390/children13030344",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -359,7 +368,8 @@ const DATA = [
   "age": "0–8 & 9–25",
   "country": "Fragile & conflict-affected settings (global)",
   "region": "Global / multi-country",
-  "link": "https://www.bmj.com/content/bmj/392/bmj-2025-086040.full.pdf",
+  "link": "https://doi.org/10.1136/bmj-2025-086040",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -384,6 +394,7 @@ const DATA = [
   "country": "United Kingdom",
   "region": "Europe / UK",
   "link": "https://doi.org/10.1111/cch.70199",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -408,6 +419,7 @@ const DATA = [
   "country": "Peru",
   "region": "Latin America & Caribbean",
   "link": "https://doi.org/10.1126/sciadv.aeb9403",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -432,6 +444,7 @@ const DATA = [
   "country": "Global",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1007/s10567-026-00569-3",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -455,7 +468,8 @@ const DATA = [
   "age": "0–8",
   "country": "United Kingdom (Northern Ireland)",
   "region": "Europe / UK",
-  "link": "https://www.mdpi.com/2227-7102/16/1/92/pdf",
+  "link": "https://doi.org/10.3390/educsci16010092",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -480,6 +494,7 @@ const DATA = [
   "country": "Fragile & conflict-affected settings (global)",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1136/bmj-2025-086043",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -503,6 +518,7 @@ const DATA = [
   "country": "Cambodia; Mozambique; Niger; occupied Palestinian territories; Philippines; Sudan",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1093/chidev/aacag044",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -527,6 +543,7 @@ const DATA = [
   "country": "Colombia",
   "region": "Latin America & Caribbean",
   "link": "#",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -551,6 +568,7 @@ const DATA = [
   "country": "Bangladesh (Cox’s Bazar)",
   "region": "Asia-Pacific",
   "link": "https://doi.org/10.1186/s44263-026-00266-x",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -575,6 +593,7 @@ const DATA = [
   "country": "Bangladesh (Cox’s Bazar)",
   "region": "Asia-Pacific",
   "link": "https://doi.org/10.1016/j.ecresq.2026.01.005",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -597,7 +616,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "United States",
   "region": "North America",
-  "link": "https://osf.io/dw2em",
+  "link": "https://openalex.org/W7125667541",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -621,6 +641,7 @@ const DATA = [
   "country": "Ghana",
   "region": "Sub-Saharan Africa",
   "link": "https://doi.org/10.1108/978-1-80117-624-820251001",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -645,6 +666,7 @@ const DATA = [
   "country": "Multi-country (narrative review)",
   "region": "Global / multi-country",
   "link": "#",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -668,7 +690,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Rwanda",
   "region": "Sub-Saharan Africa",
-  "link": "https://link.springer.com/content/pdf/10.1186/s12889-025-25445-7.pdf",
+  "link": "https://doi.org/10.1186/s12889-025-25445-7",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -690,7 +713,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Rwanda",
   "region": "Sub-Saharan Africa",
-  "link": "https://gh.bmj.com/content/10/6/e017866.full.pdf",
+  "link": "https://doi.org/10.1136/bmjgh-2024-017866",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -714,7 +738,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "United States",
   "region": "North America",
-  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ajcp.70021",
+  "link": "https://doi.org/10.1002/ajcp.70021",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -738,7 +763,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "Rwanda",
   "region": "Sub-Saharan Africa",
-  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jcpp.14160",
+  "link": "https://doi.org/10.1111/jcpp.14160",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -762,7 +788,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "United Kingdom",
   "region": "Europe / UK",
-  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/chso.12968",
+  "link": "https://doi.org/10.1111/chso.12968",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -786,7 +813,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "Georgia; The Gambia; Madagascar; Malawi; Sierra Leone; State of Palestine",
   "region": "Global / multi-country",
-  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jcpp.70081",
+  "link": "https://doi.org/10.1111/jcpp.70081",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -811,6 +839,7 @@ const DATA = [
   "country": "Six countries (Multiple Indicator Cluster Surveys)",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1037/vio0000651",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -835,6 +864,7 @@ const DATA = [
   "country": "Global",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1371/journal.pgph.0004441",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -858,7 +888,8 @@ const DATA = [
   "age": "0–8",
   "country": "Hungary; Romania; Slovakia; United Kingdom; Quebec (Canada); Bangladesh",
   "region": "Global / multi-country",
-  "link": "https://public-pages-files-2025.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1739990/pdf",
+  "link": "https://doi.org/10.3389/feduc.2025.1739990",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -883,6 +914,7 @@ const DATA = [
   "country": "Germany",
   "region": "Europe / UK",
   "link": "https://doi.org/10.1080/1350293x.2025.2563852",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -906,7 +938,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Germany",
   "region": "Europe / UK",
-  "link": "https://pdf.ejper.com/EJPER_8_1_35.pdf",
+  "link": "https://doi.org/10.12973/ejper.8.1.35",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -930,7 +963,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Nigeria; Bangladesh",
   "region": "Global / multi-country",
-  "link": "https://publications.aap.org/pediatricsopenscience/article-pdf/doi/10.1542/pedsos.2024-000356/1813613/pedsos_2024000356.pdf",
+  "link": "https://doi.org/10.1542/pedsos.2024-000356",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -953,6 +987,7 @@ const DATA = [
   "country": "International (K-12)",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.3102/00346543251367769",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -976,6 +1011,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.1016/j.sel.2025.100170",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1000,6 +1036,7 @@ const DATA = [
   "country": "Timor-Leste",
   "region": "Asia-Pacific",
   "link": "https://doi.org/10.1080/13575279.2025.2449852",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1024,6 +1061,7 @@ const DATA = [
   "country": "Brazil",
   "region": "Latin America & Caribbean",
   "link": "https://doi.org/10.1002/ajhb.70004",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1047,7 +1085,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "Jordan",
   "region": "Middle East & North Africa",
-  "link": "https://www.nature.com/articles/s41598-025-89818-z.pdf",
+  "link": "https://doi.org/10.1038/s41598-025-89818-z",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1072,6 +1111,7 @@ const DATA = [
   "country": "International",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1038/s44159-025-00447-9",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1096,6 +1136,7 @@ const DATA = [
   "country": "Russia",
   "region": "Europe / UK",
   "link": "https://doi.org/10.1016/j.ecresq.2025.02.002",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1119,6 +1160,7 @@ const DATA = [
   "country": "Colombia",
   "region": "Latin America & Caribbean",
   "link": "https://doi.org/10.1371/journal.pone.0336106",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1142,7 +1184,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "United States",
   "region": "North America",
-  "link": "https://jamanetwork.com/journals/jamapediatrics/articlepdf/2834896/jamapediatrics_duncan_2025_oi_250026_1748962171.48097.pdf",
+  "link": "https://doi.org/10.1001/jamapediatrics.2025.1612",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1166,7 +1209,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Bangladesh (Cox’s Bazar)",
   "region": "Asia-Pacific",
-  "link": "https://bmjopen.bmj.com/content/bmjopen/15/11/e099052.full.pdf",
+  "link": "https://doi.org/10.1136/bmjopen-2025-099052",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1190,7 +1234,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "China",
   "region": "Asia-Pacific",
-  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cdev.14256",
+  "link": "https://doi.org/10.1111/cdev.14256",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1213,6 +1258,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.3386/w33844",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1237,6 +1283,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.59377/590p8000g",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1258,7 +1305,8 @@ const DATA = [
   "age": "0–8 & 9–25",
   "country": "Lebanon",
   "region": "Middle East & North Africa",
-  "link": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3F0E4B1C90E62D3FE586DD0D2DB401BE/S0954579424001202a.pdf/div-class-title-patterns-of-self-regulation-and-emotional-well-being-among-syrian-refugee-children-in-lebanon-an-exploratory-person-centered-approach-div.pdf",
+  "link": "https://doi.org/10.1017/s0954579424001202",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1283,6 +1331,7 @@ const DATA = [
   "country": "Nigeria",
   "region": "Sub-Saharan Africa",
   "link": "https://doi.org/10.1007/s10826-023-02763-1",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1307,6 +1356,7 @@ const DATA = [
   "country": "Low- and middle-income countries (incl. humanitarian settings)",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1016/j.comppsych.2024.152483",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1330,7 +1380,8 @@ const DATA = [
   "age": "0–8 & 9–25",
   "country": "Palestine (Gaza & occupied Palestinian territories)",
   "region": "Middle East & North Africa",
-  "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11197870/pdf/hhr-26-01-147.pdf",
+  "link": "https://openalex.org/W4400103728",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1354,7 +1405,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Sierra Leone",
   "region": "Sub-Saharan Africa",
-  "link": "https://bmcpsychiatry.biomedcentral.com/counter/pdf/10.1186/s12888-024-06209-w",
+  "link": "https://doi.org/10.1186/s12888-024-06209-w",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1379,6 +1431,7 @@ const DATA = [
   "country": "Nigeria",
   "region": "Sub-Saharan Africa",
   "link": "https://doi.org/10.2139/ssrn.5054962",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1402,6 +1455,7 @@ const DATA = [
   "country": "Bhutan; Cambodia; Ethiopia; Rwanda",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1037/vio0000502",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1424,7 +1478,8 @@ const DATA = [
   "age": "All ages / N.A.",
   "country": "134 low- and middle-income countries",
   "region": "Global / multi-country",
-  "link": "https://gh.bmj.com/content/9/11/e015991.full.pdf",
+  "link": "https://doi.org/10.1136/bmjgh-2024-015991",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1449,6 +1504,7 @@ const DATA = [
   "country": "Latin America & the Caribbean (18 countries)",
   "region": "Latin America & Caribbean",
   "link": "https://doi.org/10.1016/j.worlddev.2024.106817",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1471,6 +1527,7 @@ const DATA = [
   "country": "Colombia",
   "region": "Latin America & Caribbean",
   "link": "https://doi.org/10.1111/cch.13325",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1495,6 +1552,7 @@ const DATA = [
   "country": "Global (low- and middle-income focus)",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1016/s0140-6736(24)01390-4",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1519,6 +1577,7 @@ const DATA = [
   "country": "United States; Latin America; Middle East",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1080/10510974.2024.2339565",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1543,6 +1602,7 @@ const DATA = [
   "country": "Global (low- and middle-income / conflict-affected focus)",
   "region": "Global / multi-country",
   "link": "#",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1566,7 +1626,8 @@ const DATA = [
   "age": "0–8 & 9–25 + caregivers/adults",
   "country": "International",
   "region": "Global / multi-country",
-  "link": "http://www.jaacap.org/article/S0890856724002430/pdf",
+  "link": "https://doi.org/10.1016/j.jaac.2024.02.017",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1591,6 +1652,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.1016/j.sel.2024.100029",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1614,6 +1676,7 @@ const DATA = [
   "country": "Jordan",
   "region": "Middle East & North Africa",
   "link": "https://doi.org/10.1007/s10826-024-02809-y",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1638,6 +1701,7 @@ const DATA = [
   "country": "International (refugees in Europe & the Middle East)",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1016/j.psyneuen.2024.107084",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1661,7 +1725,8 @@ const DATA = [
   "age": "All ages / N.A.",
   "country": "Colombia",
   "region": "Latin America & Caribbean",
-  "link": "https://link.springer.com/content/pdf/10.1007/s10578-024-01787-y.pdf",
+  "link": "https://doi.org/10.1007/s10578-024-01787-y",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1685,7 +1750,8 @@ const DATA = [
   "age": "0–8 & 9–25",
   "country": "Pakistan",
   "region": "Asia-Pacific",
-  "link": "https://ecommons.aku.edu/pakistan_fhs_mc_women_childhealth_paediatr/1574",
+  "link": "https://doi.org/10.1016/s2352-4642(24)00304-3",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1708,6 +1774,7 @@ const DATA = [
   "country": "United States (conceptual)",
   "region": "North America",
   "link": "https://doi.org/10.1080/15295192.2024.2411503",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1731,6 +1798,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.3102/01623737241268074",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1754,7 +1822,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "Global",
   "region": "Global / multi-country",
-  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cdep.12516",
+  "link": "https://doi.org/10.1111/cdep.12516",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1779,6 +1848,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.2139/ssrn.4955765",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1801,7 +1871,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "United States",
   "region": "North America",
-  "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12145882/pdf/nihms-2081217.pdf",
+  "link": "https://doi.org/10.1111/cdev.14139",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1824,6 +1895,7 @@ const DATA = [
   "country": "Jordan",
   "region": "Middle East & North Africa",
   "link": "https://doi.org/10.1016/j.ecresq.2024.07.004",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1847,7 +1919,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "United States",
   "region": "North America",
-  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cdev.14141",
+  "link": "https://doi.org/10.1111/cdev.14141",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1870,7 +1943,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "United States",
   "region": "North America",
-  "link": "http://dx.doi.org/10.2139/ssrn.4940902",
+  "link": "https://doi.org/10.2139/ssrn.4940902",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1894,6 +1968,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.2139/ssrn.4781670",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1916,6 +1991,7 @@ const DATA = [
   "country": "Global",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1111/cdep.12503",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -1940,6 +2016,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.1037/dev0001824",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1961,7 +2038,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "United States",
   "region": "North America",
-  "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11323047/pdf/nihms-2004550.pdf",
+  "link": "https://doi.org/10.1086/729364",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -1985,6 +2063,7 @@ const DATA = [
   "country": "Lebanon",
   "region": "Middle East & North Africa",
   "link": "https://doi.org/10.1177/23328584231209268",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2008,7 +2087,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Bhutan; Rwanda",
   "region": "Global / multi-country",
-  "link": "https://www.mdpi.com/2227-9067/10/8/1413/pdf?version=1692436474",
+  "link": "https://doi.org/10.3390/children10081413",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2031,7 +2111,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Rwanda (Sugira Muryango trial)",
   "region": "Sub-Saharan Africa",
-  "link": "https://journals.plos.org/globalpublichealth/article/file?id=10.1371/journal.pgph.0002473&type=printable",
+  "link": "https://doi.org/10.1371/journal.pgph.0002473",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2056,6 +2137,7 @@ const DATA = [
   "country": "Global",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1016/j.chiabu.2023.106430",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -2080,6 +2162,7 @@ const DATA = [
   "country": "64 low- and middle-income countries",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1007/s10578-022-01362-3",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -2103,7 +2186,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "31 low- and middle-income countries",
   "region": "Global / multi-country",
-  "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/10616762",
+  "link": "https://doi.org/10.1001/jamapediatrics.2023.4615",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -2128,6 +2212,7 @@ const DATA = [
   "country": "Five low- and middle-income countries",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1111/desc.13404",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2152,6 +2237,7 @@ const DATA = [
   "country": "Brazil",
   "region": "Latin America & Caribbean",
   "link": "#",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2176,6 +2262,7 @@ const DATA = [
   "country": "Ireland",
   "region": "Europe / UK",
   "link": "https://doi.org/10.1080/03323315.2023.2185275",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2198,7 +2285,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "Bangladesh; Brazil; Colombia; India; Jordan; Lebanon; Mexico; Nigeria; South Africa",
   "region": "Global / multi-country",
-  "link": "https://api.taylorfrancis.com/content/chapters/oa-edit/download?identifierName=doi&identifierValue=10.4324/9781003415213-10&type=chapterpdf",
+  "link": "https://doi.org/10.4324/9781003415213-10",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -2222,7 +2310,8 @@ const DATA = [
   "age": "0–8 & 9–25",
   "country": "Germany",
   "region": "Europe / UK",
-  "link": "https://www.degruyter.com/document/doi/10.1515/9783111010649-013/pdf",
+  "link": "https://doi.org/10.1515/9783111010649-013",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2245,7 +2334,8 @@ const DATA = [
   "age": "caregivers/adults",
   "country": "Lebanon; Egypt; Jordan",
   "region": "Middle East & North Africa",
-  "link": "https://api.taylorfrancis.com/content/chapters/oa-edit/download?identifierName=doi&identifierValue=10.4324/9781003415213-6&type=chapterpdf",
+  "link": "https://doi.org/10.4324/9781003415213-6",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2270,6 +2360,7 @@ const DATA = [
   "country": "53 countries (international)",
   "region": "Global / multi-country",
   "link": "#",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -2294,6 +2385,7 @@ const DATA = [
   "country": "International (K-12)",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1016/j.sel.2023.100008",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -2317,7 +2409,8 @@ const DATA = [
   "age": "0–8 & 9–25",
   "country": "International",
   "region": "Global / multi-country",
-  "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cl2.1346",
+  "link": "https://doi.org/10.1002/cl2.1346",
+  "oa": true,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -2341,6 +2434,7 @@ const DATA = [
   "country": "Low- And Middle-Income",
   "region": "Global / multi-country",
   "link": "https://doi.org/10.1177/01650254231217465",
+  "oa": false,
   "status": "confirmed",
   "rel": 2,
   "themes": [
@@ -2365,6 +2459,7 @@ const DATA = [
   "country": "United States",
   "region": "North America",
   "link": "https://doi.org/10.1080/19345747.2023.2273511",
+  "oa": false,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2388,7 +2483,8 @@ const DATA = [
   "age": "0–8 + caregivers/adults",
   "country": "United States",
   "region": "North America",
-  "link": "https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2809968/sperber_2023_oi_231012_1695236872.53666.pdf",
+  "link": "https://doi.org/10.1001/jamanetworkopen.2023.35237",
+  "oa": true,
   "status": "confirmed",
   "rel": 3,
   "themes": [
@@ -2409,9 +2505,10 @@ function renderFocus(i){
   const d=featured[i]; if(!d) return;
   const ft=document.getElementById('focusText');
   ft.innerHTML = '“'+d.finding.replace(/—/g,'<em>—</em>')+'”';
+  const fUrl = (d.link && d.link!=='#') ? d.link : 'https://scholar.google.com/scholar?q='+encodeURIComponent(d.title);
   document.getElementById('focusMeta').innerHTML =
     d.authors.split(',')[0]+' et al. · <em>'+d.venue+'</em>, '+d.date+
-    '   <a href="'+d.link+'" target="_blank" rel="noopener">Open source →</a>';
+    '   <a href="'+fUrl+'" target="_blank" rel="noopener">'+(d.oa?'Read (open access) →':'View at publisher →')+'</a>';
   document.querySelectorAll('#focusDots button').forEach((b,bi)=>b.setAttribute('aria-current', bi===i?'true':'false'));
   fi=i;
 }
@@ -2440,7 +2537,7 @@ function stats(){
   const order=[2023,2024,2025,2026]; const max=Math.max(...Object.values(yrs));
   document.getElementById('yearChart').innerHTML = order.map(y=>{
     const c=yrs[y]||0; const w=max?Math.round(c/max*100):0;
-    return '<div class="ybar"><span class="yr">'+y+'</span><span class="track"><span class="fill" style="width:'+w+'%"></span></span><span class="c">'+c+'</span></div>';
+    return '<div class="ybar"><span class="yr">'+y+'</span><span class="track"><span class="fill" style="width:'+(c?w:0)+'%">'+(c||'')+'</span></span></div>';
   }).join('');
 }
 
@@ -2488,12 +2585,17 @@ function card(d){
   const isNew = d.year>=2025;
   const badges = [];
   badges.push('<span class="b b-'+(d.type==='peer'?'peer':d.type)+'">'+(d.type==='peer'?'Peer-reviewed':d.type==='grey'?'Grey':'Book')+'</span>');
+  badges.push(d.oa ? '<span class="b b-oa">Open access</span>' : '<span class="b b-closed">Subscription</span>');
   if(d.status==='lead') badges.push('<span class="b b-lead">Lead</span>');
   if(isNew) badges.push('<span class="b b-new">New</span>');
-  const memberHi = d.authors; // members already bolded via list below
   const memberLine = 'ECPC: <b>'+d.members.join(', ')+'</b> · '+d.authors;
   const find = d.finding ? '<div class="c-find"><span class="lab">Key finding</span>'+d.finding+'</div>' : '';
   const tags = d.themes.map(t=>'<span class="tag">'+t+'</span>').join('')+'<span class="tag region">'+d.region+'</span>';
+  const hasLink = d.link && d.link!=='#';
+  const url = hasLink ? d.link : 'https://scholar.google.com/scholar?q='+encodeURIComponent(d.title);
+  const linkLabel = d.oa ? 'Read (open access)' : 'View at publisher';
+  const linkTitle = d.oa ? 'Open-access full text on the publisher site' : 'Opens the journal page — may require institutional login or subscription';
+  const icon = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>';
   return '<article class="card t-'+d.type+'">'
     +'<div class="c-top"><span class="c-year">'+d.date+'</span><span class="badges">'+badges.join('')+'</span></div>'
     +'<h3 class="c-title">'+d.title+'</h3>'
@@ -2502,7 +2604,7 @@ function card(d){
     + find
     +'<div class="tags">'+tags+'</div>'
     +'<div class="c-foot"><span class="age">'+d.age+'</span>'
-    +'<a class="c-link" href="'+d.link+'" target="_blank" rel="noopener">Open source <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>'
+    +'<a class="c-link'+(d.oa?'':' closed')+'" href="'+url+'" target="_blank" rel="noopener" title="'+linkTitle+'">'+linkLabel+' '+icon+'</a></div>'
     +'</article>';
 }
 function render(){
